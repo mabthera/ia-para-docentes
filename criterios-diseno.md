@@ -58,5 +58,6 @@ Adaptar estos elementos a cada tema: sirven para organizar información útil, s
 ## Comprobaciones al desarrollar una fase
 
 - Comprobar en una pantalla horizontal habitual que cada sección principal cabe completa, incluidas las líneas, los botones de ampliación y la navegación, y que los elementos permanecen alineados al pasar de una a otra.
+- Para portátiles y proyectores panorámicos, comprobar la altura útil real del navegador, no solo la resolución de la pantalla. Las navegaciones superiores y de «Anterior»/«Siguiente» deben situar cada diapositiva justo debajo de la barra fija y mostrar también su cierre inferior. Verificar distintas ventanas horizontales, incluidas alturas de 560 a 768 píxeles cuando el contenido lo permita.
 - Revisar también una pantalla más pequeña o con zoom: debe poder leerse y desplazarse sin contenido inaccesible. No reducir demasiado las letras para forzar el encaje.
 - Probar apertura y cierre de ampliaciones, retorno al punto de partida, navegación con teclado, visibilidad del foco y comportamiento con movimiento reducido; comprobar que imágenes y enlaces funcionan desde las rutas relativas del sitio.

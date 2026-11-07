@@ -1,4 +1,9 @@
 const contexto = document.querySelector('#frase-contexto');
+// El destino de los enlaces queda justo debajo de la barra superior, incluso si cambia de altura.
+const barraCapitulos = document.querySelector('.chapter-nav');
+if (barraCapitulos && 'ResizeObserver' in window) {
+  new ResizeObserver(() => document.documentElement.style.setProperty('--chapter-nav-height', `${barraCapitulos.offsetHeight}px`)).observe(barraCapitulos);
+}
 const respuesta = document.querySelector('#respuesta-contexto');
 const cambiar = document.querySelector('#cambiar-contexto');
 cambiar.addEventListener('click', () => {
