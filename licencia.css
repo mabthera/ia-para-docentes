@@ -1,0 +1,16 @@
+.license-badge { position: fixed; z-index: 20; right: 12px; bottom: 8px; width: 78px; max-width: calc(100vw - 24px); color: #3f5058; font: 12px/1.4 Arial, sans-serif; transition: width .3s ease; }
+.license-badge[open], .license-badge:focus-within { width: 258px; }
+@media (hover: hover) { .license-badge:hover { width: 258px; } }
+.license-badge summary { box-sizing: border-box; display: block; width: 100%; overflow: hidden; white-space: nowrap; padding: 7px 11px; border: 1px solid #fff; border-radius: 14px; background: rgba(244, 247, 248, .96); box-shadow: 2px 3px 10px #aebac268; color: #3f5058; font: 700 12px/1.4 Arial, sans-serif; cursor: pointer; list-style: none; }
+.license-badge summary::-webkit-details-marker { display: none; }
+.license-badge .license-more { opacity: 0; transition: opacity .2s ease; }
+.license-badge[open] .license-more, .license-badge:focus-within .license-more { opacity: 1; }
+@media (hover: hover) { .license-badge:hover .license-more { opacity: 1; } }
+.license-badge summary:focus-visible, .license-badge a:focus-visible { outline: 3px solid #9a3734; outline-offset: 3px; }
+.license-badge .license-info { position: absolute; right: 0; bottom: calc(100% + 9px); width: min(350px, calc(100vw - 24px)); padding: 18px; border: 1px solid #fff; border-radius: 16px; background: #f6f8f9; box-shadow: 6px 8px 22px #8b999f75; font-size: 14px; line-height: 1.5; }
+.license-badge .license-info p { margin: 0 0 10px; }
+.license-badge .license-info p:last-child { margin-bottom: 0; }
+.license-badge a { color: #8d302f; font-weight: 700; }
+.drawer .license-badge { z-index: 5; }
+@media (max-width: 600px) { .license-badge { right: 8px; bottom: 6px; } }
+@media (prefers-reduced-motion: reduce) { .license-badge, .license-badge .license-more { transition: none; } }

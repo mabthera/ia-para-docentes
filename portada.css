@@ -1,0 +1,62 @@
+/* Una portada completa para proyectar; el recorrido continúa más abajo. */
+.site-shell { width: min(1450px, 100%); padding-inline: clamp(30px, 5.5vw, 80px); }
+@media (min-width: 851px) {
+  .topbar { height: clamp(72px, 10vh, 96px); }
+  .hero {
+    min-height: calc(100svh - clamp(72px, 10vh, 96px));
+    padding: clamp(24px, 4vh, 48px) 0;
+  }
+  .hero-visual { width: min(100%, 580px, calc(100svh - 175px)); }
+  .hero h1 { font-size: clamp(50px, min(6.7vw, 10.5vh), 100px); }
+  .hero .eyebrow { margin-bottom: clamp(14px, 2.5vh, 29px); }
+  .hero .intro { margin: clamp(17px, 3vh, 31px) 0 clamp(16px, 2.5vh, 28px); }
+}
+
+.intro {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(19px, 1.7vw, 24px);
+  letter-spacing: -.015em;
+  line-height: 1.42;
+  color: #46545b;
+}
+.intro em { color: var(--accent); font-style: italic; font-weight: 700; }
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.hero-link span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d3dade;
+  border-radius: 50%;
+  color: var(--accent);
+  box-shadow: 4px 4px 10px #d2d9dd, -4px -4px 10px #fff;
+}
+.hero-link:hover span { background: var(--accent); color: white; }
+.visual-badge { top: 8%; right: -2%; }
+.badge-explorar { top: 8%; left: -3%; right: auto; }
+.badge-crear { top: auto; bottom: 14%; left: -4%; right: auto; }
+.badge-revisar { top: auto; bottom: 14%; right: -4%; }
+.visual-caption { left: 50%; bottom: 0; transform: translateX(-50%); white-space: nowrap; }
+
+@media (max-height: 720px) and (min-width: 851px) {
+  .hero-link { margin-top: 12px; }
+  .hero-meta { font-size: 11px; }
+  .visual-badge { padding: 10px 13px; }
+}
+@media (max-width: 600px) {
+  .site-shell { padding-inline: 20px; }
+  .hero-link { margin-top: 20px; }
+  .visual-badge { padding: 9px 10px; font-size: 8px; }
+  .badge-explorar { left: -2%; }
+  .badge-crear { left: -2%; }
+  .badge-revisar { right: -2%; }
+}
