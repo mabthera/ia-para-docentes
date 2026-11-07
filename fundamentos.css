@@ -437,3 +437,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .slide:not(.cover) .slide-body .slide-content { gap: 10px; }
   #criterio .teacher-hook img { height: clamp(110px, 22vh, 140px); }
 }
+
+/* El diagrama conserva sus proporciones y llena su propia tarjeta, sin zonas vacías laterales. */
+#llm .prediction-figure { width: min(100%, calc(26svh * 3.75)); }
+#llm .prediction-figure img { width: 100%; height: auto; max-height: none; object-fit: contain; }
