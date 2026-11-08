@@ -42,7 +42,7 @@ Adaptar estos elementos a cada tema: sirven para organizar información útil, s
 
 ## Fuentes y contenido
 
-- Preferir recursos fiables en español cuando existan y sean adecuados; para cuestiones oficiales, técnicas, científicas o legales, priorizar fuentes primarias y enlazar directamente al documento o apartado pertinente. Usar fuentes en otros idiomas cuando sean necesarias o aporten un valor especial, indicándolo si ayuda.
+- Priorizar para las ampliaciones webs contrastadas, divulgativas y en español. Para cuestiones oficiales, científicas, legales o técnicas que requieran una fuente primaria, enlazar también el documento o artículo original y, cuando exista, acompañarlo de una explicación accesible en español. Indicar si una referencia útil está en otro idioma.
 - Acompañar cada enlace de una breve explicación de qué encontrará la persona. Diferenciar leyes vigentes, propuestas en tramitación, guías y recomendaciones; no presentar una orientación o borrador como una obligación legal.
 - Verificar la actualidad de normativa, herramientas y condiciones de uso antes de publicarlas. Indicar la fecha de consulta cuando sea relevante y enlazar a fuentes donde comprobar cambios.
 - Ofrecer ejemplos concretos de situaciones docentes, sin emplear datos personales reales innecesarios. Distinguir claramente los datos ficticios y las demostraciones ilustrativas.

@@ -1,0 +1,6 @@
+::011 Coincidentes - caverna::Relaciona cada elemento del mito con su función principal. {
+=Sombras -> Apariencias engañosas
+=Fuego -> Fuente de la luz interior
+=Exterior -> Ámbito de la verdad
+=Cadenas -> Condición de ignorancia
+}

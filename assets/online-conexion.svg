@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Conectar, crear y compartir</title>
+  <desc id="descripcion">Una ventana de navegador conectada a una red y a pequeños símbolos de texto, imagen y audio.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dae4e7"/></linearGradient>
+    <linearGradient id="pantalla" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbfdfd"/><stop offset="1" stop-color="#e5efee"/></linearGradient>
+    <linearGradient id="globo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#76b5b1"/><stop offset="1" stop-color="#1e6c72"/></linearGradient>
+    <filter id="sombra" x="-35%" y="-35%" width="180%" height="180%"><feDropShadow dx="13" dy="16" stdDeviation="13" flood-color="#a5b9bd" flood-opacity=".38"/></filter>
+  </defs>
+  <circle cx="260" cy="259" r="200" fill="url(#fondo)" filter="url(#sombra)"/>
+  <circle cx="260" cy="259" r="225" fill="none" stroke="#c3d2d4"/>
+  <circle cx="260" cy="259" r="213" fill="none" stroke="#c3d2d4" stroke-dasharray="3 7"/>
+  <g fill="none" stroke="#6b9e9e" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 7">
+    <path d="M153 146 122 113M365 153l35-37M160 352l-37 36M363 355l40 37"/>
+  </g>
+  <g fill="#e9f3f2" stroke="#fff" stroke-width="2" filter="url(#sombra)">
+    <rect x="79" y="70" width="80" height="80" rx="23"/>
+    <rect x="366" y="70" width="80" height="80" rx="23"/>
+    <rect x="79" y="368" width="80" height="80" rx="23"/>
+    <rect x="366" y="368" width="80" height="80" rx="23"/>
+  </g>
+  <g fill="none" stroke="#367d80" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M101 99h35M101 110h35M101 121h24"/>
+    <rect x="387" y="93" width="38" height="34" rx="5"/><circle cx="414" cy="102" r="3"/><path d="m391 121 10-11 8 8 5-5 7 8"/>
+    <path d="M100 407v-8m9 14v-20m9 26v-32m9 26v-20m9 14v-8"/>
+    <path d="M389 405h33m-9-9 9 9-9 9"/>
+  </g>
+  <g filter="url(#sombra)">
+    <rect x="133" y="154" width="254" height="210" rx="25" fill="url(#pantalla)" stroke="#fff" stroke-width="3"/>
+    <path d="M135 193h250" stroke="#d1e0df" stroke-width="2"/>
+    <circle cx="155" cy="174" r="4" fill="#6ca8a6"/><circle cx="169" cy="174" r="4" fill="#a7c7c4"/><circle cx="183" cy="174" r="4" fill="#cadcda"/>
+    <rect x="241" y="168" width="117" height="11" rx="5.5" fill="#e1ebea"/>
+    <circle cx="260" cy="271" r="58" fill="url(#globo)"/>
+    <g fill="none" stroke="#e5f5f2" stroke-width="2.5" stroke-linecap="round" opacity=".95">
+      <ellipse cx="260" cy="271" rx="26" ry="57"/><path d="M203 271h114M213 242h94M213 300h94"/>
+    </g>
+    <circle cx="260" cy="271" r="58" fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="2"/>
+    <path d="M165 337h74M247 337h38" stroke="#c3d9d6" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#287d82"><circle cx="118" cy="113" r="3"/><circle cx="403" cy="387" r="3"/><circle cx="65" cy="249" r="4"/><circle cx="456" cy="267" r="4"/></g>
+</svg>

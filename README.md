@@ -2,14 +2,16 @@
 
 Web de apoyo a una formación sobre inteligencia artificial aplicada a la docencia, creada por **David Rodríguez**, profesor de Matemáticas y divulgador en IA.
 
-El recorrido consta de cuatro fases: fundamentos, herramientas online, asistentes de escritorio y trabajo en local. El bloque de fundamentos está desarrollado; las otras fases se encuentran en preparación.
+El recorrido consta de fundamentos, herramientas online, el puente de proyectos y GeminiNotebook, asistentes de escritorio y trabajo en local. Fundamentos y herramientas online están desarrolladas; las demás secciones se encuentran en preparación.
 
 ## Organización
 
-- `index.html`: portada y acceso a las cuatro fases.
-- `fundamentos.html`, `online.html`, `escritorio.html` y `local.html`: páginas de las fases.
+- `index.html`: portada y acceso a las cinco secciones.
+- `fundamentos.html`, `online.html`, `proyectos.html`, `escritorio.html` y `local.html`: páginas de las secciones.
 - `assets/`: imágenes utilizadas por la web.
 - Archivos `.css` y `.js`: estilos e interacciones de la presentación.
+- `ejemplos/`: archivos de muestra para practicar la importación de preguntas en Moodle.
+- `recursos/`: manuales y documentos descargables para las prácticas.
 - `criterios-diseno.md`: decisiones de diseño y contenido para seguir desarrollando el proyecto.
 
 La web es estática: no necesita instalación, compilación ni claves para funcionar. Para revisarla en el ordenador, abre `index.html` en un navegador y conserva la estructura de archivos y carpetas.

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="formulas">
+    <name>
+      <text>014 Formulas - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una escena del mito de la caverna hay <strong>{prisioneros}</strong> prisioneros y cada uno distingue <strong>{sombras}</strong> sombras distintas.</p><p>Responde las dos partes:</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Esta pregunta usa dos campos de respuesta. Primero calcula el total del grupo y luego el total que quedaría si un prisionero fuera liberado.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>2.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <correctfeedback format="html">
+      <text><![CDATA[<p>Correcto.</p>]]></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text><![CDATA[<p>Una de las dos partes está bien, pero revisa la otra.</p>]]></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text><![CDATA[<p>Recuerda: total = prisioneros × sombras, y si uno sale, restantes = (prisioneros - 1) × sombras.</p>]]></text>
+    </incorrectfeedback>
+    <varsrandom>
+      <text>prisioneros = {4,5,6};
+sombras = {2,3,4};</text>
+    </varsrandom>
+    <varsglobal>
+      <text>total = prisioneros*sombras;
+restantes = (prisioneros-1)*sombras;</text>
+    </varsglobal>
+    <answers>
+      <partindex>
+        <text>0</text>
+      </partindex>
+      <placeholder>
+        <text></text>
+      </placeholder>
+      <answermark>
+        <text>1</text>
+      </answermark>
+      <answertype>
+        <text>0</text>
+      </answertype>
+      <numbox>
+        <text>1</text>
+      </numbox>
+      <vars1>
+        <text></text>
+      </vars1>
+      <answer>
+        <text>total</text>
+      </answer>
+      <vars2>
+        <text></text>
+      </vars2>
+      <correctness>
+        <text><![CDATA[_relerr < 0.001]]></text>
+      </correctness>
+      <unitpenalty>
+        <text>1</text>
+      </unitpenalty>
+      <postunit>
+        <text></text>
+      </postunit>
+      <ruleid>
+        <text>1</text>
+      </ruleid>
+      <otherrule>
+        <text></text>
+      </otherrule>
+      <subqtext format="html">
+        <text><![CDATA[<p>1. ¿Cuántas imágenes contempla el grupo en total?</p>]]></text>
+      </subqtext>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto: total = prisioneros × sombras.</p>]]></text>
+      </feedback>
+    </answers>
+    <answers>
+      <partindex>
+        <text>1</text>
+      </partindex>
+      <placeholder>
+        <text></text>
+      </placeholder>
+      <answermark>
+        <text>1</text>
+      </answermark>
+      <answertype>
+        <text>0</text>
+      </answertype>
+      <numbox>
+        <text>1</text>
+      </numbox>
+      <vars1>
+        <text></text>
+      </vars1>
+      <answer>
+        <text>restantes</text>
+      </answer>
+      <vars2>
+        <text></text>
+      </vars2>
+      <correctness>
+        <text><![CDATA[_relerr < 0.001]]></text>
+      </correctness>
+      <unitpenalty>
+        <text>1</text>
+      </unitpenalty>
+      <postunit>
+        <text></text>
+      </postunit>
+      <ruleid>
+        <text>1</text>
+      </ruleid>
+      <otherrule>
+        <text></text>
+      </otherrule>
+      <subqtext format="html">
+        <text><![CDATA[<p>2. Si uno de los prisioneros es liberado, ¿cuántas imágenes seguirían viendo los que permanecen encadenados?</p>]]></text>
+      </subqtext>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto: restantes = (prisioneros - 1) × sombras.</p>]]></text>
+      </feedback>
+    </answers>
+  </question>
+</quiz>

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual práctico para docentes: creación de imágenes científicas con IA</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --paper: #fffdfa;
+      --ink: #1d2733;
+      --muted: #5e6874;
+      --line: #ddd5c8;
+      --primary: #0f5c6e;
+      --primary-soft: #e4f2f5;
+      --secondary: #8b5b2b;
+      --secondary-soft: #f7eee3;
+      --ok: #215f4e;
+      --ok-soft: #eaf6f1;
+      --warn: #8b3d29;
+      --warn-soft: #fbe9e4;
+      --shadow: 0 22px 48px rgba(31, 41, 55, 0.10);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(15, 92, 110, 0.10), transparent 24rem),
+        radial-gradient(circle at top right, rgba(139, 91, 43, 0.09), transparent 22rem),
+        linear-gradient(180deg, #faf7f1 0%, var(--bg) 100%);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+      padding: 1.4rem 0 3.5rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      padding: 2.4rem;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(8, 64, 77, 0.98), rgba(15, 92, 110, 0.95)),
+        linear-gradient(135deg, #0f5c6e, #114b5c);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero::before {
+      width: 18rem;
+      height: 18rem;
+      right: -5rem;
+      top: -6rem;
+    }
+
+    .hero::after {
+      width: 12rem;
+      height: 12rem;
+      left: -3rem;
+      bottom: -4rem;
+    }
+
+    .eyebrow,
+    .section-tag,
+    .mini-tag,
+    .step-number,
+    .prompt-box strong,
+    .source-note,
+    .footer-note {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.9rem;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 0.75rem;
+      line-height: 1.16;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+      max-width: 14ch;
+    }
+
+    h2 {
+      font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+      color: #133b47;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      color: #1e3545;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .lead {
+      max-width: 70ch;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 1.06rem;
+    }
+
+    .hero-grid,
+    .main-grid,
+    .cards,
+    .example-grid,
+    .two-cols,
+    .reference-grid,
+    .prompt-grid,
+    .check-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .hero-grid {
+      margin-top: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-card span {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.74);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-card strong {
+      font-size: 1rem;
+    }
+
+    .main-grid {
+      margin-top: 1.2rem;
+      grid-template-columns: 290px 1fr;
+      align-items: start;
+    }
+
+    .side,
+    .section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .side {
+      position: sticky;
+      top: 1rem;
+      padding: 1.2rem;
+    }
+
+    .side h2 {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      color: var(--muted);
+    }
+
+    .side a {
+      display: block;
+      padding: 0.55rem 0.1rem;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid #ece4d8;
+    }
+
+    .side a:last-child {
+      border-bottom: 0;
+    }
+
+    .side .side-note {
+      margin-top: 1rem;
+      padding: 0.9rem;
+      border-radius: 14px;
+      background: #f8f4ed;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .content {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .section {
+      padding: 1.6rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .cards,
+    .prompt-grid,
+    .check-grid,
+    .reference-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card,
+    .check-card,
+    .reference-card,
+    .prompt-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      background: linear-gradient(180deg, #fffdfa 0%, #fbf8f2 100%);
+    }
+
+    .card.soft-blue,
+    .prompt-box {
+      background: linear-gradient(180deg, #f7fcfd 0%, #edf7f9 100%);
+    }
+
+    .card.soft-amber {
+      background: linear-gradient(180deg, #fffaf4 0%, #f8efe5 100%);
+    }
+
+    .card.soft-green,
+    .check-card.ok {
+      background: linear-gradient(180deg, #f7fcf9 0%, #edf8f2 100%);
+    }
+
+    .check-card.warn {
+      background: linear-gradient(180deg, #fff9f7 0%, #fdeee9 100%);
+    }
+
+    ul,
+    ol {
+      margin: 0.2rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin: 0.45rem 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fffdf9;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #0a4451);
+    }
+
+    .two-cols {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: start;
+    }
+
+    .formula {
+      margin-top: 0.8rem;
+      padding: 1rem;
+      border-radius: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #103945, #0f5c6e);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.96rem;
+      overflow-x: auto;
+    }
+
+    .prompt-box strong,
+    .mini-tag,
+    .source-note {
+      font-size: 0.78rem;
+    }
+
+    .mini-tag {
+      display: inline-block;
+      margin-bottom: 0.55rem;
+      padding: 0.28rem 0.55rem;
+      border-radius: 999px;
+      background: var(--secondary-soft);
+      color: var(--secondary);
+    }
+
+    .example-grid {
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
+
+    .example-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fffdfa;
+      box-shadow: 0 16px 30px rgba(31, 41, 55, 0.07);
+    }
+
+    .example-body {
+      padding: 1rem;
+    }
+
+    .example-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+      padding: 0.75rem;
+      background: #f7f2ea;
+    }
+
+    .comparison figure,
+    .single-image figure {
+      margin: 0;
+    }
+
+    .comparison img,
+    .single-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: #fff;
+    }
+
+    .comparison figcaption,
+    .single-image figcaption {
+      margin-top: 0.45rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .single-image {
+      padding: 0.75rem;
+      background: #f7f2ea;
+    }
+
+    .prompt {
+      margin: 0.8rem 0;
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      background: #eef7fa;
+      border-left: 4px solid var(--primary);
+      font-size: 0.96rem;
+    }
+
+    .quote {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #f4fbfd 0%, #ecf6f8 100%);
+      border: 1px solid #d8e9ee;
+      color: #21424d;
+    }
+
+    .source-note {
+      display: inline-block;
+      margin-top: 0.55rem;
+      color: var(--muted);
+    }
+
+    .reference-card a {
+      word-break: break-word;
+    }
+
+    .footer-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .app-footer {
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+      text-align: center;
+      margin-top: 18px;
+      padding: 4px 18px 10px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .footer-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      white-space: nowrap;
+    }
+
+    .footer-separator {
+      color: rgba(88, 101, 106, 0.55);
+      font-weight: 700;
+    }
+
+    .footer-highlight {
+      display: inline-block;
+      font-weight: 800;
+      color: var(--ink);
+      background: rgba(15, 92, 110, 0.10);
+      border-radius: 999px;
+      padding: 2px 10px;
+      text-decoration: none;
+    }
+
+    a.footer-highlight:hover,
+    a.footer-highlight:focus-visible {
+      background: rgba(15, 92, 110, 0.16);
+      outline: none;
+    }
+
+    .license-subtitle {
+      max-width: 48ch;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+      .main-grid,
+      .two-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .side {
+        position: static;
+      }
+
+      .footer-meta {
+        flex-wrap: wrap;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(calc(100% - 1rem), var(--max));
+      }
+
+      .hero,
+      .section,
+      .side {
+        padding: 1.15rem;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison img,
+      .single-image img {
+        height: 210px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="eyebrow">Manual práctico para profesorado</div>
+      <h1>Creación de imágenes científicas con IA</h1>
+      <p class="lead">
+        Guía de referencia para generar ilustraciones científicas, esquemas y materiales visuales adaptados al aula.
+        El foco no está solo en pedir imágenes, sino en revisarlas, corregirlas y validarlas antes de utilizarlas con el alumnado.
+      </p>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <span>Idea clave</span>
+          <strong>La IA acelera la creación visual, pero no sustituye el criterio docente.</strong>
+        </div>
+        <div class="hero-card">
+          <span>Lo que necesitas</span>
+          <strong>Acceso a una herramienta de generación visual, prompts sencillos y dominio del contenido científico.</strong>
+        </div>
+        <div class="hero-card">
+          <span>Recomendación</span>
+          <strong>Trabaja por iteraciones cortas: pedir, revisar, corregir y validar.</strong>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <aside class="side">
+        <h2>Índice</h2>
+        <nav>
+          <a href="#introduccion">1. Introducción</a>
+          <a href="#necesitas">2. Qué necesitas</a>
+          <a href="#prompt">3. Cómo pedir la imagen</a>
+          <a href="#revision">4. Cómo revisar</a>
+          <a href="#correccion">5. Cómo corregir</a>
+          <a href="#validacion">6. Cómo validar</a>
+          <a href="#fotos">7. Uso de fotos propias</a>
+          <a href="#ejemplos">8. Ejemplos prácticos</a>
+          <a href="#ventajas">9. Ventajas educativas</a>
+          <a href="#consejos">10. Consejos clave</a>
+          <a href="#errores">11. Errores comunes</a>
+          <a href="#conclusion">12. Conclusión</a>
+          <a href="#referencias">Referencias</a>
+        </nav>
+        <div class="side-note">
+          Este material se ha redactado a partir de dos artículos de Bilateria publicados el 2 y el 3 de diciembre de 2025, centrados en ilustración científica y en la transformación de fotografías propias en materiales didácticos.
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="section" id="introduccion">
+          <div class="section-tag">1. Introducción</div>
+          <h2>Por qué usar IA para crear imágenes científicas</h2>
+          <div class="two-cols">
+            <div>
+              <p>
+                La inteligencia artificial permite generar ilustraciones educativas de forma rápida, visual y muy adaptable al contexto del aula. Con las herramientas de generación de imágenes se pueden crear esquemas desde cero, rehacer dibujos a partir de una petición o transformar fotografías en materiales más claros para explicar conceptos científicos.
+              </p>
+              <p>
+                Esto resulta especialmente útil cuando necesitamos adaptar una imagen a un nivel concreto, destacar solo ciertos elementos o construir material visual que conecte mejor con la experiencia del alumnado.
+              </p>
+            </div>
+            <div class="quote">
+              <p>
+                La gran advertencia es simple: una imagen generada por IA puede ser vistosa y, aun así, contener errores anatómicos, geométricos o conceptuales. Por eso, el trabajo docente no termina al generar la imagen; empieza realmente en la revisión crítica.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="necesitas">
+          <div class="section-tag">2. Preparación</div>
+          <h2>Qué necesitas antes de empezar</h2>
+          <div class="cards">
+            <div class="card soft-blue">
+              <h3>Acceso a una herramienta de generación visual</h3>
+              <p>Puedes trabajar desde la web o la app. Según las fuentes consultadas, los mejores resultados llegan al combinar chat con generación de imágenes y revisión iterativa.</p>
+            </div>
+            <div class="card soft-amber">
+              <h3>Prompts claros</h3>
+              <p>No hace falta lenguaje técnico avanzado. Lo importante es describir con precisión qué quieres enseñar, para quién y en qué formato visual.</p>
+            </div>
+            <div class="card soft-green">
+              <h3>Criterio disciplinar</h3>
+              <p>La IA ayuda a producir imágenes, pero el conocimiento científico sigue siendo imprescindible para detectar fallos, omisiones o simplificaciones inadecuadas.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="prompt">
+          <div class="section-tag">3. El Prompt</div>
+          <h2>Pedir una imagen correctamente</h2>
+          <p>
+            La calidad del resultado depende mucho de cómo se formula la petición. Un buen prompt no tiene que ser largo, pero sí debe contener la información esencial.
+          </p>
+          <div class="prompt-grid">
+            <div class="prompt-box">
+              <strong>Contenido científico</strong>
+              <p>Indica con exactitud el concepto o estructura: <em>célula animal</em>, <em>estructura interna de la Tierra</em>, <em>circuito eléctrico</em>.</p>
+            </div>
+            <div class="prompt-box">
+              <strong>Nivel educativo</strong>
+              <p>Especifica para quién va dirigido: <em>para primaria</em>, <em>nivel 1.º de ESO</em>, <em>2.º de bachillerato</em>.</p>
+            </div>
+            <div class="prompt-box">
+              <strong>Tipo de imagen</strong>
+              <p>Añade el formato esperado: <em>esquema con etiquetas</em>, <em>dibujo realista</em>, <em>blanco y negro</em>, <em>fondo blanco</em>.</p>
+            </div>
+          </div>
+          <div class="formula">Haz un esquema de la célula animal con etiquetas, nivel 1.º de ESO, fondo blanco y estilo claro para imprimir.</div>
+          <div class="cards" style="margin-top: 1rem;">
+            <div class="card soft-blue">
+              <div class="mini-tag">Regla práctica</div>
+              <p>Cuanto más concreta sea la instrucción, menos espacio de interpretación dejarás a la IA.</p>
+            </div>
+            <div class="card soft-amber">
+              <div class="mini-tag">Muy útil</div>
+              <p>Si la imagen va a imprimirse, dilo. Si necesitas etiquetas, dilo. Si el alumnado es pequeño, dilo también.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="revision">
+          <div class="section-tag">4. Revisión</div>
+          <h2>Revisar la imagen es obligatorio</h2>
+          <p>No conviene usar directamente una imagen generada por IA sin una comprobación previa. Antes de llevarla al aula, revisa al menos estos puntos:</p>
+          <div class="check-grid">
+            <div class="check-card warn">
+              <h3>Checklist de revisión</h3>
+              <ul>
+                <li>Partes mal colocadas o proporciones incoherentes.</li>
+                <li>Elementos inventados o imposibles.</li>
+                <li>Ausencia de estructuras esenciales.</li>
+                <li>Etiquetas confusas, incompletas o incorrectas.</li>
+                <li>La imagen representa bien el concepto que quieres enseñar.</li>
+                <li>El resultado puede explicarse en clase sin introducir errores.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="correccion">
+          <div class="section-tag">5. Iteración</div>
+          <h2>Corregir la imagen: trabajo iterativo y guiado</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Señala el error</h3>
+                <p>No digas solo “está mal”. Mejor: <em>La membrana está mal colocada</em> o <em>faltan los ribosomas</em>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Pide cambios concretos</h3>
+                <p>Ejemplo: <em>Añade el núcleo y corrige la forma del orgánulo</em>. Las correcciones pequeñas suelen poder hacerse en el mismo chat.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Decide si compensa seguir</h3>
+                <p>Si hay uno o dos fallos leves, corrige. Si los errores son graves o estructurales, normalmente es mejor reiniciar el intento o aportar una imagen de referencia.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="validacion">
+          <div class="section-tag">6. Validación</div>
+          <h2>Validar la imagen antes de llevarla al aula</h2>
+          <div class="two-cols">
+            <div>
+              <p>
+                Una buena práctica es pedir a otra IA que describa la imagen final y comprobar si su descripción coincide con lo que la imagen debería mostrar. Esta validación externa ayuda a detectar fallos que pueden pasar desapercibidos en una primera revisión.
+              </p>
+              <p>
+                Las fuentes consultadas recomiendan esta auditoría final, especialmente en materiales anatómicos, geométricos o de laboratorio.
+              </p>
+            </div>
+            <div class="card soft-green">
+              <h3>Checklist final</h3>
+              <ul>
+                <li>¿La descripción de otra IA coincide con la intención didáctica?</li>
+                <li>¿No hay errores conceptuales ni etiquetas dudosas?</li>
+                <li>¿La imagen ayuda a aprender y no solo a impresionar?</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="fotos">
+          <div class="section-tag">7. Fotos propias</div>
+          <h2>Uso avanzado: convertir tus propias fotos en material didáctico</h2>
+          <p>
+            Uno de los usos más potentes de estas herramientas es trabajar sobre imágenes tomadas por el propio profesorado. Esto permite transformar una fotografía real en un esquema, un dibujo lineal, una imagen etiquetada o una guía visual para prácticas.
+          </p>
+          <div class="cards">
+            <div class="card soft-blue">
+              <h3>Qué puedes conseguir</h3>
+              <ul>
+                <li>Convertir fotos en esquemas claros.</li>
+                <li>Añadir nombres o etiquetas sobre la imagen.</li>
+                <li>Simplificar escenas complejas.</li>
+                <li>Crear dibujos técnicos desde objetos reales.</li>
+              </ul>
+            </div>
+            <div class="card soft-amber">
+              <h3>Ventaja pedagógica</h3>
+              <p>Trabajar con el entorno real del alumnado aumenta la conexión con el contenido y hace más fáciles de reconocer los objetos, fenómenos o situaciones estudiadas.</p>
+            </div>
+            <div class="card soft-green">
+              <h3>Autonomía docente</h3>
+              <p>Las fotografías propias ayudan a crear materiales visuales personalizados sin depender tanto de bancos de imágenes externos.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="ejemplos">
+          <div class="section-tag">8. Ejemplos</div>
+          <h2>Ejemplos prácticos por asignaturas</h2>
+          <p>
+            A continuación se muestran ejemplos basados en la transformación de fotografías propias en materiales visuales para el aula.
+          </p>
+
+          <div class="example-grid" style="margin-top: 1rem;">
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-12.png" alt="Fotografía original de una lupa binocular">
+                  <figcaption>Foto original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-13.png" alt="Esquema etiquetado de una lupa binocular generado con IA">
+                  <figcaption>Esquema generado</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Ciencias naturales</div>
+                <h3>De una foto de laboratorio a un esquema útil</h3>
+                <div class="prompt">“Extrae la imagen de la lupa binocular, colócala en una posición adecuada y pon las partes de las que está formada. Debe verse la lupa al completo.”</div>
+                <p>Este tipo de transformación es muy útil para preparar guías de prácticas o fichas previas de observación científica.</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-27.png" alt="Fotografía original de un sistema de poleas">
+                  <figcaption>Foto original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-28.png" alt="Esquema de poleas con líneas claras y color">
+                  <figcaption>Versión didáctica</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Física y tecnología</div>
+                <h3>Montaje real convertido en dibujo técnico</h3>
+                <div class="prompt">“Convierte esta imagen en un esquema de líneas claras para explicar las poleas. Añade colores.”</div>
+                <p>Ideal para pasar de una foto compleja a un material visual más limpio, legible y fácil de explicar en clase.</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-15.png" alt="Escena original con un árbol para un problema de trigonometría">
+                  <figcaption>Escena original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-17.png" alt="Problema geométrico generado a partir de una foto de un árbol">
+                  <figcaption>Problema visual</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Matemáticas</div>
+                <h3>Fotografía real transformada en problema geométrico</h3>
+                <div class="prompt">“Convierte esta escena en una imagen para ilustrar el problema: Halla la altura del árbol si desde 3 m de distancia de su base vemos la copa con un ángulo de 75º.”</div>
+                <p>Un buen ejemplo de cómo llevar situaciones cercanas al alumnado a actividades de trigonometría o proporcionalidad.</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-19.png" alt="Fotografía original de estratos geológicos">
+                  <figcaption>Fotografía original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-20.png" alt="Imagen geológica con estratos e identificación de horizontes">
+                  <figcaption>Imagen anotada</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Geología</div>
+                <h3>Lectura del terreno sobre imagen real</h3>
+                <div class="prompt">“Haz esta imagen marcando los estratos e identifica los diferentes horizontes sobre la imagen.”</div>
+                <p>Muy útil para salidas de campo, clasificación de rocas o actividades de observación del entorno.</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-21.png" alt="Objeto tridimensional fotografiado">
+                  <figcaption>Objeto original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-22.png" alt="Versión en líneas claras para dibujo técnico">
+                  <figcaption>Dibujo lineal</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Dibujo técnico o plástica</div>
+                <h3>De objeto real a versión en blanco y negro</h3>
+                <div class="prompt">“Haz una versión en blanco y negro con líneas claras, útil para practicar vistas y proporciones.”</div>
+                <p>Permite preparar materiales para trabajar forma, volumen, observación y representación técnica.</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="comparison">
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-23.png" alt="Fotografía original de un insecto">
+                  <figcaption>Imagen original</figcaption>
+                </figure>
+                <figure>
+                  <img src="https://educacion.bilateria.org/wp-content/uploads/2025/12/imatge-24.png" alt="Dibujo a lápices de colores con partes del insecto etiquetadas">
+                  <figcaption>Dibujo etiquetado</figcaption>
+                </figure>
+              </div>
+              <div class="example-body">
+                <div class="mini-tag">Biología</div>
+                <h3>Dibujo anatómico a partir de una fotografía</h3>
+                <div class="prompt">“Utiliza esta imagen para hacer un dibujo con lápices de colores señalando las partes del cuerpo de los insectos.”</div>
+                <p>Un buen recurso para trabajar morfología externa sin depender de ilustraciones ajenas al contexto de clase.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="quote" style="margin-top: 1rem;">
+            <p>
+              En los artículos de referencia se repite una idea central: si la IA comete uno o dos errores, suele compensar corregirlos con instrucciones precisas; si el resultado presenta fallos de base, es preferible reiniciar o usar una imagen de referencia.
+            </p>
+            <div class="source-note">Basado en Bilateria, diciembre de 2025.</div>
+          </div>
+        </section>
+
+        <section class="section" id="ventajas">
+          <div class="section-tag">9. Beneficios</div>
+          <h2>Ventajas educativas de este enfoque</h2>
+          <div class="cards">
+            <div class="card soft-blue">
+              <h3>Personalización total</h3>
+              <p>Puedes adaptar la imagen al nivel, al contexto del aula y a ejemplos cercanos al alumnado.</p>
+            </div>
+            <div class="card soft-amber">
+              <h3>Ahorro de tiempo</h3>
+              <p>Reduce la búsqueda de recursos externos y acelera la preparación de materiales específicos.</p>
+            </div>
+            <div class="card soft-green">
+              <h3>Mejor comprensión</h3>
+              <p>Los esquemas y simplificaciones visuales ayudan a explicar procesos, estructuras y relaciones complejas.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="consejos">
+          <div class="section-tag">10. Buenas prácticas</div>
+          <h2>Consejos clave para docentes</h2>
+          <ol>
+            <li>Empieza con imágenes sencillas y un solo objetivo visual por prompt.</li>
+            <li>Indica siempre contenido, nivel educativo y tipo de imagen.</li>
+            <li>Guarda las versiones que funcionen para reutilizar prompts eficaces.</li>
+            <li>Si una imagen no mejora tras varios intentos, reinicia o cambia la referencia.</li>
+          </ol>
+        </section>
+
+        <section class="section" id="errores">
+          <div class="section-tag">11. Alertas</div>
+          <h2>Errores comunes que conviene evitar</h2>
+          <div class="check-card warn">
+            <ul>
+              <li>Usar imágenes sin revisar.</li>
+              <li>Dar instrucciones demasiado vagas.</li>
+              <li>No indicar el nivel educativo.</li>
+              <li>Quedarse con el primer intento.</li>
+              <li>No comprobar etiquetas, proporciones o conceptos.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="conclusion">
+          <div class="section-tag">12. Cierre</div>
+          <h2>Conclusión</h2>
+          <p>
+            La creación de imágenes científicas con IA puede convertirse en una herramienta muy potente para el profesorado si se utiliza con un enfoque activo, crítico y pedagógico. La clave no está solo en generar imágenes, sino en saber guiar a la IA, revisar lo que produce y corregirlo cuando sea necesario.
+          </p>
+          <p>
+            Bien utilizada, esta tecnología permite construir materiales visuales personalizados, claros y ajustados al alumnado, mejorando la comprensión y enriqueciendo el proceso de enseñanza-aprendizaje.
+          </p>
+        </section>
+
+        <section class="section" id="referencias">
+          <div class="section-tag">Referencias</div>
+          <h2>Fuentes utilizadas</h2>
+          <div class="reference-grid">
+            <div class="reference-card">
+              <h3>Bilateria. Parte I</h3>
+              <p>Juan José de Haro, 2 de diciembre de 2025.</p>
+              <a href="https://educacion.bilateria.org/ilustracion-cientifica-con-gemini">https://educacion.bilateria.org/ilustracion-cientifica-con-gemini</a>
+            </div>
+            <div class="reference-card">
+              <h3>Bilateria. Parte II</h3>
+              <p>Juan José de Haro, 3 de diciembre de 2025.</p>
+              <a href="https://educacion.bilateria.org/ilustracion-cientifica-con-gemini-parte-ii-creacion-de-materiales-a-partir-de-fotografias-propias">https://educacion.bilateria.org/ilustracion-cientifica-con-gemini-parte-ii-creacion-de-materiales-a-partir-de-fotografias-propias</a>
+            </div>
+          </div>
+          <div class="footer-note">
+            Manual redactado a partir de esas dos publicaciones y de los ejemplos visuales incluidos en ellas. Las imágenes permanecen enlazadas a sus ubicaciones originales en Bilateria.
+          </div>
+        </section>
+
+        <footer class="app-footer" aria-label="Créditos y licencia">
+          <div class="footer-meta">
+            <span>Creado por:</span>
+            <span class="footer-highlight">David Rodríguez Vicente</span>
+            <span class="footer-separator">|</span>
+            <span>Licencia:</span>
+            <a class="footer-highlight" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
+          </div>
+          <div class="license-subtitle">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</div>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
+

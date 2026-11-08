@@ -1,0 +1,6 @@
+::Revolución::¿Cuándo estalló la Revolución Francesa? {
+=1789#Correcto.
+~1733#Revisa la cronología.
+~1743#Revisa la cronología.
+~1808#Revisa la cronología.
+}

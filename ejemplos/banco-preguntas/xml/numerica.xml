@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="numerical">
+    <name>
+      <text>008 Numérica - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una versión didáctica del mito hay 12 prisioneros y cada uno distingue 5 sombras diferentes en la pared. Si no repetimos ninguna, ¿cuántas visiones se cuentan en total?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Se multiplica el número de prisioneros por las sombras que distingue cada uno.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100">
+      <text>60</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto: 12 × 5 = 60.</p>]]></text>
+      </feedback>
+    </answer>
+    <tolerance>0</tolerance>
+  </question>
+</quiz>

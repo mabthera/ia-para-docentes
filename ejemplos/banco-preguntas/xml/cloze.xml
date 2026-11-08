@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="cloze">
+    <name>
+      <text>013 Cloze - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa este resumen del mito de la caverna. Los {1:MULTICHOICE:%100%prisioneros~guardianes~poetas} permanecen encadenados y solo ven {1:SHORTANSWER:=sombras~=las sombras~reflejos} sobre la pared. Si en una escena hay 4 cautivos y cada uno distingue 3 figuras, el total de imágenes percibidas es {1:NUMERICAL:=12:0}.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Esta pregunta Cloze mezcla tres subtipos: opción múltiple, respuesta corta y respuesta numérica.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>3.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+  </question>
+</quiz>

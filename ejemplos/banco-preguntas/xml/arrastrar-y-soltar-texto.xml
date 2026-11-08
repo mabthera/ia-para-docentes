@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="ddwtos">
+    <name>
+      <text>016 Arrastrar y soltar sobre texto - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa la escena del mito: Los [[1]] solo ven [[2]] y desconocen el [[3]].</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La actividad diferencia entre la apariencia, sus sujetos y la verdad exterior.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>3.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>1</shuffleanswers>
+    <dragbox>
+      <text>prisioneros</text>
+      <group>1</group>
+      <infinite/>
+    </dragbox>
+    <dragbox>
+      <text>sombras</text>
+      <group>2</group>
+      <infinite/>
+    </dragbox>
+    <dragbox>
+      <text>exterior</text>
+      <group>3</group>
+      <infinite/>
+    </dragbox>
+    <dragbox>
+      <text>filósofos</text>
+      <group>1</group>
+    </dragbox>
+    <dragbox>
+      <text>cadenas</text>
+      <group>2</group>
+    </dragbox>
+    <dragbox>
+      <text>fuego</text>
+      <group>3</group>
+    </dragbox>
+  </question>
+</quiz>

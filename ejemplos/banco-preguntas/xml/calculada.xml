@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="calculated">
+    <name>
+      <text>018 Calculada - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una escena del mito de la caverna hay <strong>{prisioneros}</strong> prisioneros encadenados y cada uno distingue <strong>{sombras}</strong> sombras proyectadas en la pared. ¿Cuántas imágenes contempla el grupo en total?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La cantidad total se obtiene multiplicando el número de prisioneros por el número de sombras que percibe cada uno.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <synchronize>0</synchronize>
+    <single>1</single>
+    <answernumbering>abc</answernumbering>
+    <shuffleanswers>1</shuffleanswers>
+    <correctfeedback format="html">
+      <text><![CDATA[<p>Correcto: has aplicado la multiplicación adecuada.</p>]]></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text><![CDATA[<p>Hay parte del razonamiento bien, pero revisa la operación.</p>]]></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text><![CDATA[<p>No. Debes multiplicar el número de prisioneros por las sombras vistas por cada uno.</p>]]></text>
+    </incorrectfeedback>
+    <answer fraction="100">
+      <text>{prisioneros}*{sombras}</text>
+      <tolerance>0</tolerance>
+      <tolerancetype>1</tolerancetype>
+      <correctanswerformat>1</correctanswerformat>
+      <correctanswerlength>4</correctanswerlength>
+      <feedback format="html">
+        <text><![CDATA[<p>Muy bien.</p>]]></text>
+      </feedback>
+    </answer>
+    <dataset_definitions>
+      <dataset_definition>
+        <status>
+          <text>private</text>
+        </status>
+        <name>
+          <text>prisioneros</text>
+        </name>
+        <type>calculated</type>
+        <distribution>
+          <text>uniform</text>
+        </distribution>
+        <minimum>
+          <text>3</text>
+        </minimum>
+        <maximum>
+          <text>8</text>
+        </maximum>
+        <decimals>
+          <text>0</text>
+        </decimals>
+        <itemcount>5</itemcount>
+        <dataset_items>
+          <dataset_item>
+            <number>1</number>
+            <value>3</value>
+          </dataset_item>
+          <dataset_item>
+            <number>2</number>
+            <value>4</value>
+          </dataset_item>
+          <dataset_item>
+            <number>3</number>
+            <value>5</value>
+          </dataset_item>
+          <dataset_item>
+            <number>4</number>
+            <value>6</value>
+          </dataset_item>
+          <dataset_item>
+            <number>5</number>
+            <value>8</value>
+          </dataset_item>
+        </dataset_items>
+        <number_of_items>5</number_of_items>
+      </dataset_definition>
+      <dataset_definition>
+        <status>
+          <text>private</text>
+        </status>
+        <name>
+          <text>sombras</text>
+        </name>
+        <type>calculated</type>
+        <distribution>
+          <text>uniform</text>
+        </distribution>
+        <minimum>
+          <text>2</text>
+        </minimum>
+        <maximum>
+          <text>7</text>
+        </maximum>
+        <decimals>
+          <text>0</text>
+        </decimals>
+        <itemcount>5</itemcount>
+        <dataset_items>
+          <dataset_item>
+            <number>1</number>
+            <value>2</value>
+          </dataset_item>
+          <dataset_item>
+            <number>2</number>
+            <value>3</value>
+          </dataset_item>
+          <dataset_item>
+            <number>3</number>
+            <value>4</value>
+          </dataset_item>
+          <dataset_item>
+            <number>4</number>
+            <value>5</value>
+          </dataset_item>
+          <dataset_item>
+            <number>5</number>
+            <value>7</value>
+          </dataset_item>
+        </dataset_items>
+        <number_of_items>5</number_of_items>
+      </dataset_definition>
+    </dataset_definitions>
+  </question>
+</quiz>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="gapselect">
+    <name>
+      <text>015 Seleccionar palabras que faltan - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En la caverna, los [[1]] contemplan [[2]] mientras una [[3]] arde a sus espaldas.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La frase resume a los sujetos, lo que ven y la fuente de luz interior del mito.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>3.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>1</shuffleanswers>
+    <selectoption>
+      <text>prisioneros</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>sombras</text>
+      <group>2</group>
+    </selectoption>
+    <selectoption>
+      <text>hoguera</text>
+      <group>3</group>
+    </selectoption>
+    <selectoption>
+      <text>filósofos</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>ideas</text>
+      <group>2</group>
+    </selectoption>
+    <selectoption>
+      <text>salida</text>
+      <group>3</group>
+    </selectoption>
+  </question>
+</quiz>

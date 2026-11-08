@@ -1,0 +1,20 @@
+::001 Escolla múltiple - caverna::En el mito de la caverna, ¿qué contemplan directamente los prisioneros encadenados en la pared del fondo? {=Sombras proyectadas#Correcto: los cautivos solo perciben sombras y las toman por reales. ~El sol exterior#No: el sol pertenece al mundo exterior, al que todavía no acceden. ~Las Ideas puras#No: las Ideas no son visibles para los prisioneros encadenados. ~El mar Egeo#No: ese elemento no forma parte del relato platónico.}
+
+::003 Verdadero/Falso - caverna::En el mito de la caverna, el prisionero liberado vuelve a la cueva para intentar contar a los demás lo que ha visto fuera. {TRUE#No: Platón sí presenta el regreso del liberado a la cueva.#Correcto: ese retorno simboliza la tarea del filósofo que intenta educar a los demás.}
+
+::005 Resposta curta - caverna::¿Qué elemento situado detrás de los prisioneros produce la iluminación que hace visibles las sombras? {=fuego#Correcto: la fuente de luz interior de la cueva es el fuego. =hoguera#Correcto: la hoguera ilumina las figuras y proyecta las sombras. =una hoguera#Correcto: esa es la fuente de luz que aparece en el mito.}
+
+::007 Numérica - caverna::En una versión didáctica del mito hay 12 prisioneros y cada uno distingue 5 sombras diferentes en la pared. Si no repetimos ninguna, ¿cuántas visiones se cuentan en total? {#
+=60:0#Correcto: 12 prisioneros por 5 sombras cada uno suman 60 visiones.
+=%50%17:0#Has sumado 12 y 5, pero aquí había que multiplicar.
+####Para resolverla, multiplica el número de prisioneros por el número de sombras que ve cada uno.
+}
+
+::009 Práctica - caverna::Explica por qué el regreso del prisionero liberado a la cueva simboliza la dificultad de educar a quienes viven entre sombras. {}
+
+::011 Coincidentes - caverna::Relaciona cada elemento del mito con su función principal. {
+=Sombras -> Apariencias engañosas
+=Fuego -> Fuente de la luz interior
+=Exterior -> Ámbito de la verdad
+=Cadenas -> Condición de ignorancia
+}

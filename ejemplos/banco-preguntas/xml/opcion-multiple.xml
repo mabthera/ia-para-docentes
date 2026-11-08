@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>002 Escolla múltiple - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En el mito de la caverna, ¿qué contemplan directamente los prisioneros encadenados en la pared del fondo?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Los prisioneros solo perciben apariencias: las sombras.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text><![CDATA[<p>Correcto.</p>]]></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text><![CDATA[<p>Revisa el símbolo central del mito.</p>]]></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text><![CDATA[<p>No. Los prisioneros no acceden todavía a la realidad exterior.</p>]]></text>
+    </incorrectfeedback>
+    <answer fraction="100">
+      <text>Sombras proyectadas</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Así es: solo ven sombras.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>El sol exterior</text>
+      <feedback format="html">
+        <text><![CDATA[<p>El sol pertenece al mundo exterior, no a la cueva.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Las Ideas puras</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Esa es la meta filosófica, no la experiencia inicial de los cautivos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>El mar Egeo</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ese elemento no forma parte del relato.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

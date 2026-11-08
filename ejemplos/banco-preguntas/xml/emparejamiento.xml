@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="matching">
+    <name>
+      <text>012 Coincidentes - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Relaciona cada elemento del mito con su función principal.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>La pregunta repasa los símbolos esenciales del relato platónico.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion>
+      <text>Sombras</text>
+      <answer>
+        <text>Apariencias engañosas</text>
+      </answer>
+    </subquestion>
+    <subquestion>
+      <text>Fuego</text>
+      <answer>
+        <text>Fuente de la luz interior</text>
+      </answer>
+    </subquestion>
+    <subquestion>
+      <text>Exterior</text>
+      <answer>
+        <text>Ámbito de la verdad</text>
+      </answer>
+    </subquestion>
+    <subquestion>
+      <text>Cadenas</text>
+      <answer>
+        <text>Condición de ignorancia</text>
+      </answer>
+    </subquestion>
+  </question>
+</quiz>

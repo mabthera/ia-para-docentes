@@ -1,0 +1,1 @@
+::003 Verdadero/Falso - caverna::En el mito de la caverna, el prisionero liberado vuelve a la cueva para intentar contar a los demás lo que ha visto fuera. {TRUE#No: Platón sí presenta el regreso del liberado a la cueva.#Correcto: ese retorno simboliza la tarea del filósofo que intenta educar a los demás.}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="essay">
+    <name>
+      <text>010 Práctica - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Explica por qué el regreso del prisionero liberado a la cueva simboliza la dificultad de educar a quienes viven entre sombras.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Se espera una explicación razonada sobre verdad, educación y resistencia al cambio.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>
+</quiz>

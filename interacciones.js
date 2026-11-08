@@ -1,12 +1,15 @@
 const mensajes = {
   fundamentos: 'Una base para comprender cómo funciona la IA y tomar decisiones informadas sobre su uso.',
   online: 'Exploraremos herramientas web para crear, adaptar y revisar materiales docentes.',
+  proyectos: 'Un pequeño puente entre las herramientas online y el escritorio: organizar proyectos y consultar fuentes con GeminiNotebook.',
   escritorio: 'Conoceremos asistentes de escritorio que pueden ayudar a trabajar con archivos y crear recursos.',
   local: 'Una primera mirada a modelos y herramientas que pueden procesar información en el propio equipo.'
 };
 const botones = document.querySelectorAll('.phase');
 const descripcion = document.querySelector('#fase-descripcion');
 const volver = document.querySelector('.reset');
+const centro = document.querySelector('.phase-center');
+centro.addEventListener('click', () => volver.click());
 function seleccionar(fase) {
   document.body.dataset.fase = fase;
   botones.forEach(boton => boton.setAttribute('aria-pressed', String(boton.dataset.fase === fase)));
@@ -64,3 +67,5 @@ enlaceRecorrido.addEventListener('click', evento => {
   }
   animacionDesplazamiento = requestAnimationFrame(avanzar);
 });
+
+

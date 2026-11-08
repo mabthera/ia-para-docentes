@@ -126,3 +126,220 @@ footer { font-size: 11px; }
   .phase-list .phase-text strong { font-size: clamp(16px, 4vw, 20px); }
   .phase-list .phase-text small { font-size: clamp(13px, 3vw, 15px); }
 }
+
+/* Cinco etapas en pentágono; la fase 2.5 funciona como un puente visual más ligero. */
+.line-proyectos { stroke:#9b6f24; stroke-dasharray:6 7; }
+.phase[data-fase=proyectos] { --phase-color:#8a621e; --phase-hover:#f2ead8; }
+@media (min-width:851px) {
+  /* Centros de las cinco tarjetas situados en los vértices de un pentágono regular. */
+  .phase-list { display:block; position:relative; height:420px; max-height:none; min-height:420px; }
+  .phase-list .phase { position:absolute; left:50%; top:50%; right:auto; bottom:auto; width:clamp(210px,22%,250px); height:108px; min-height:108px; margin:0; padding:20px 14px; border-radius:24px; transform:translate(-50%,-50%); }
+  .phase-list .phase:nth-of-type(1) { left:50%; top:9.52%; }
+  .phase-list .phase:nth-of-type(2) { left:66.17%; top:37.5%; }
+  .phase-list .phase:nth-of-type(3) { left:60%; top:82.74%; width:clamp(205px,21%,235px); min-width:205px; max-width:235px; height:100px; min-height:100px; padding:17px 12px; border-radius:22px; }
+  .phase-list .phase:nth-of-type(4) { left:40%; top:82.74%; }
+  .phase-list .phase:nth-of-type(5) { left:33.83%; top:37.5%; }
+  .phase-list .phase[data-fase=proyectos] .phase-number { top:10px; left:13px; }
+  .phase-list .phase[data-fase=proyectos] .phase-arrow { top:9px; right:13px; font-size:17px; }
+  .phase-list .phase[data-fase=proyectos] .phase-text strong { font-size:clamp(15px,1.25vw,18px); line-height:1.15; }
+  .phase-list .phase[data-fase=proyectos] .phase-text small { font-size:12px; }
+}
+@media (max-width:850px) {
+  .phase-list { display:grid; position:relative; height:auto; min-height:0; max-height:none; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:auto; gap:13px; }
+  .phase-connectors,.phase-center { display:none; }
+  .phase-list .phase { position:relative; inset:auto; width:auto; min-width:0; max-width:none; height:auto; min-height:120px; margin:0; transform:none; padding:22px 14px; }
+  .phase-list .phase:nth-of-type(1) { grid-column:1; grid-row:1; }
+  .phase-list .phase:nth-of-type(2) { grid-column:2; grid-row:1; }
+  .phase-list .phase:nth-of-type(3) { grid-column:1 / 3; grid-row:2; justify-self:center; width:min(74%,360px); min-height:105px; padding:23px 14px 17px; border-radius:23px; }
+  .phase-list .phase:nth-of-type(4) { grid-column:1; grid-row:3; }
+  .phase-list .phase:nth-of-type(5) { grid-column:2; grid-row:3; }
+  .phase-list .phase[data-fase=proyectos] .phase-number { top:12px; left:15px; }
+  .phase-list .phase[data-fase=proyectos] .phase-arrow { top:10px; right:15px; font-size:18px; }
+  .phase-list .phase[data-fase=proyectos] .phase-text strong { font-size:clamp(16px,3.4vw,20px); line-height:1.15; }
+  .phase-list .phase[data-fase=proyectos] .phase-text small { font-size:13px; }
+}
+@media (max-width:420px) {
+  .phase-list .phase { padding-inline:9px; }
+  .phase-list .phase-text strong { font-size:clamp(15px,4.4vw,18px); }
+  .phase-list .phase-text small { font-size:12px; }
+  .phase-list .phase[data-fase=proyectos] { width:84%; }
+}
+
+
+
+/* Pentágono regular: los centros de las cinco tarjetas ocupan vértices equidistantes. */
+@media (min-width:851px) {
+  .journey { grid-template-rows:auto auto auto; }
+  .phase-list { width:min(100%,760px); height:760px; min-height:760px; max-width:760px; aspect-ratio:1; margin:0 auto; }
+  .phase-list .phase { left:auto; right:auto; top:auto; bottom:auto; width:30%; height:145px; min-height:145px; transform:translate(-50%,-50%); }
+  .phase-list .phase:nth-of-type(1) { left:50%; top:14%; }
+  .phase-list .phase:nth-of-type(2) { left:84.24%; top:38.88%; }
+  .phase-list .phase:nth-of-type(3) { left:71.16%; top:79.1%; width:26%; min-width:0; max-width:240px; height:112px; min-height:112px; padding:18px 14px; border-radius:24px; }
+  .phase-list .phase:nth-of-type(4) { left:28.84%; top:79.1%; }
+  .phase-list .phase:nth-of-type(5) { left:15.76%; top:38.88%; }
+}
+
+
+/* Núcleo protagonista y pestañas compactas en los vértices del pentágono regular. */
+@media (min-width:851px) {
+  .phase-list { width:min(100%,620px); height:620px; min-height:620px; max-width:620px; }
+  .phase-list .phase { display:grid; grid-template-columns:1fr auto; grid-template-rows:20px 1fr; align-items:start; justify-content:stretch; width:27%; height:112px; min-height:112px; padding:12px 14px; border-radius:20px; gap:3px 8px; }
+  .phase-list .phase[data-fase=fundamentos] { left:50%; top:18%; right:auto; bottom:auto; }
+  .phase-list .phase[data-fase=online] { left:80.5%; top:40.1%; right:auto; bottom:auto; }
+  .phase-list .phase[data-fase=proyectos] { left:68.8%; top:75.9%; right:auto; bottom:auto; width:27%; max-width:210px; height:108px; min-height:108px; }
+  .phase-list .phase[data-fase=escritorio] { left:31.2%; top:75.9%; right:auto; bottom:auto; }
+  .phase-list .phase[data-fase=local] { left:19.5%; top:40.1%; right:auto; bottom:auto; }
+  .phase-list .phase-number { position:static; grid-column:1; grid-row:1; justify-self:start; align-self:center; font-size:14px; }
+  .phase-list .phase-arrow { position:static; grid-column:2; grid-row:1; justify-self:end; align-self:center; font-size:17px; }
+  .phase-list .phase-text { grid-column:1 / 3; grid-row:2; align-self:center; width:100%; padding:2px 0 0; }
+  .phase-list .phase-text strong { font-size:clamp(16px,1.55vw,20px); line-height:1.15; }
+  .phase-list .phase-text small { font-size:12px; }
+  .phase-list .phase[data-fase=proyectos] .phase-text strong { font-size:clamp(15px,1.45vw,18px); }
+  .phase-center { width:clamp(170px,30%,188px); z-index:3; border:2px solid #fff; background:linear-gradient(145deg,#f9fbfc,#e1e8eb); box-shadow:18px 18px 38px #c9d2d7,-18px -18px 38px #fff; cursor:pointer; font:inherit; }
+  .phase-center span { font-size:clamp(48px,5vw,58px); font-weight:850; }
+  .phase-center small { font-size:11px; letter-spacing:.12em; }
+  .phase-center:hover { transform:translate(-50%,-50%) scale(1.035); }
+  .phase-center:focus-visible { outline:3px solid var(--accent); outline-offset:7px; }
+}
+@media (max-width:850px) {
+  .phase-list .phase[data-fase=fundamentos] { grid-column:1; grid-row:1; }
+  .phase-list .phase[data-fase=online] { grid-column:2; grid-row:1; }
+  .phase-list .phase[data-fase=proyectos] { grid-column:1 / 3; grid-row:2; }
+  .phase-list .phase[data-fase=escritorio] { grid-column:1; grid-row:3; }
+  .phase-list .phase[data-fase=local] { grid-column:2; grid-row:3; }
+}
+
+/* El recorrido completo cabe en una pantalla de presentación. */
+@media (min-width:851px) {
+  .journey {
+    height:100svh; min-height:100svh; max-height:100svh; box-sizing:border-box;
+    display:grid; grid-template-rows:auto minmax(0,1fr) auto;
+    gap:clamp(8px,1.5vh,14px); padding:clamp(18px,3vh,30px) 0; overflow:hidden;
+  }
+  .journey-heading { margin:0 auto; align-self:center; }
+  .phase-list {
+    width:min(100%,620px,calc(100svh - 190px)); height:auto; min-height:0;
+    max-height:none; aspect-ratio:1; margin:auto; align-self:center;
+  }
+  .phase-list .phase { height:clamp(88px,14svh,112px); min-height:0; padding:clamp(8px,1.4vh,12px) 12px; }
+  .phase-list .phase[data-fase=proyectos] { height:clamp(88px,13.5svh,108px); min-height:0; }
+  .phase-center { width:clamp(138px,30%,188px); }
+
+  /* El 04 comparte línea con «En local» para ahorrar altura. */
+  .phase-list .phase[data-fase=local] { grid-template-columns:auto 1fr; grid-template-rows:20px 1fr; }
+  .phase-list .phase[data-fase=local] .phase-number { grid-column:1; grid-row:2; justify-self:end; align-self:center; }
+  .phase-list .phase[data-fase=local] .phase-arrow { grid-column:1 / 3; grid-row:1; justify-self:end; }
+  .phase-list .phase[data-fase=local] .phase-text { grid-column:2; grid-row:2; justify-items:start; align-self:center; width:auto; padding:0; text-align:left; }
+  .phase-list .phase[data-fase=local] .phase-text strong { white-space:nowrap; }
+}
+
+/* Tarjetas horizontales: número y título en una línea, descripción debajo. */
+@media (min-width:851px) {
+  .phase-list { width:min(100%,620px,calc(100svh - 190px)); height:auto; min-height:0; max-height:none; aspect-ratio:1; }
+  .phase-list .phase {
+    display:grid; grid-template-columns:auto minmax(0,1fr) auto; grid-template-rows:1fr auto;
+    width:40%; height:clamp(80px,11.5svh,94px); min-height:0; padding:9px 10px;
+    align-items:center; justify-content:stretch; gap:4px 6px;
+  }
+  .phase-list .phase[data-fase=fundamentos] { left:50%; top:14%; }
+  .phase-list .phase[data-fase=online] { left:84.24%; top:38.88%; }
+  .phase-list .phase[data-fase=proyectos] { left:71.16%; top:79.1%; width:40%; height:clamp(80px,11.5svh,94px); }
+  .phase-list .phase[data-fase=escritorio] { left:28.84%; top:79.1%; }
+  .phase-list .phase[data-fase=local] { left:15.76%; top:38.88%; }
+  .phase-list .phase-number { position:static; grid-column:1; grid-row:1; justify-self:start; align-self:center; font-size:12px; }
+  .phase-list .phase-arrow { position:static; grid-column:3; grid-row:1; justify-self:end; align-self:center; font-size:14px; }
+  .phase-list .phase-text { display:contents; }
+  .phase-list .phase-text strong {
+    grid-column:2; grid-row:1; justify-self:start; align-self:center; min-width:0;
+    font-size:clamp(14px,1vw,16px); line-height:1.1; white-space:nowrap;
+  }
+  .phase-list .phase-text small {
+    grid-column:1 / 4; grid-row:2; justify-self:center; align-self:center;
+    font-size:12px; line-height:1.15; white-space:nowrap;
+  }
+  .phase-list .phase[data-fase=proyectos] .phase-text strong { font-size:clamp(12px,.72vw,13.5px); }
+  .phase-list .phase[data-fase=local] .phase-number { grid-column:1; grid-row:1; }
+  .phase-list .phase[data-fase=local] .phase-text strong { grid-column:2; grid-row:1; }
+  .phase-list .phase[data-fase=local] .phase-text small { grid-column:1 / 4; grid-row:2; }
+  .phase-center { width:clamp(160px,29%,180px); }
+}
+
+/* Accesos en recorrido vertical junto al núcleo de marca; evita textos comprimidos en órbita. */
+@media (min-width:851px) {
+  .journey {
+    height:100svh; min-height:100svh; max-height:100svh; box-sizing:border-box;
+    grid-template-rows:auto minmax(0,1fr) auto; gap:clamp(8px,1.5vh,14px);
+    padding:clamp(18px,3vh,30px) 0; overflow:hidden;
+  }
+  .phase-list {
+    display:grid; position:relative; width:min(100%,1050px); height:auto; min-height:0;
+    max-height:none; aspect-ratio:auto; margin:auto; align-self:center;
+    grid-template-columns:minmax(220px,.62fr) minmax(0,1.38fr);
+    grid-template-rows:72px 72px 56px 72px 72px; gap:8px 30px;
+  }
+  .phase-connectors { display:none; }
+  .phase-center {
+    position:relative; left:auto; top:auto; transform:none; grid-column:1; grid-row:1 / 6;
+    justify-self:center; align-self:center; width:clamp(190px,19vw,230px); z-index:2;
+    border:2px solid #fff; background:linear-gradient(145deg,#f9fbfc,#e1e8eb);
+    box-shadow:18px 18px 38px #c9d2d7,-18px -18px 38px #fff; cursor:pointer; font:inherit;
+  }
+  .phase-center span { font-size:clamp(54px,5vw,68px); font-weight:850; }
+  .phase-center small { font-size:11px; letter-spacing:.12em; }
+  .phase-center:hover { transform:scale(1.025); }
+  .phase-list .phase {
+    position:relative; left:auto; right:auto; top:auto; bottom:auto; transform:none;
+    grid-column:2; width:min(100%,680px); height:72px; min-height:0; margin:0;
+    display:grid; grid-template-columns:38px minmax(0,1fr) 24px; grid-template-rows:1fr;
+    align-items:center; justify-content:stretch; gap:0 12px; padding:10px 16px;
+    border-left:3px solid var(--phase-color); border-radius:17px; text-align:left;
+  }
+  .phase-list .phase[data-fase=fundamentos],
+  .phase-list .phase[data-fase=online],
+  .phase-list .phase[data-fase=proyectos],
+  .phase-list .phase[data-fase=escritorio],
+  .phase-list .phase[data-fase=local] {
+    position:relative; inset:auto; transform:none; grid-column:2;
+    width:min(100%,680px); max-width:680px; min-width:0; height:72px; min-height:0;
+    margin:0; padding:10px 16px;
+  }
+  .phase-list .phase[data-fase=fundamentos] { grid-row:1; }
+  .phase-list .phase[data-fase=online] { grid-row:2; }
+  .phase-list .phase[data-fase=escritorio] { grid-row:4; }
+  .phase-list .phase[data-fase=local] { grid-row:5; }
+  .phase-list .phase-number { position:static; grid-column:1; grid-row:1; justify-self:center; align-self:center; font-size:13px; }
+  .phase-list .phase-text { display:grid; grid-column:2; grid-row:1; grid-template-columns:1fr; grid-template-rows:auto auto; gap:3px; width:auto; justify-items:start; text-align:left; }
+  .phase-list .phase-text strong { grid-column:1; grid-row:1; font-size:17px; line-height:1.15; white-space:nowrap; }
+  .phase-list .phase-text small { grid-column:1; grid-row:2; font-size:12px; line-height:1.2; white-space:nowrap; }
+  .phase-list .phase-arrow { position:static; grid-column:3; grid-row:1; justify-self:center; font-size:18px; }
+  .phase-list .phase[data-fase=proyectos] {
+    grid-row:3; width:min(calc(100% - 42px),560px); height:56px; justify-self:start;
+    margin-left:42px; padding:7px 14px; grid-template-columns:34px minmax(0,1fr) 20px;
+    border-left:3px solid var(--phase-color); border-radius:15px;
+  }
+  .phase-list .phase[data-fase=proyectos] .phase-text { gap:2px; }
+  .phase-list .phase[data-fase=proyectos] .phase-text strong { font-size:14px; }
+  .phase-list .phase[data-fase=proyectos] .phase-text small { font-size:11px; }
+  .phase-list .phase[data-fase=proyectos] .phase-number { font-size:12px; }
+  .phase-list .phase[data-fase=proyectos] .phase-arrow { font-size:16px; }
+
+  /* Los cuatro accesos principales comparten la misma estructura. */
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) {
+    grid-template-columns:38px minmax(0,1fr) 24px; grid-template-rows:1fr;
+  }
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) .phase-number {
+    grid-column:1; grid-row:1; justify-self:center; align-self:center;
+  }
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) .phase-arrow {
+    grid-column:3; grid-row:1; justify-self:center; align-self:center;
+  }
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) .phase-text {
+    display:grid; grid-column:2; grid-row:1; width:auto; padding:0; justify-items:start; text-align:left;
+  }
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) .phase-text strong {
+    grid-column:1; grid-row:1; justify-self:start;
+  }
+  .phase-list .phase:is([data-fase=fundamentos],[data-fase=online],[data-fase=escritorio],[data-fase=local]) .phase-text small {
+    grid-column:1; grid-row:2; justify-self:start;
+  }
+}

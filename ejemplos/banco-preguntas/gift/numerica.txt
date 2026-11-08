@@ -1,0 +1,5 @@
+::007 Numérica - caverna::En una versión didáctica del mito hay 12 prisioneros y cada uno distingue 5 sombras diferentes en la pared. Si no repetimos ninguna, ¿cuántas visiones se cuentan en total? {#
+=60:0#Correcto: 12 prisioneros por 5 sombras cada uno suman 60 visiones.
+=%50%17:0#Has sumado 12 y 5, pero aquí había que multiplicar.
+####Para resolverla, multiplica el número de prisioneros por el número de sombras que ve cada uno.
+}

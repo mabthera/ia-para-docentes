@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name><text>Revolución</text></name>
+    <questiontext format="html"><text>¿Cuándo estalló la Revolución Francesa?</text></questiontext>
+    <single>true</single>
+    <answer fraction="100"><text>1789</text></answer>
+    <answer fraction="0"><text>1808</text></answer>
+  </question>
+</quiz>

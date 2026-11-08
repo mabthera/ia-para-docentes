@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="truefalse">
+    <name>
+      <text>004 Verdadero/Falso - caverna</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En el mito de la caverna, el prisionero liberado vuelve a la cueva para intentar contar a los demás lo que ha visto fuera.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>El regreso del liberado representa la tarea filosófica y educativa.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>No: Platón sí presenta ese retorno a la cueva.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>
