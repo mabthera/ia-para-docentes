@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cuestionario breve para conocer la experiencia del profesorado con la inteligencia artificial en tareas educativas.">
+  <title>Encuesta inicial · IA para docentes</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="portada.css">
+  <link rel="stylesheet" href="fundamentos.css">
+  <link rel="stylesheet" href="encuesta.css">
+  <link rel="stylesheet" href="licencia.css?v=2">
+  <script src="encuesta.js" defer></script>
+  <script src="licencia.js?v=2" defer></script>
+</head>
+<body data-fase="fundamentos">
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Volver al inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
+      <span class="top-note"><span class="status-dot"></span> PUNTO DE PARTIDA</span>
+      <a class="volver" href="fundamentos.html#cierre">← Volver a Fundamentos</a>
+    </header>
+
+    <main class="survey-page">
+      <section class="survey-intro" aria-labelledby="survey-title">
+        <div>
+          <p class="kicker"><span>5 MIN</span> ENCUESTA BREVE</p>
+          <h1 id="survey-title">IA en tareas<br><em>docentes</em><span class="red">.</span></h1>
+          <p class="survey-lead">Un punto de partida para adaptar las prácticas a la experiencia del grupo.</p>
+        </div>
+        <aside class="survey-note">
+          <span class="survey-note-mark" aria-hidden="true">01</span>
+          <p>Responde según lo que has hecho antes de esta formación. En las situaciones, elige lo que harías ahora.</p>
+          <small>No es un examen. No escribas nombres ni datos reales del alumnado.</small>
+        </aside>
+      </section>
+
+      <form id="diagnostic-form" novalidate>
+        <div class="survey-honeypot" aria-hidden="true">
+          <label for="website">Deja este campo vacío</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <fieldset class="survey-card" id="experiencia">
+          <legend><span class="question-number">01</span> ¿Qué has hecho por tu cuenta con herramientas de IA?</legend>
+          <p class="question-hint">Marca todas las opciones que correspondan.</p>
+          <div class="option-list check-list">
+            <label class="answer-option"><input type="checkbox" name="experiencia" value="material"><span>He pedido un material para clase y después he solicitado cambios concretos.</span></label>
+            <label class="answer-option"><input type="checkbox" name="experiencia" value="verificacion"><span>He comprobado afirmaciones de una respuesta con las fuentes originales.</span></label>
+            <label class="answer-option"><input type="checkbox" name="experiencia" value="fuentes"><span>He añadido documentos como fuentes y he hecho preguntas sobre su contenido.</span></label>
+            <label class="answer-option"><input type="checkbox" name="experiencia" value="archivos"><span>He usado un asistente para trabajar con archivos de mi ordenador.</span></label>
+            <label class="answer-option"><input type="checkbox" name="experiencia" value="local"><span>He probado un modelo configurado para funcionar en el propio equipo.</span></label>
+            <label class="answer-option answer-unsure"><input type="checkbox" name="experiencia" value="ninguna"><span>Aún no he probado estas tareas.</span></label>
+          </div>
+          <p class="field-error" data-error-for="experiencia" hidden>Elige al menos una opción.</p>
+        </fieldset>
+
+        <fieldset class="survey-card">
+          <legend><span class="question-number">02</span> Una respuesta de IA incluye un dato importante para tu clase. ¿Qué harías?</legend>
+          <div class="option-list">
+            <label class="answer-option"><input type="radio" name="fundamentos" value="fluidez"><span>Usaría el dato si la explicación está bien redactada y parece coherente.</span></label>
+            <label class="answer-option"><input type="radio" name="fundamentos" value="contrastaria" required><span>Lo trataría como una propuesta y contrastaría el dato antes de utilizarlo.</span></label>
+            <label class="answer-option"><input type="radio" name="fundamentos" value="citas"><span>Revisaría las citas que aparecen y escogería la que parece más completa.</span></label>
+            <label class="answer-option"><input type="radio" name="fundamentos" value="actualidad"><span>Preguntaría al mismo asistente si está seguro antes de decidir.</span></label>
+            <label class="answer-option answer-unsure"><input type="radio" name="fundamentos" value="no-se"><span>No estoy seguro/a; no sabría decidirlo todavía.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-card">
+          <legend><span class="question-number">03</span> Quieres adaptar una noticia pública para comprensión lectora en 2.º de ESO. ¿Qué petición orientarías primero?</legend>
+          <div class="option-list">
+            <label class="answer-option"><input type="radio" name="peticion" value="claro"><span>«Prepara un recurso claro, interesante y útil para una clase de secundaria».</span></label>
+            <label class="answer-option"><input type="radio" name="peticion" value="ficha"><span>«Convierte esta noticia en una ficha completa con actividades variadas».</span></label>
+            <label class="answer-option"><input type="radio" name="peticion" value="contexto" required><span>«Adapta esta noticia para 2.º de ESO, conserva las ideas clave y simplifica las frases».</span></label>
+            <label class="answer-option"><input type="radio" name="peticion" value="investiga"><span>«Busca información relacionada y prepara una actividad lista para imprimir».</span></label>
+            <label class="answer-option answer-unsure"><input type="radio" name="peticion" value="no-se"><span>No sabría qué información incluir en la petición.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-card">
+          <legend><span class="question-number">04</span> Tienes tres documentos públicos y quieres preparar una síntesis que puedas comprobar. ¿Qué flujo elegirías?</legend>
+          <div class="option-list">
+            <label class="answer-option"><input type="radio" name="fuentes" value="anadir-fuentes" required><span>Añadir los documentos, pedir una síntesis basada en ellos y revisar las referencias que ofrece.</span></label>
+            <label class="answer-option"><input type="radio" name="fuentes" value="resumen-general"><span>Pedir una síntesis general y comparar algunas afirmaciones con los documentos.</span></label>
+            <label class="answer-option"><input type="radio" name="fuentes" value="busqueda"><span>Buscar primero el tema en internet y guardar las páginas que parezcan más útiles.</span></label>
+            <label class="answer-option"><input type="radio" name="fuentes" value="pegar-fragmentos"><span>Copiar fragmentos y pedir una explicación acompañada de citas.</span></label>
+            <label class="answer-option answer-unsure"><input type="radio" name="fuentes" value="no-se"><span>No conozco este tipo de trabajo con fuentes.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-card">
+          <legend><span class="question-number">05</span> Un asistente puede leer y modificar archivos de una carpeta didáctica. ¿Cómo empezarías una tarea de edición?</legend>
+          <div class="option-list">
+            <label class="answer-option"><input type="radio" name="archivos" value="carpeta-completa"><span>Le daría acceso a la carpeta y revisaría los documentos principales al terminar.</span></label>
+            <label class="answer-option"><input type="radio" name="archivos" value="actualizar-directo"><span>Le pediría una lista de cambios y dejaría que actualizara directamente los archivos.</span></label>
+            <label class="answer-option"><input type="radio" name="archivos" value="resumen-manual"><span>Le pediría que resumiera la carpeta y haría yo los cambios manualmente.</span></label>
+            <label class="answer-option"><input type="radio" name="archivos" value="copia-acotada" required><span>Probaría con una copia y una tarea acotada, y revisaría los cambios antes de aceptarlos.</span></label>
+            <label class="answer-option answer-unsure"><input type="radio" name="archivos" value="no-se"><span>No he usado asistentes que trabajen con archivos.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-card">
+          <legend><span class="question-number">06</span> Quieres transcribir un vídeo ficticio con un modelo configurado para funcionar en tu equipo. ¿Qué afirmación describe mejor esta opción?</legend>
+          <div class="option-list">
+            <label class="answer-option"><input type="radio" name="local" value="no-sale"><span>Si la herramienta está instalada, el contenido y sus metadatos no pueden salir del equipo.</span></label>
+            <label class="answer-option"><input type="radio" name="local" value="matiz-local" required><span>Puede reducir el envío a servicios externos si todo el procesamiento es local; aún hay que revisar herramienta, equipo y normas.</span></label>
+            <label class="answer-option"><input type="radio" name="local" value="sin-internet"><span>Solo sirve si el equipo está desconectado de internet y se utiliza un modelo pequeño.</span></label>
+            <label class="answer-option"><input type="radio" name="local" value="quitar-nombres"><span>La privacidad depende sobre todo de quitar nombres antes de procesar el vídeo.</span></label>
+            <label class="answer-option answer-unsure"><input type="radio" name="local" value="no-conozco"><span>No conozco lo suficiente esta opción para responder.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-card survey-card-interest">
+          <legend><span class="question-number">07</span> ¿Qué dos prácticas te interesaría probar o mejorar?</legend>
+          <p class="question-hint">Elige hasta dos.</p>
+          <div class="option-list check-list">
+            <label class="answer-option"><input type="checkbox" name="interes" value="crear"><span>Crear o adaptar materiales con un asistente conversacional.</span></label>
+            <label class="answer-option"><input type="checkbox" name="interes" value="consultar"><span>Consultar y resumir documentos propios o fuentes seleccionadas.</span></label>
+            <label class="answer-option"><input type="checkbox" name="interes" value="archivos"><span>Pedir a un asistente que trabaje con archivos y revisar los cambios.</span></label>
+            <label class="answer-option"><input type="checkbox" name="interes" value="audio"><span>Probar generación o transcripción de audio en el propio equipo.</span></label>
+            <label class="answer-option"><input type="checkbox" name="interes" value="criterio"><span>Revisar respuestas de IA y decidir qué información se puede utilizar.</span></label>
+            <label class="answer-option answer-unsure"><input type="checkbox" name="interes" value="sin-preferencia"><span>Aún no lo tengo claro.</span></label>
+          </div>
+          <p class="field-error" data-error-for="interes" hidden>Elige como máximo dos opciones.</p>
+        </fieldset>
+
+        <fieldset class="survey-card survey-card-open">
+          <legend><span class="question-number">08</span> Escribe una petición breve que probarías con una IA para una tarea docente.</legend>
+          <p class="question-hint">Una frase. No incluyas datos reales del alumnado.</p>
+          <label class="visually-hidden" for="peticion-propia">Tu petición para una IA</label>
+          <textarea id="peticion-propia" name="peticion-propia" maxlength="240" rows="3" placeholder="Por ejemplo: Prepara una actividad de ciencias para 1.º de ESO a partir de este texto público…"></textarea>
+          <div class="character-count"><span id="character-count">0</span>/240</div>
+        </fieldset>
+
+        <div class="survey-submit-area">
+          <p class="survey-privacy-note">La respuesta se enviará de forma anónima para adaptar el ritmo de la formación. No incluyas datos identificativos.</p>
+          <button class="survey-submit" type="submit">Finalizar <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+        </div>
+      </form>
+
+      <nav class="survey-bottom-nav" aria-label="Navegación del cuestionario">
+        <a href="fundamentos.html#cierre">← Volver al cierre de Fundamentos</a>
+        <a href="index.html#recorrido">Ver el recorrido del curso ↗</a>
+      </nav>
+    </main>
+
+    <footer><span>IA PARA DOCENTES <span class="slash">/</span> DAVID RODRÍGUEZ</span><span>ENCUESTA DE PARTIDA · 5 MINUTOS</span></footer>
+  </div>
+</body>
+</html>
+
