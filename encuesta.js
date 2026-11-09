@@ -3,7 +3,7 @@ const experiencia = [...formulario.querySelectorAll('input[name="experiencia"]')
 const interes = [...formulario.querySelectorAll('input[name="interes"]')];
 const estado = document.querySelector('#form-status');
 const botonEnviar = formulario.querySelector('.survey-submit');
-const URL_RECEPTOR = '__URL_APPS_SCRIPT__';
+const URL_RECEPTOR = 'https://script.google.com/macros/s/AKfycbxJXkLdEpmXJliR2jhC6B0ezPaAO0rmKsW7TpbStGu5HZwZeNHMKd5ha4xE9VGO53XaUQ/exec';
 
 const casillaNinguna = experiencia.find(casilla => casilla.value === 'ninguna');
 experiencia.forEach(casilla => casilla.addEventListener('change', () => {
@@ -79,13 +79,6 @@ formulario.addEventListener('submit', async evento => {
     formulario.reportValidity();
     return;
   }
-  if (URL_RECEPTOR === '__URL_APPS_SCRIPT__') {
-    estado.hidden = false;
-    estado.textContent = 'El envío todavía no está configurado. Vuelve a intentarlo más adelante.';
-    estado.focus();
-    return;
-  }
-
   botonEnviar.disabled = true;
   formulario.setAttribute('aria-busy', 'true');
   estado.hidden = false;
