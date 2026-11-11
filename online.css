@@ -140,6 +140,10 @@ body[data-fase="online"] .slide-hook p, body[data-fase="online"] .drawer-arrow {
 @media (max-width:850px) { #investigacion .research-compare { grid-template-columns:1fr; } #investigacion .source-review-steps { grid-template-columns:1fr; } }
 #investigacion .research-quote { margin-top:4px; font-family:Georgia,'Times New Roman',serif; font-style:italic; }
 #investigacion .research-quote strong { color:var(--accent); font-weight:700; }
+.research-prompt { margin:14px 0 20px; border:1px solid #c9dfdc; border-radius:15px; background:#f1f8f7; }
+.research-prompt > summary { padding:15px 18px; color:#176b6f; font-weight:750; cursor:pointer; }
+.research-prompt[open] > summary { border-bottom:1px solid #c9dfdc; }
+.research-prompt .prompt { margin:14px; }
 /* Dos decisiones distintas: calidad pedagógica y formato técnico de importación. */
 #preguntas .question-stages { display:grid; gap:14px; margin-top:10px; }
 #preguntas .question-stage { padding:0 0 12px; border:0; border-bottom:1px solid #d7e1e2; border-radius:0; background:transparent; }

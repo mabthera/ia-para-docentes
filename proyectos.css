@@ -1,0 +1,704 @@
+/* Estilos específicos de la Fase 02.5: Proyectos y Gemini Notebook */
+body[data-fase="proyectos"] {
+  --accent: #9b6f24;
+  --accent-soft: #eadbb7;
+}
+
+body[data-fase="proyectos"] .chapter-nav a:hover,
+body[data-fase="proyectos"] .chapter-nav a:focus-visible,
+body[data-fase="proyectos"] .chapter-nav a[aria-current] {
+  color: #724e12;
+  background: #f7eed8;
+}
+
+body[data-fase="proyectos"] .slide-aside .open-drawer {
+  border-left-color: var(--accent);
+  background: #f9f5ec;
+  color: #5d4213;
+}
+
+body[data-fase="proyectos"] .slide-aside .open-drawer:hover {
+  background: #f2e9d2;
+}
+
+body[data-fase="proyectos"] .slide-aside .open-drawer.bridge-expansion-link {
+  border-left-color: #374b99;
+  background: #e4e7f7;
+  color: #374b99;
+}
+body[data-fase="proyectos"] .slide-aside .open-drawer.bridge-expansion-link:hover { background: #d9def2; }
+body[data-fase="proyectos"] .slide-aside .open-drawer.bridge-expansion-link .drawer-arrow { color: #374b99; }
+
+body[data-fase="proyectos"] .slide-aside .open-drawer.legal-expansion-link {
+  border-left-color: #a52d2b;
+  background: #fae9e7;
+  color: #6d302e;
+}
+
+body[data-fase="proyectos"] .slide-aside .open-drawer.legal-expansion-link:hover {
+  background: #f2dcda;
+}
+
+body[data-fase="proyectos"] .slide-aside .open-drawer.legal-expansion-link .drawer-arrow {
+  color: #a52d2b;
+}
+
+body[data-fase="proyectos"] .drawer-content.legal-expansion-content .legal-expansion-intro {
+  padding: 18px 22px;
+  border-left: 4px solid #a52d2b;
+  border-radius: 0 15px 15px 0;
+  background: #fae9e7;
+  color: #6d302e;
+}
+
+body[data-fase="proyectos"] .drawer-content a,
+body[data-fase="proyectos"] .close-drawer {
+  color: #7b5617;
+}
+
+body[data-fase="proyectos"] .drawer-content strong {
+  color: #4b350b;
+}
+
+body[data-fase="proyectos"] .drawer-example,
+body[data-fase="proyectos"] .prompt {
+  border-left: 4px solid var(--accent);
+  background: #faf5ea;
+}
+
+#recetas .secret-codes-opening {
+  margin: 10px 0 22px;
+  padding: 18px 22px;
+  border-left: 5px solid var(--accent);
+  border-radius: 0 15px 15px 0;
+  background: linear-gradient(110deg, #f7edd8, #fbf9f4);
+}
+#recetas .secret-codes-opening > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #805a18;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+#recetas .secret-codes-opening > strong {
+  display: block;
+  color: #684b17;
+  font: 700 25px/1.2 Georgia, 'Times New Roman', serif;
+}
+#recetas .secret-codes-opening p { margin: 9px 0 0; color: #514633; font-size: 16px; line-height: 1.55; }
+
+body[data-fase="proyectos"] .slide-hook p,
+body[data-fase="proyectos"] .drawer-arrow {
+  color: var(--accent);
+}
+
+.slide-navigation span {
+  color: #756a5c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.prompt {
+  margin: 22px 0;
+  padding: 18px 20px;
+  border-radius: 0 15px 15px 0;
+}
+
+.prompt > strong {
+  display: block;
+  color: #7b5617 !important;
+  font-size: 14px;
+}
+
+.prompt pre,
+.drawer-content pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #3b3123;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.copy {
+  padding: 9px 13px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: #fdfaf4;
+  color: #7b5617;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.copy:hover {
+  background: #ebdcc0;
+}
+
+.copy:focus-visible,
+.open-drawer:focus-visible,
+.close-drawer:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.copy-status {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 13px;
+  color: #5d4213;
+}
+
+@media (min-width: 851px) and (min-height: 560px) {
+  .slide:not(.cover) .slide-body .slide-content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .slide-body {
+    display: contents;
+  }
+  .slide-aside {
+    margin-top: 25px;
+  }
+  .slide-navigation {
+    margin-top: 28px;
+  }
+}
+
+.visual-flow,
+.visual-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+.visual-flow span,
+.visual-tags span {
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #f7f1e4;
+  color: #5f4414;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.visual-flow b {
+  color: var(--accent);
+}
+
+.visual-flow small {
+  color: #736149;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Remates destacados de cada diapositiva, siguiendo el formato de IA Online. */
+#recorrido-proyectos .slide-content > .takeaway {
+  margin: 11px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(110deg, rgba(234, 219, 183, .38), rgba(238, 241, 243, 0));
+  color: #554a38;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#recorrido-proyectos .slide-content > .takeaway strong {
+  color: #765419;
+  font-weight: 700;
+}
+
+@media (min-width: 851px) and (max-height: 700px) {
+  #recorrido-proyectos .slide-content > .takeaway {
+    margin-top: 8px;
+    padding: 8px 11px;
+  }
+}
+
+/* Cada diapositiva usa una composición que responde a su idea principal. */
+#archivos .context-points,
+#cuadernos .notebook-flow {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#archivos .context-points { display: grid; gap: 0; }
+#archivos .context-points li,
+#cuadernos .notebook-flow li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 9px 0;
+  border-bottom: 1px solid #e3dac8;
+}
+
+#archivos .context-points li:last-child,
+#cuadernos .notebook-flow li:last-child { border-bottom: 0; }
+#archivos .context-points li > span,
+#cuadernos .notebook-step {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #efe2c3;
+  color: #765419;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#archivos .context-points strong,
+#cuadernos .notebook-flow h3 { color: #684b17; font-size: 16px; }
+#archivos .context-points p,
+#cuadernos .notebook-flow p { margin: 2px 0 0; color: #554a38; line-height: 1.4; }
+
+#proyectos .project-question { display: flex; justify-content: center; align-items: center; gap: 9px; margin: 16px 0 0; color: #51432d; font-size: 22px; font-weight: 650; text-align: center; }
+#proyectos .project-question-chip { display: inline-block; padding: 7px 12px; border: 1px solid #d7bf88; border-radius: 999px; background: linear-gradient(145deg, #f7edd8, #eee0bd); box-shadow: 4px 4px 9px #d5d8d7, -3px -3px 8px #fff; color: #684b17; font-size: 17px; font-weight: 800; line-height: 1.15; white-space: nowrap; }
+#proyectos .project-question b { color: #9b6f24; font-size: 20px; }
+#proyectos .project-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 12px; margin: 6px 0 0; }
+#proyectos .project-examples article { padding: 8px 0 9px; border-bottom: 1px solid #d9d9d3; }
+#proyectos .project-examples h4 { margin: 0 0 3px; color: #805a18; font-size: 18px; font-weight: 850; letter-spacing: .035em; line-height: 1.2; }
+#proyectos .project-files-label { display: block; margin-bottom: 3px; color: #6c665b; font-size: 10px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+#proyectos .project-examples ul { display: grid; gap: 1px; margin: 0; padding-left: 16px; color: #4c5354; font-size: 12px; line-height: 1.28; }
+#proyectos .project-examples li::marker { color: #9b6f24; }
+
+#proyectos .project-purpose-symbol { display: grid; place-items: center; width: 100%; margin: 12px 0 5px; }
+#proyectos .project-purpose-symbol svg { display: block; width: min(100%, 255px); max-height: 215px; filter: drop-shadow(7px 10px 8px #d3d7d6); }
+#proyectos .project-purpose-caption { display: grid; gap: 9px; margin: 10px 0 0; text-align: center; }
+#proyectos .project-purpose-caption strong { display: block; color: #684b17; font: 700 19px/1.3 Georgia, 'Times New Roman', serif; }
+
+@media (min-width: 851px) {
+  #proyectos .slide-aside > .slide-hook {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: minmax(120px, .9fr) minmax(145px, 1.1fr);
+    align-items: center;
+    column-gap: 14px;
+    padding: 19px 21px;
+  }
+  #proyectos .slide-aside > .slide-hook > p { grid-column: 1 / -1; margin: 0 0 3px; }
+  #proyectos .slide-aside > .extras { margin-top: auto; }
+  #proyectos .project-purpose-symbol { margin: 0; }
+  #proyectos .project-purpose-symbol svg { width: min(100%, 150px); max-height: 120px; }
+  #proyectos .project-purpose-caption { gap: 8px; margin: 0; text-align: left; }
+  #proyectos .project-purpose-caption strong { font-size: 18px; line-height: 1.2; }
+}
+
+#recetas .recipe-shortcut-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 8px 0 2px;
+}
+#recetas .recipe-shortcut-stage { display: grid; justify-items: center; gap: 4px; min-width: 0; text-align: center; }
+#recetas .recipe-shortcut-stage svg { display: block; width: min(100%, 145px); height: auto; }
+#recetas .recipe-shortcut-stage strong { font: 800 11px/1.2 Inter, Arial, sans-serif; letter-spacing: .08em; }
+#recetas .recipe-shortcut-before strong { color: #a83d39; }
+#recetas .recipe-shortcut-after strong { color: #28724e; }
+#recetas .recipe-shortcut-after code { color: #28724e; background: transparent; font: 750 11px/1.2 Inter, Arial, sans-serif; white-space: nowrap; }
+#recetas .recipe-shortcut-arrow { color: #78877f; font-size: 22px; font-weight: 700; text-align: center; }
+
+#recetas .recipe-builder {
+  margin: 17px 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+#recetas .recipe-caption { margin: 0 0 12px; color: #805a18; font-size: 18px; line-height: 1.25; text-align: center; }
+#recetas .recipe-caption strong { font-weight: 850; }
+#recetas .recipe-command { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 9px; }
+#recetas .recipe-command code { display: inline-block; padding: 9px 12px; border: 1px solid #ddc58f; border-radius: 9px; background: #fffdf8; color: #765419; font-size: 14px; font-weight: 800; }
+#recetas .recipe-command > span { color: #9b6f24; font-weight: 800; }
+#recetas .recipe-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 17px 0 0; padding: 12px 0 0; border-top: 1px solid #e2d4b8; list-style: none; }
+#recetas .recipe-notes li { display: grid; align-content: start; gap: 4px; }
+#recetas .recipe-notes strong { color: #684b17; font-size: 14px; font-weight: 850; }
+#recetas .recipe-notes span { color: #554a38; font-size: 13px; line-height: 1.4; }
+
+#cuadernos .notebook-flow { display: grid; }
+#cuadernos .notebook-flow li { grid-template-columns: 34px minmax(0, 1fr); }
+#cuadernos .notebook-flow h3 { margin: 1px 0 0; }
+
+#integracion .integration-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; }
+#integracion .integration-mode { padding: 15px 16px; border-top: 3px solid var(--accent); border-radius: 13px; background: linear-gradient(145deg, #fbf7ed, #f1e6cd); box-shadow: 6px 6px 14px #d5d9d9, -5px -5px 13px #fff; }
+#integracion .integration-mode.open-mode { border-top-color: #b38d4e; background: linear-gradient(145deg, #fffdfa, #f7f2e7); }
+#integracion .integration-mode > span { color: #765419; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+#integracion .integration-mode h3 { margin: 8px 0 3px; color: #684b17; font-size: 19px; }
+#integracion .integration-mode p { margin: 0 0 7px; color: #765419; font-size: 13px; font-weight: 700; }
+#integracion .integration-mode small { display: block; color: #554a38; font-size: 13px; line-height: 1.4; }
+#integracion .integration-bridge { display: flex; align-items: center; gap: 12px; margin-top: 10px; padding: 10px 14px; border-radius: 12px; background: #f1e6cd; color: #554a38; }
+#integracion .integration-bridge > span { color: #9b6f24; font-size: 24px; font-weight: 800; }
+#integracion .integration-bridge p { margin: 0; line-height: 1.35; }
+#integracion .integration-bridge strong { color: #684b17; }
+
+#cierre .closing-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 18px 0 12px; }
+#cierre .closing-choices article { padding: 2px 0 0 14px; border-left: 3px solid #c9ad70; }
+#cierre .closing-choices article > span { display: block; margin-bottom: 5px; color: #805a18; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+#cierre .closing-choices h3 { margin: 0 0 5px; color: #684b17; font-size: 19px; line-height: 1.2; }
+#cierre .closing-choices p { margin: 0; color: #4c5354; font-size: 14px; line-height: 1.45; }
+#cierre .cloud-local-table { margin: 12px 0; font-size: 13px; }
+#cierre .cloud-local-table th,
+#cierre .cloud-local-table td { padding: 9px 10px; vertical-align: top; line-height: 1.45; }
+#cierre .cloud-local-table thead th:first-child { width: 20%; }
+#cierre .cloud-local-table tbody th { width: 20%; }
+#cierre .slide-aside > .local-bridge-hook { gap: 10px; padding: clamp(18px, 2vw, 26px); border-left: 3px solid #9b6f24; background: linear-gradient(145deg, #fbf8f0, #eef0f8); }
+#cierre .local-bridge-hook > p { margin: 0; color: #5965a5; }
+#cierre .local-bridge-diagram { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr); align-items: center; gap: 8px; width: 100%; }
+#cierre .local-bridge-step { display: grid; justify-items: center; gap: 4px; text-align: center; }
+#cierre .local-bridge-step svg { display: block; width: min(100%, 86px); height: auto; }
+#cierre .local-bridge-step strong { color: #805a18; font-size: 11px; letter-spacing: .06em; }
+#cierre .local-bridge-device strong { color: #374b99; }
+#cierre .local-bridge-diagram > span { color: #5965a5; font-size: 22px; font-weight: 800; text-align: center; }
+#cierre .local-bridge-caption { color: #4c5354; font-size: 15px; font-weight: 650; line-height: 1.4; }
+#cierre .slide-hook.local-bridge-hook > strong { font-size: 18px; line-height: 1.3; }
+#cierre .slide-navigation a:last-child { color: #374b99; }
+
+.adaptation-privacy-reminder { display: flex; align-items: center; gap: 14px; margin: 18px 0; padding: 12px 14px; border-left: 4px solid #a52d2b; border-radius: 0 15px 15px 0; background: #fae9e7; color: #6d302e; }
+.adaptation-privacy-reminder img { flex: 0 0 66px; width: 66px; height: 66px; padding: 0; background: transparent; object-fit: contain; }
+.adaptation-privacy-reminder p { margin: 0; font-size: 14px; line-height: 1.45; }
+.adaptation-privacy-reminder strong { color: #96322f; }
+
+@media (max-width: 600px) {
+  .adaptation-privacy-reminder { align-items: flex-start; gap: 9px; padding: 10px; }
+  .adaptation-privacy-reminder img { flex-basis: 52px; width: 52px; height: 52px; }
+}
+
+#archivos .context-upload {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 0;
+  min-height: 205px;
+  padding: 18px 14px;
+  border: 1px solid #eadbb7;
+  border-radius: 17px;
+  background: linear-gradient(120deg, #fbf8ef, #f1f3f3);
+}
+
+#archivos .upload-source,
+#archivos .upload-target { display: grid; justify-items: center; gap: 6px; text-align: center; }
+#archivos .upload-source svg { width: 90px; height: 90px; }
+#archivos .upload-target svg { width: 108px; height: 90px; }
+#archivos .upload-source strong,
+#archivos .upload-target strong { color: #684b17; font: 700 15px/1.2 Georgia, 'Times New Roman', serif; }
+#archivos .upload-source small { color: #6a6254; font-size: 11px; line-height: 1.35; }
+#archivos .upload-arrow { color: #9b6f24; font-size: 25px; font-weight: 700; text-align: center; }
+#archivos .upload-question { margin: 12px 0 0; color: #684b17; font-size: 17px; font-weight: 750; line-height: 1.3; text-align: center; }
+
+@media (min-width: 851px) and (max-height: 700px) {
+  #archivos .context-points, #proyectos .project-examples, #cuadernos .notebook-flow { margin-top: 14px; }
+  #archivos .context-points li, #cuadernos .notebook-flow li { padding-block: 6px; }
+  #proyectos .project-examples { gap: 7px; }
+  #proyectos .project-question { margin-top: 10px; gap: 7px; font-size: 20px; }
+  #proyectos .project-question-chip { padding: 6px 10px; font-size: 16px; }
+  #proyectos .project-question b { font-size: 18px; }
+  #proyectos .project-examples article { padding-block: 5px; }
+  #proyectos .project-examples h4 { font-size: 16px; }
+  #proyectos .project-files-label { font-size: 9px; }
+  #proyectos .project-examples ul { font-size: 11px; }
+  #proyectos .project-purpose-symbol svg { width: min(100%, 135px); max-height: 108px; }
+  #proyectos .slide-aside > .slide-hook { padding: 15px 17px; }
+  #proyectos .project-purpose-caption { gap: 6px; }
+  #proyectos .project-purpose-caption strong { font-size: 16px; }
+  #recetas .recipe-builder, #integracion .integration-compare { margin-top: 15px; }
+  #recetas .recipe-builder { padding-block: 0; }
+  #recetas .recipe-notes { margin-top: 10px; padding-top: 8px; }
+  #integracion .integration-mode { padding-block: 10px; }
+  #archivos .context-upload { min-height: 175px; padding-block: 10px; }
+  #archivos .upload-source svg { width: 76px; height: 76px; }
+  #archivos .upload-target svg { width: 90px; height: 76px; }
+}
+
+@media (max-width: 600px) {
+  #proyectos .project-examples { grid-template-columns: 1fr; }
+  #recetas .recipe-notes { grid-template-columns: 1fr; gap: 8px; }
+  #integracion .integration-compare { grid-template-columns: 1fr; }
+  #cierre .closing-choices { gap: 14px; }
+  #cierre .cloud-local-table { font-size: 12px; }
+  #cierre .cloud-local-table th, #cierre .cloud-local-table td { padding: 7px 8px; }
+}
+
+/* Portada de Proyectos */
+.project-folder {
+  position: relative;
+  z-index: 1;
+  width: 54%;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(13px 16px 14px #cbd3d8);
+}
+
+.project-folder svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.folder-paper {
+  fill: #fffdfa;
+  stroke: #c9b17b;
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.folder-paper-back { fill: #f7f1e4; }
+.folder-paper-line { fill: none; stroke: #c9b17b; stroke-width: 3; stroke-linecap: round; opacity: .8; }
+.folder-body { fill: #d2aa59; stroke: #9b6f24; stroke-width: 3; stroke-linejoin: round; }
+.folder-tab { fill: #e3c47f; stroke: #9b6f24; stroke-width: 3; stroke-linejoin: round; }
+.folder-front { fill: #e6c77f; stroke: #9b6f24; stroke-width: 3; stroke-linejoin: round; }
+.folder-front-line { fill: none; stroke: #c39a47; stroke-width: 4; stroke-linecap: round; opacity: .55; }
+
+/* Las etiquetas de la portada deben quedar legibles sobre la ilustración. */
+#inicio .orbit-label {
+  z-index: 2;
+  padding: 9px 11px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #d6dce0;
+}
+
+#inicio .label-a { transform: rotate(-15deg); transform-origin: center; }
+#inicio .label-b { right: 2%; transform: rotate(15deg); transform-origin: center; }
+#inicio .label-c { transform: rotate(-15deg); transform-origin: center; }
+
+#inicio .cover-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 0;
+}
+
+#inicio .primary-link {
+  margin-top: 0;
+}
+
+#inicio .extras {
+  display: block;
+}
+
+#inicio .extras details {
+  width: auto;
+}
+
+#inicio .extras summary,
+#inicio .extras .open-drawer {
+  width: auto;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #9b6f24;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#inicio .extras summary {
+  cursor: pointer;
+}
+
+#inicio .extras .open-drawer:hover {
+  color: #724e12;
+  text-decoration: underline;
+}
+
+#inicio .extras .drawer-arrow {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  background: transparent;
+  font-size: 18px;
+}
+
+/* Tarjetas neumórficas temáticas */
+.project-card,
+.feature-card {
+  border: 1px solid #ebdcc0;
+  border-top: 4px solid var(--accent);
+  background: linear-gradient(145deg, #fffdfa, #f5ebd7);
+  box-shadow: 8px 8px 18px #cfd4d8, -7px -7px 17px #fff;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.project-card > span,
+.feature-card > span {
+  color: #7b5617;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.project-card h3,
+.feature-card h3 {
+  color: #5d4213;
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.25;
+  margin: 10px 0 8px;
+}
+
+.project-card p,
+.feature-card p {
+  color: #443725;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Semáforo RGPD */
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.traffic-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border-left: 5px solid;
+}
+
+.traffic-green {
+  background: #f1f8f3;
+  border-color: #2e7d32;
+  color: #1b431e;
+}
+
+.traffic-yellow {
+  background: #fdfbf0;
+  border-color: #f9a825;
+  color: #5d4004;
+}
+
+.traffic-red {
+  background: #fdf2f2;
+  border-color: #c62828;
+  color: #5c1414;
+}
+
+.traffic-item strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.traffic-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Tabla comparativa estilizada */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.comp-table th,
+.comp-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2d7c0;
+}
+
+.comp-table th {
+  background: #f4ead5;
+  color: #52390f;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.comp-table tr:hover td {
+  background: #fdfbf7;
+}
+
+/* Grid de comandos */
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.command-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #fcf9f2;
+  border: 1px solid #ebdcc0;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px #dde2e5, -4px -4px 10px #fff;
+}
+
+.command-badge code {
+  color: #8c6017;
+  font-weight: 800;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.command-badge span {
+  font-size: 12px;
+  color: #554836;
+  line-height: 1.35;
+}
+
+/* Diagrama de 3 paneles de NotebookLM */
+.studio-layout-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.studio-panel-col {
+  padding: 12px;
+  border-radius: 12px;
+  background: #fdfaf4;
+  border: 1px solid #e8dac0;
+  box-shadow: 4px 4px 12px #d2d8dc, -4px -4px 12px #fff;
+}
+
+.studio-panel-col h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #7b5617;
+  font-weight: 800;
+}
+
+.studio-panel-col ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 12px;
+  color: #554836;
+  line-height: 1.4;
+}
+
+@media (max-width: 650px) {
+  .studio-layout-diagram {
+    grid-template-columns: 1fr;
+  }
+}
+

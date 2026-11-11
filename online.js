@@ -9,7 +9,7 @@ function actualizarIndice() {
   enlacesIndice.forEach(a => { if (a.dataset.topic === actual.dataset.topic) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); });
 }
 addEventListener('scroll', actualizarIndice, {passive:true}); addEventListener('resize', actualizarIndice); actualizarIndice();
-document.querySelectorAll('.extras details').forEach((detalle, i) => {
+document.querySelectorAll('.extras > details').forEach((detalle, i) => {
   const resumen = detalle.querySelector('summary').textContent;
   const contenido = detalle.querySelector(':scope > div');
   const boton = document.createElement('button'); boton.type='button'; boton.className='open-drawer'; boton.setAttribute('aria-haspopup','dialog'); boton.setAttribute('aria-controls',`ampliacion-${i}`);

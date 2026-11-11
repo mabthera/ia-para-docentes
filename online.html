@@ -2,8 +2,8 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Herramientas de IA online para crear y revisar recursos docentes.">
 <title>IA online · IA para docentes</title>
-<link rel="stylesheet" href="estilos.css"><link rel="stylesheet" href="portada.css"><link rel="stylesheet" href="fundamentos.css?v=39"><link rel="stylesheet" href="online.css?v=2"><link rel="stylesheet" href="licencia.css?v=2">
-<script src="online.js" defer></script><script src="licencia.js?v=2" defer></script></head>
+<link rel="stylesheet" href="estilos.css"><link rel="stylesheet" href="portada.css"><link rel="stylesheet" href="fundamentos.css?v=39"><link rel="stylesheet" href="online.css?v=3"><link rel="stylesheet" href="licencia.css?v=2">
+<script src="online.js?v=2" defer></script><script src="licencia.js?v=2" defer></script></head>
 <body data-fase="online"><div class="site-shell"><header class="topbar">
 <a class="brand" href="index.html" aria-label="Volver al inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
 <span class="top-note"><span class="status-dot"></span> IA ONLINE</span><a class="volver" href="index.html#recorrido">← Volver al recorrido</a></header>
@@ -220,46 +220,684 @@ Un párrafo con **una idea clave**.
     Application.ScreenUpdating = True
     MsgBox "Formato aplicado. Revisa el documento y ajústalo a la alumna.", vbInformation
 End Sub</pre><button class="copy" type="button">Copiar macro al portapapeles</button><span class="copy-status" role="status" aria-live="polite"></span></div><h3>Instalación en Word · plantilla Normal</h3><p>La instalaré en directo durante la formación. Si quieres repetirlo:</p><ol><li>Abre Word de escritorio. Activa la pestaña <strong>Desarrollador</strong> desde Archivo → Opciones → Personalizar cinta de opciones.</li><li>Pulsa <strong>Alt+F11</strong>. En el editor VBA, selecciona <strong>Normal (Normal.dotm)</strong> en el panel de proyectos. Si no aparece, pulsa Ctrl+R.</li><li>Con Normal seleccionado, elige <strong>Insertar → Módulo</strong> y pega el código. Guarda con Ctrl+S y acepta guardar Normal.dotm. <strong>No lo pegues en el proyecto del documento</strong>: así la macro queda disponible en tus documentos de Word.</li><li>Vuelve a Word, abre una copia del documento y pulsa <strong>Alt+F8</strong>. Ejecuta <code>MaquetarLecturaCaso</code> y comprueba el resultado.</li><li>Opcional: en Archivo → Opciones → Barra de herramientas de acceso rápido, selecciona «Macros», agrega <code>MaquetarLecturaCaso</code> y acepta para tener un botón.</li></ol><p>Hace falta Word de escritorio; Word para la web no ejecuta macros. En macOS, los nombres de menús y atajos pueden variar.</p><p>Ejecuta solo macros revisadas y permitidas por las normas del centro.</p><ul class="resource-list"><li><a href="https://support.microsoft.com/en-us/word/show-the-developer-tab-in-word" target="_blank" rel="noopener noreferrer">Microsoft · mostrar la pestaña Desarrollador ↗</a></li><li><a href="https://support.microsoft.com/en-gb/word/create-or-run-a-macro?nochrome=true" target="_blank" rel="noopener noreferrer">Microsoft · crear o ejecutar una macro en Word ↗</a></li><li><a href="https://support.microsoft.com/en-us/office/add-commands-to-the-quick-access-toolbar" target="_blank" rel="noopener noreferrer">Microsoft · personalizar la barra de acceso rápido ↗</a></li></ul></div></details><details><summary>Ampliación · LaTeX y fórmulas</summary><div class="longread"><p class="drawer-intro">Puedes pedirle al chatbot que escriba una fórmula con <strong>LaTeX</strong>: una notación textual que representa símbolos, fracciones, raíces, subíndices y estructuras matemáticas. Después puedes verla y llevarla a Word mediante un editor como EdiMarkdown.</p><h3>Flujo paso a paso</h3><ol><li>Describe qué representa cada símbolo y qué formato necesitas. Pide que el chatbot no cambie el significado y que entregue la fórmula en un bloque de código LaTeX.</li><li>Para una fórmula dentro de una frase, puede usar <code>$v = \frac{d}{t}$</code>. Para una ecuación en una línea propia, puede usar <code>$$a^2+b^2=c^2$$</code>. Los delimitadores admitidos pueden variar según la aplicación.</li><li>Copia la fórmula a EdiMarkdown y comprueba que la vista previa renderiza fracciones, índices, exponentes y paréntesis como esperabas.</li><li>Exporta el documento a DOCX y ábrelo en Word. Revisa la ecuación en pantalla y en impresión; corrige cualquier símbolo que haya quedado como texto o se haya desplazado.</li></ol><div class="prompt"><strong>Petición para el chatbot</strong><pre>Redacta la notación matemática científica en formato LaTeX o TeX puro.</pre><button class="copy" type="button">Copiar petición</button><span class="copy-status" role="status" aria-live="polite"></span></div><p>EdiMarkdown integra Pandoc para convertir el contenido a formatos de documento, y el proyecto incluye herramientas de previsualización de fórmulas. Pandoc puede transformar fórmulas LaTeX a objetos de ecuación de Word según el formato de salida; aun así, <strong>verifica siempre que la ecuación sea legible y correcta en el archivo exportado</strong>.</p><h3>Recursos</h3><ul class="resource-list"><li><a href="https://edimarkdown.github.io/" target="_blank" rel="noopener noreferrer">EdiMarkWeb · ahora EdiMarkdown ↗</a><br>Editor con vista previa y exportación multiformato.</li><li><a href="https://pandoc.org/" target="_blank" rel="noopener noreferrer">Pandoc · formatos y fórmulas ↗</a><br>Documentación oficial; en inglés.</li></ul></div></details></div></aside></div><nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#textos">← Anterior</a><a href="#investigacion">Siguiente →</a></nav></section>
-<section class="slide" id="investigacion" data-topic="investigacion"><div class="slide-body"><div class="slide-content"><p class="kicker"><span>05 / 13</span> UNA PREGUNTA, VARIAS FUENTES</p><h2>Investigar con <em>fuentes</em><span class="period">.</span></h2><div class="research-compare" aria-label="Diferencia entre una búsqueda normal y la investigación profunda"><article class="research-route"><p class="research-label"><span>01</span> BÚSQUEDA NORMAL</p><strong>Pregunta → respuesta breve</strong><p>Resuelve una duda concreta o localiza un dato. Si la búsqueda web está activa, puede ofrecer enlaces, pero no necesariamente explora el tema de forma amplia.</p></article><article class="research-route research-route-deep"><p class="research-label"><span>02</span> INVESTIGACIÓN PROFUNDA</p><strong>Plan → varias fuentes → síntesis</strong><p>Descompone la pregunta, encadena búsquedas y prepara un informe con citas. Requiere más tiempo y suele consumir más cuota.</p></article></div><blockquote class="takeaway research-quote">«Las citas orientan la comprobación; <strong>leer la fuente permite valorar la respuesta.</strong>»</blockquote></div><aside class="slide-aside"><div class="slide-hook source-review-hook"><p>LAS CITAS SON PISTAS PARA REVISAR</p><strong>Abre las fuentes: ¿respaldan realmente lo que afirma el informe?</strong><div class="source-review-steps" aria-label="Tres pasos para revisar un informe"><span><b>01</b> Abre la fuente</span><span><b>02</b> Contrasta la afirmación</span><span><b>03</b> Anota límites o dudas</span></div></div><div class="extras"><details><summary>Ampliación · usar la investigación profunda</summary><div class="longread"><p class="drawer-intro">La investigación profunda organiza varias búsquedas en un informe documentado. Suele tardar más y consumir más cuota que una pregunta habitual. El acceso y los límites dependen del plan, la cuenta y la capacidad disponible; comprueba el contador o el aviso de la propia aplicación.</p><h3>ChatGPT · Deep Research</h3><ol><li>Abre el menú de herramientas <strong>(+)</strong> y elige <strong>Investigación profunda</strong>; también puedes escribir <code>/Deepresearch</code> si está habilitado.</li><li>Explica qué necesitas, para quién y qué fuentes prefieres. Revisa y ajusta el plan que propone ChatGPT antes de iniciar la búsqueda.</li><li>Cuando termine, abre las citas y verifica que cada fuente exista y respalde la afirmación. El uso disponible varía por plan; el contador de la cuenta muestra las tareas restantes. <a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noopener noreferrer">Ayuda oficial de ChatGPT · Investigación profunda ↗</a> (en inglés).</li></ol><h3>Gemini · Deep Research</h3><ol><li>En Gemini, abre <strong>Herramientas → Deep Research</strong> si aparece disponible. Describe el tema y el tipo de informe que necesitas.</li><li>Revisa o edita el plan de investigación; Google Search se incluye como fuente y puedes añadir otras fuentes compatibles. Después, inicia la investigación.</li><li>Comprueba las citas del informe. Hay límites diarios y de tareas simultáneas; los planes Google AI Pro y Ultra ofrecen límites superiores. Algunas funciones de mayor consumo pueden no estar disponibles para cuentas sin plan cuando hay mucha demanda. <a href="https://support.google.com/gemini/answer/15719111?hl=es" target="_blank" rel="noopener noreferrer">Ayuda oficial de Gemini · Deep Research ↗</a> (en español).</li></ol><h3>Claude · Research</h3><ol><li>En el selector de herramientas del chat, elige <strong>Research</strong> y comprueba que la búsqueda web esté activada.</li><li>Plantea la pregunta y acota el objetivo. Claude realiza búsquedas encadenadas y entrega una síntesis con citas.</li><li>Según la ayuda oficial consultada, Research está disponible en planes de pago Pro, Max, Team y Enterprise. Usa los límites de conversación habituales, pero las búsquedas múltiples pueden consumirlos más rápido. <a href="https://support.anthropic.com/en/articles/11088861-using-research-on-claude-ai" target="_blank" rel="noopener noreferrer">Ayuda oficial de Claude · Research ↗</a> (en inglés).</li></ol><div class="drawer-example"><strong>Antes de empezar</strong><p>Comprueba el acceso en tu cuenta y guarda las tareas de investigación profunda para preguntas que necesiten comparar varias fuentes. Para una consulta rápida, una búsqueda normal suele bastar. Los límites cambian; revisa la información que muestra cada servicio.</p></div><p class="source-date">Información revisada el 8 de noviembre de 2026. Funciones, planes y cuotas pueden cambiar.</p></div></details><details><summary>Ampliación · tres casos de uso</summary><div class="longread"><p class="drawer-intro">La investigación profunda resulta útil cuando necesitas reunir y contrastar varias fuentes. Estos tres ejemplos muestran objetivos distintos.</p><h3>Primaria · preparar un dossier para 5.º</h3><p>Objetivo: reunir fuentes comprensibles sobre los polinizadores y su importancia para un proyecto de ciencias.</p><div class="prompt"><strong>Petición de partida</strong><pre>OBJETIVO
-Prepara un dossier de investigación para un proyecto de Ciencias de 5.º de Primaria sobre los polinizadores y su importancia para las plantas y los ecosistemas.
+<section class="slide" id="investigacion" data-topic="investigacion"><div class="slide-body"><div class="slide-content"><p class="kicker"><span>05 / 13</span> UNA PREGUNTA, VARIAS FUENTES</p><h2>Investigar con <em>fuentes</em><span class="period">.</span></h2><div class="research-compare" aria-label="Diferencia entre una búsqueda normal y la investigación profunda"><article class="research-route"><p class="research-label"><span>01</span> BÚSQUEDA NORMAL</p><strong>Pregunta → respuesta breve</strong><p>Resuelve una duda concreta o localiza un dato. Si la búsqueda web está activa, puede ofrecer enlaces, pero no necesariamente explora el tema de forma amplia.</p></article><article class="research-route research-route-deep"><p class="research-label"><span>02</span> INVESTIGACIÓN PROFUNDA</p><strong>Plan → varias fuentes → síntesis</strong><p>Descompone la pregunta, encadena búsquedas y prepara un informe con citas. Requiere más tiempo y suele consumir más cuota.</p></article></div><blockquote class="takeaway research-quote">«Las citas orientan la comprobación; <strong>leer la fuente permite valorar la respuesta.</strong>»</blockquote></div><aside class="slide-aside"><div class="slide-hook source-review-hook"><p>LAS CITAS SON PISTAS PARA REVISAR</p><strong>Abre las fuentes: ¿respaldan realmente lo que afirma el informe?</strong><div class="source-review-steps" aria-label="Tres pasos para revisar un informe"><span><b>01</b> Abre la fuente</span><span><b>02</b> Contrasta la afirmación</span><span><b>03</b> Anota límites o dudas</span></div></div><div class="extras"><details><summary>Ampliación · usar la investigación profunda</summary><div class="longread"><p class="drawer-intro">La investigación profunda organiza varias búsquedas en un informe documentado. Suele tardar más y consumir más cuota que una pregunta habitual. El acceso y los límites dependen del plan, la cuenta y la capacidad disponible; comprueba el contador o el aviso de la propia aplicación.</p><h3>ChatGPT · Deep Research</h3><ol><li>Abre el menú de herramientas <strong>(+)</strong> y elige <strong>Investigación profunda</strong>; también puedes escribir <code>/Deepresearch</code> si está habilitado.</li><li>Explica qué necesitas, para quién y qué fuentes prefieres. Revisa y ajusta el plan que propone ChatGPT antes de iniciar la búsqueda.</li><li>Cuando termine, abre las citas y verifica que cada fuente exista y respalde la afirmación. El uso disponible varía por plan; el contador de la cuenta muestra las tareas restantes. <a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noopener noreferrer">Ayuda oficial de ChatGPT · Investigación profunda ↗</a> (en inglés).</li></ol><h3>Gemini · Deep Research</h3><ol><li>En Gemini, abre <strong>Herramientas → Deep Research</strong> si aparece disponible. Describe el tema y el tipo de informe que necesitas.</li><li>Revisa o edita el plan de investigación; Google Search se incluye como fuente y puedes añadir otras fuentes compatibles. Después, inicia la investigación.</li><li>Comprueba las citas del informe. Hay límites diarios y de tareas simultáneas; los planes Google AI Pro y Ultra ofrecen límites superiores. Algunas funciones de mayor consumo pueden no estar disponibles para cuentas sin plan cuando hay mucha demanda. <a href="https://support.google.com/gemini/answer/15719111?hl=es" target="_blank" rel="noopener noreferrer">Ayuda oficial de Gemini · Deep Research ↗</a> (en español).</li></ol><h3>Claude · Research</h3><ol><li>En el selector de herramientas del chat, elige <strong>Research</strong> y comprueba que la búsqueda web esté activada.</li><li>Plantea la pregunta y acota el objetivo. Claude realiza búsquedas encadenadas y entrega una síntesis con citas.</li><li>Según la ayuda oficial consultada, Research está disponible en planes de pago Pro, Max, Team y Enterprise. Usa los límites de conversación habituales, pero las búsquedas múltiples pueden consumirlos más rápido. <a href="https://support.anthropic.com/en/articles/11088861-using-research-on-claude-ai" target="_blank" rel="noopener noreferrer">Ayuda oficial de Claude · Research ↗</a> (en inglés).</li></ol><div class="drawer-example"><strong>Antes de empezar</strong><p>Comprueba el acceso en tu cuenta y guarda las tareas de investigación profunda para preguntas que necesiten comparar varias fuentes. Para una consulta rápida, una búsqueda normal suele bastar. Los límites cambian; revisa la información que muestra cada servicio.</p></div><p class="source-date">Información revisada el 8 de noviembre de 2026. Funciones, planes y cuotas pueden cambiar.</p></div></details><details><summary>Ampliación · tres casos de uso</summary><div class="longread"><p class="drawer-intro">La investigación profunda resulta útil cuando necesitas reunir y contrastar varias fuentes. Estos tres ejemplos muestran objetivos distintos.</p><h3>Primaria · preparar un dossier para 5.º</h3><p>Objetivo: reunir fuentes comprensibles sobre los polinizadores y su importancia para un proyecto de ciencias.</p><details class="research-prompt"><summary>Ver prompt completo · Primaria · polinizadores</summary><div class="prompt"><pre># INVESTIGACIÓN AVANZADA: LOS POLINIZADORES Y SU IMPORTANCIA
 
-PREGUNTA Y PLAN
-Antes de buscar, propone 3 o 4 subpreguntas y un plan breve. Incluye qué son los polinizadores, cómo ocurre la polinización y qué factores pueden afectarlos. Mantén el alcance adecuado para una actividad escolar.
+## 1. OBJETIVO Y ROL
 
-FUENTES
-Localiza entre 4 y 6 fuentes fiables en español. Prioriza museos de ciencias, universidades, organismos públicos y entidades científicas. Para cada fuente indica autor o entidad, fecha, enlace directo y qué información aporta. No inventes referencias.
+Actúa como un equipo formado por un investigador científico, un especialista en educación primaria y un diseñador de materiales didácticos.
 
-RESULTADO
-Resume los hallazgos con lenguaje claro para alumnado de 10–11 años. Separa los datos respaldados de las explicaciones simplificadas. Propón una observación segura que la clase pueda realizar en el patio, sin tocar ni dañar insectos o plantas.
+Tu misión es investigar el papel de los polinizadores en la naturaleza y, utilizando los resultados de esa investigación, **elaborar un dossier educativo completo para alumnos de 5.º de Educación Primaria (10–11 años)**.
 
-COMPROBACIÓN
-Vincula cada afirmación importante a su fuente. Señala información dudosa o que necesite revisión docente. Termina con tres preguntas para conversar en clase y una lista breve de aspectos que debo comprobar antes de usar el dossier.</pre><button class="copy" type="button">Copiar petición</button><span class="copy-status" role="status" aria-live="polite"></span></div><p><strong>Revisa:</strong> que las fuentes sean adecuadas a la edad, que los enlaces funcionen y que el alumnado pueda distinguir observación de explicación científica.</p><h3>Secundaria · contrastar información sobre plásticos</h3><p>Objetivo: preparar una actividad para 3.º de ESO que diferencie datos, interpretaciones y preguntas abiertas.</p><div class="prompt"><strong>Petición de partida</strong><pre>OBJETIVO
-Prepara un informe de apoyo para una actividad de 3.º de ESO sobre el uso y el impacto ambiental de los plásticos de un solo uso en España y Europa.
+**IMPORTANTE:** No basta con explicar qué has investigado ni con ofrecer recomendaciones para crear el dossier. Debes **crear y entregar el dossier completo**, con todos sus textos, actividades y materiales, listo para utilizar en clase.
 
-PLAN DE INVESTIGACIÓN
-Antes de redactar, plantea subpreguntas sobre tipos de productos, ciclo de vida, residuos y medidas para reducirlos. Distingue el impacto documentado de las propuestas o predicciones.
+## 2. FASE 1. PLANIFICACIÓN DE LA INVESTIGACIÓN
 
-FUENTES Y ALCANCE
-Reúne entre 5 y 7 fuentes fiables: organismos públicos, normativa vigente, estudios revisados por pares y divulgación experta. Prioriza recursos en español y añade fuentes europeas cuando aporten datos pertinentes. Indica autor o entidad, fecha, territorio, tipo de fuente y enlace directo. Comprueba que cada enlace respalda la afirmación asociada.
+Antes de comenzar la búsqueda:
 
-SÍNTESIS PARA EL AULA
-Organiza el informe en: hallazgos respaldados, datos y su fecha, medidas vigentes, cuestiones discutidas y límites de la información. No equipares todos los plásticos ni generalices cifras de un territorio a otro. No inventes datos ni presentes una relación causal si la fuente no la demuestra.
+- Formula entre 3 y 4 preguntas de investigación.
+- Diseña un plan breve para responderlas.
+- Delimita los contenidos para que sean adecuados a 5.º de Primaria.
 
-ACTIVIDAD Y REVISIÓN
-Propón dos preguntas para comparar fuentes y una tabla que ayude al alumnado a distinguir dato, interpretación y propuesta. Cierra con una lista de afirmaciones que yo deba comprobar antes de llevar el material al aula.</pre><button class="copy" type="button">Copiar petición</button><span class="copy-status" role="status" aria-live="polite"></span></div><p><strong>Revisa:</strong> la fecha y el ámbito de cada dato, y si las fuentes hablan del mismo tipo de plástico y del mismo contexto geográfico.</p><h3>Investigación personal docente · evaluación formativa</h3><p>Objetivo: orientarse sobre la evidencia educativa para preparar una decisión o una explicación profesional.</p><div class="prompt"><strong>Petición de partida</strong><pre>PROPÓSITO
-Elabora un informe de orientación para un docente que quiere comprender qué indica la investigación sobre evaluación formativa y retroalimentación en Educación Primaria y Secundaria.
+La investigación debe abordar, como mínimo:
 
-PREGUNTAS DE INVESTIGACIÓN
-Propón un plan y organiza la búsqueda en torno a estas cuestiones: qué efectos se han estudiado, qué prácticas de retroalimentación se comparan, qué condiciones parecen relevantes, qué diferencias hay entre etapas y qué límites tiene la evidencia.
+- Qué son los polinizadores y cuáles son los principales.
+- Cómo se produce la polinización y por qué es importante.
+- Qué relación existe entre los polinizadores, las plantas, los alimentos y los ecosistemas.
+- Qué amenazas afectan a los polinizadores y cómo podemos ayudar a protegerlos.
 
-FUENTES
-Prioriza revisiones sistemáticas, metaanálisis, estudios revisados por pares y organismos educativos. Busca primero fuentes fiables en español; incorpora investigaciones internacionales pertinentes cuando sean necesarias e indica si están en inglés. Para cada referencia proporciona autores, año, título, publicación o entidad y enlace verificable. No inventes ni completes datos bibliográficos por inferencia.
+Esta fase debe ser breve y estar orientada a la elaboración del material educativo.
 
-ANÁLISIS
-Para cada hallazgo, identifica la población, etapa, contexto, práctica estudiada y resultado medido. Distingue asociación de causalidad, resultados consistentes de resultados discutidos y evidencia de recomendaciones de los autores. Explica las limitaciones metodológicas importantes y no generalices a todos los centros.
+## 3. FASE 2. INVESTIGACIÓN Y CONTRASTE DE FUENTES
 
-ENTREGA Y USO
-Presenta una síntesis temática, una tabla breve de fuentes y conclusiones, y preguntas que ayuden a valorar la pertinencia para mi centro. Indica que es una búsqueda de orientación, no una revisión sistemática exhaustiva ni una recomendación automática. Señala qué debo leer y verificar directamente antes de tomar decisiones.</pre><button class="copy" type="button">Copiar petición</button><span class="copy-status" role="status" aria-live="polite"></span></div><p><strong>Revisa:</strong> métodos, población estudiada, etapa educativa y contexto; una conclusión no se traslada automáticamente a cualquier grupo o centro.</p></div></details></div></aside></div><nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#editable">← Anterior</a><a href="#preguntas">Siguiente →</a></nav></section>
+Busca y consulta entre 4 y 6 fuentes fiables, preferentemente en español.
+
+Prioriza:
+
+- Museos de ciencias.
+- Universidades y centros de investigación.
+- Organismos públicos.
+- Instituciones científicas y ambientales.
+
+Para cada fuente, registra:
+
+- Nombre de la institución o autor.
+- Título del recurso.
+- Fecha de publicación o actualización, cuando esté disponible.
+- Enlace directo a la fuente.
+- Información relevante que aporta al proyecto.
+
+Contrasta las afirmaciones importantes y evita utilizar datos que no puedas verificar.
+
+**No inventes fuentes, enlaces, fechas, estadísticas ni conclusiones científicas.** Si no encuentras un dato fiable, indícalo y no lo presentes como un hecho demostrado.
+
+## 4. FASE 3. ELABORACIÓN DEL DOSSIER PARA EL ALUMNADO
+
+Esta es la fase principal y el resultado más importante del trabajo.
+
+Debes elaborar un **dossier didáctico completo, autónomo y listo para entregar a los estudiantes**, escrito directamente para niños y niñas de 10–11 años.
+
+El dossier debe incluir obligatoriamente las siguientes secciones:
+
+### PORTADA
+
+Título: **Los polinizadores: pequeños ayudantes de la naturaleza**
+
+Subtítulo: Proyecto de Ciencias Naturales – 5.º de Primaria.
+
+Incluye espacios para el nombre del alumno, la clase y la fecha.
+
+### SECCIÓN 1. DESCUBRIMOS A LOS POLINIZADORES
+
+Explica qué son los polinizadores y presenta ejemplos como abejas, mariposas, moscas y escarabajos.
+
+Utiliza un lenguaje sencillo, ejemplos cercanos y explicaciones científicamente correctas.
+
+### SECCIÓN 2. ¿CÓMO FUNCIONA LA POLINIZACIÓN?
+
+Explica paso a paso cómo puede pasar el polen de una flor a otra y qué ocurre después.
+
+Incluye un esquema visual sencillo o un diagrama con etiquetas que ayude a comprender el proceso.
+
+Aclara que no todas las plantas dependen de los animales para ser polinizadas.
+
+### SECCIÓN 3. ¿POR QUÉ SON TAN IMPORTANTES?
+
+Explica la relación entre polinizadores, reproducción de las plantas, biodiversidad y producción de algunos alimentos.
+
+Introduce ejemplos cotidianos comprensibles para el alumnado.
+
+### SECCIÓN 4. ¿QUÉ PELIGROS LOS AMENAZAN?
+
+Presenta de forma sencilla algunas amenazas, como la pérdida de hábitats, determinados pesticidas y el cambio climático.
+
+Evita el alarmismo e incluye acciones positivas para protegerlos.
+
+### SECCIÓN 5. INVESTIGAMOS EN EL PATIO
+
+Diseña una actividad de observación científica segura, que pueda realizarse en el patio del colegio o en un espacio verde cercano.
+
+La actividad debe incluir:
+
+- Objetivo de la observación.
+- Materiales necesarios.
+- Instrucciones paso a paso.
+- Tabla para registrar observaciones.
+- Espacio para anotar conclusiones.
+
+Los estudiantes observarán los insectos desde una distancia prudente, sin tocarlos, capturarlos ni molestar a los animales o plantas.
+
+Incluye una alternativa para realizar la actividad con fotografías si no aparecen polinizadores.
+
+### SECCIÓN 6. ACTIVIDADES PARA COMPROBAR LO APRENDIDO
+
+Incluye al menos cuatro actividades variadas:
+
+1. Preguntas de comprensión lectora.
+2. Una actividad de relacionar conceptos.
+3. Una actividad de verdadero o falso con justificación.
+4. Una actividad creativa o de reflexión sobre cómo proteger a los polinizadores.
+
+Incluye espacios para escribir las respuestas.
+
+### SECCIÓN 7. ¿QUÉ HEMOS APRENDIDO?
+
+Prepara un resumen de las cinco ideas científicas más importantes.
+
+Añade tres preguntas abiertas para conversar en clase.
+
+### SECCIÓN 8. NUESTRAS FUENTES
+
+Incluye una bibliografía adaptada al alumnado, con nombres comprensibles de las instituciones y enlaces a los recursos utilizados.
+
+Relaciona las principales afirmaciones científicas del dossier con sus fuentes mediante referencias discretas, por ejemplo [1], [2] o [3], sin dificultar la lectura infantil.
+
+## 5. FASE 4. INFORME PARA EL DOCENTE
+
+Después del dossier, elabora un informe independiente y breve dirigido al profesor.
+
+Debe contener:
+
+- Las 3 o 4 preguntas de investigación iniciales.
+- Un resumen del procedimiento de búsqueda y contraste.
+- Una tabla con las 4–6 fuentes y sus datos bibliográficos.
+- Las conclusiones científicas más importantes y las fuentes que las respaldan.
+- Las simplificaciones didácticas utilizadas y su justificación.
+- Las posibles incertidumbres o cuestiones que requieren revisión docente.
+- Las soluciones orientativas de las actividades del alumnado.
+- Una lista de comprobación antes de utilizar el material en clase.
+
+Distingue claramente entre hechos respaldados por fuentes y explicaciones adaptadas para facilitar la comprensión infantil.
+
+## 6. FORMATO Y ENTREGA FINAL OBLIGATORIA
+
+**Debes entregar dos productos diferentes, completos y claramente separados.**
+
+**PRODUCTO A. DOSSIER DEL ALUMNADO**
+
+- Documento con portada, secciones educativas, esquemas, actividades, tabla de observación y bibliografía.
+- Extensión orientativa: 5–7 páginas.
+- Redacción dirigida a los niños, nunca al profesor.
+- Formato claro, visual, atractivo y adecuado para imprimir en A4.
+- Debe poder utilizarse sin que el docente tenga que redactar ni completar los contenidos.
+
+**PRODUCTO B. INFORME DE INVESTIGACIÓN PARA EL DOCENTE**
+
+- Documento independiente.
+- Extensión orientativa: 2–3 páginas.
+- Fuentes verificadas, metodología, conclusiones, simplificaciones, solucionario y comprobaciones.
+
+ENTREGA OBLIGATORIA: DOS ARCHIVOS HTML COMPLETOS
+
+Tu respuesta final debe incluir los dos productos terminados como dos documentos HTML independientes, no solo el informe de búsqueda ni una explicación de cómo crearlos:
+
+- Producto A: `Dossier_Polinizadores_5_Primaria.html`.
+- Producto B: `Informe_Docente_Polinizadores.html`.
+
+Cada archivo debe contener el documento completo desde `&lt;!DOCTYPE html&gt;` hasta `&lt;/html&gt;`, incluyendo todos los textos, tablas, actividades, referencias y demás contenidos solicitados para ese producto. No dejes apartados como instrucciones para completar después.
+
+Incluye en cada HTML su propio CSS dentro de `&lt;style&gt;`, con `@page { size: A4; }` y estilos de impresión. Debe abrirse directamente en un navegador y estar listo para imprimir en papel A4, con márgenes legibles, texto visible, tablas que no se salgan de la página y saltos de página adecuados. Si usas diagramas o gráficos, inclúyelos en el propio HTML para que no dependan de archivos externos.
+
+Si puedes crear archivos descargables, genera y adjunta los dos archivos `.html` con los nombres indicados y comprueba que ambos contienen el documento completo. Si no puedes adjuntar archivos, muestra obligatoriamente los dos códigos HTML completos en dos bloques de código separados, identificados con su nombre, para que pueda guardar cada uno como archivo `.html` y abrirlo en el navegador. No omitas ni resumas el código y no entregues solo fragmentos.
+
+**No sustituyas los documentos por un resumen, un índice, una descripción de lo que contendrían ni una explicación del trabajo realizado.**
+
+## 7. COMPROBACIÓN FINAL DE CALIDAD
+
+Antes de finalizar, verifica que:
+
+- La información científica es correcta y está respaldada por fuentes reales.
+- Los enlaces citados corresponden a los recursos consultados.
+- El vocabulario es adecuado para niños de 10–11 años.
+- Las actividades se pueden realizar con materiales escolares habituales.
+- El dossier contiene los textos completos, no simples indicaciones para desarrollarlos.
+- El dossier y el informe docente están separados.
+- Se han incluido todas las secciones, actividades, tablas y respuestas solicitadas.
+- Los dos productos finales están efectivamente disponibles para su lectura o descarga.
+
+**CRITERIO DE ÉXITO:** La tarea solo estará completa cuando se haya entregado el dossier real para los niños y el informe de investigación para el docente. Explicar cómo se realizó la investigación, sin entregar ambos productos, constituye un resultado incompleto.</pre><button class="copy" type="button">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details><p><strong>Revisa:</strong> que las fuentes sean adecuadas a la edad, que los enlaces funcionen y que el alumnado pueda distinguir observación de explicación científica.</p><h3>Secundaria · contrastar información sobre plásticos</h3><p>Objetivo: preparar una actividad para 3.º de ESO que diferencie datos, interpretaciones y preguntas abiertas.</p><details class="research-prompt"><summary>Ver prompt completo · Secundaria · plásticos</summary><div class="prompt"><pre># INVESTIGACIÓN AVANZADA: LOS PLÁSTICOS DE UN SOLO USO Y SU IMPACTO AMBIENTAL
+
+## 1. OBJETIVO Y ROL
+
+Actúa como un equipo formado por un investigador ambiental, un especialista en educación secundaria y un diseñador de materiales didácticos.
+
+Tu misión es investigar el uso y el impacto ambiental de los plásticos de un solo uso en España y Europa y, a partir de los resultados, **elaborar un dossier educativo completo para estudiantes de 3.º de ESO (14–15 años)**.
+
+**IMPORTANTE:** No basta con explicar lo investigado ni con presentar conclusiones científicas. Debes **crear y entregar el dossier completo**, con textos, datos, gráficos, actividades y materiales de trabajo, listo para utilizar en el aula.
+
+## 2. FASE 1. PLANIFICACIÓN DE LA INVESTIGACIÓN
+
+Antes de comenzar la búsqueda:
+
+- Formula entre 3 y 5 preguntas de investigación.
+- Diseña un plan breve para responderlas.
+- Delimita el estudio a España y la Unión Europea, diferenciando claramente ambos ámbitos.
+
+La investigación debe abordar:
+
+- Qué son los plásticos de un solo uso y cuáles son los productos más habituales.
+- Cómo es su ciclo de vida: fabricación, consumo, gestión de residuos y posibles impactos ambientales.
+- Qué problemas generan los residuos plásticos en los ecosistemas.
+- Qué datos existen sobre su consumo, recogida, reciclaje y presencia en el medioambiente.
+- Qué medidas legales y alternativas se están aplicando en España y Europa.
+
+Distingue desde el principio los impactos científicamente documentados de las hipótesis, predicciones y propuestas de mejora.
+
+## 3. FASE 2. INVESTIGACIÓN Y CONTRASTE DE FUENTES
+
+Busca y consulta entre 5 y 7 fuentes fiables y actualizadas, priorizando:
+
+- Organismos públicos españoles y europeos.
+- Normativa vigente de España y la Unión Europea.
+- Universidades y estudios científicos revisados por pares.
+- Agencias ambientales e instituciones científicas.
+
+Para cada fuente, registra:
+
+- Autor o institución responsable.
+- Título del documento o recurso.
+- Fecha de publicación o actualización.
+- Territorio al que se refiere.
+- Tipo de fuente.
+- Enlace directo.
+- Información relevante que aporta.
+
+**Verifica que cada enlace respalde realmente la afirmación asociada.**
+
+No inventes estadísticas, referencias ni conclusiones. Indica siempre el año y el territorio de los datos utilizados.
+
+No generalices cifras de un país al conjunto de Europa ni presentes relaciones causales que las fuentes no demuestren.
+
+## 4. FASE 3. ELABORACIÓN DEL DOSSIER PARA EL ALUMNADO
+
+Esta es la fase principal y el resultado más importante del trabajo.
+
+Debes elaborar un **dossier didáctico completo, autónomo y listo para entregar a estudiantes de 3.º de ESO**, con un lenguaje claro, científicamente riguroso y adaptado a su edad.
+
+El dossier debe contener obligatoriamente las siguientes secciones:
+
+### PORTADA
+
+Título: **Plásticos de un solo uso: ¿comodidad o problema ambiental?**
+
+Subtítulo: Proyecto de Biología y Geología – 3.º de ESO.
+
+Incluye espacios para el nombre del estudiante, grupo y fecha.
+
+### SECCIÓN 1. LOS PLÁSTICOS EN NUESTRA VIDA
+
+Explica qué son los plásticos de un solo uso, por qué se utilizan y cuáles son los productos más comunes.
+
+Incluye ejemplos cotidianos y una actividad breve para identificar estos productos en el entorno del alumnado.
+
+Aclara que no todos los plásticos tienen las mismas características, usos o impactos ambientales.
+
+### SECCIÓN 2. EL VIAJE DE UN PLÁSTICO
+
+Explica las principales etapas del ciclo de vida de un producto plástico: materias primas, fabricación, transporte, utilización y gestión del residuo.
+
+Incluye un esquema visual que represente estas etapas.
+
+Diferencia entre reutilización, reciclaje, valorización y eliminación.
+
+### SECCIÓN 3. ¿QUÉ IMPACTO TIENEN EN EL MEDIOAMBIENTE?
+
+Explica los principales impactos ambientales documentados, incluyendo la generación de residuos, la contaminación de ecosistemas y los efectos sobre determinados seres vivos.
+
+Introduce el concepto de microplásticos con una explicación adecuada a la edad.
+
+Distingue claramente entre impactos demostrados, riesgos potenciales y cuestiones todavía investigadas.
+
+### SECCIÓN 4. LOS PLÁSTICOS EN CIFRAS: ESPAÑA Y EUROPA
+
+Presenta entre 3 y 5 datos relevantes y verificables sobre consumo, residuos, reciclaje o contaminación por plásticos.
+
+Para cada dato, indica la fuente, el año, el territorio y las unidades utilizadas.
+
+Incluye al menos un gráfico o tabla comparativa basado en datos reales.
+
+Añade preguntas para que el alumnado interprete los datos y detecte posibles conclusiones incorrectas.
+
+### SECCIÓN 5. ¿QUÉ SE ESTÁ HACIENDO PARA REDUCIRLOS?
+
+Explica las principales medidas vigentes en España y la Unión Europea, incluyendo restricciones sobre determinados productos de plástico de un solo uso.
+
+Presenta alternativas y acciones de reducción, reutilización y consumo responsable.
+
+Diferencia las obligaciones legales de las recomendaciones y propuestas.
+
+### SECCIÓN 6. ACTIVIDAD: INVESTIGADORES DE LOS PLÁSTICOS
+
+Diseña una actividad práctica para realizar en clase o en el centro educativo.
+
+Propón analizar los residuos de envases de un solo uso observados durante una jornada escolar, sin manipular residuos peligrosos ni acceder a papeleras.
+
+La actividad debe incluir:
+
+- Objetivo.
+- Materiales.
+- Procedimiento paso a paso.
+- Tabla para registrar los resultados.
+- Preguntas para interpretar los datos.
+- Espacio para elaborar conclusiones.
+
+Aclara que los resultados de una clase no pueden generalizarse automáticamente a toda la población.
+
+### SECCIÓN 7. APRENDEMOS A DISTINGUIR HECHOS Y OPINIONES
+
+Diseña una actividad de pensamiento crítico que permita diferenciar:
+
+- Datos científicos comprobables.
+- Interpretaciones de esos datos.
+- Opiniones y propuestas de actuación.
+
+Incluye una tabla con afirmaciones para clasificar y justificar.
+
+Añade dos preguntas que obliguen a comparar la fiabilidad y las conclusiones de diferentes fuentes.
+
+### SECCIÓN 8. DEBATIMOS Y PROPONEMOS SOLUCIONES
+
+Plantea una situación cercana al alumnado:
+
+**¿Debería nuestro instituto reducir al máximo los envases de plástico de un solo uso?**
+
+Propón un debate argumentado en el que los estudiantes deban utilizar evidencias del dossier, valorar las ventajas e inconvenientes de distintas alternativas y formular propuestas realistas.
+
+### SECCIÓN 9. CONCLUSIONES Y FUENTES
+
+Resume las cinco ideas más importantes de la investigación.
+
+Incluye tres preguntas para reflexionar y conversar en clase.
+
+Añade una bibliografía adaptada al alumnado con las fuentes utilizadas.
+
+Relaciona las afirmaciones científicas relevantes con sus referencias mediante citas discretas [1], [2], [3], etc.
+
+## 5. FASE 4. INFORME DE INVESTIGACIÓN PARA EL DOCENTE
+
+Después del dossier, elabora un informe independiente dirigido al profesor.
+
+Debe contener:
+
+- Las preguntas iniciales y el plan de investigación.
+- Una explicación breve del proceso de búsqueda y contraste.
+- Una tabla con las 5–7 fuentes y sus datos bibliográficos.
+- Los principales hallazgos respaldados por evidencias.
+- Los datos estadísticos utilizados, con año, territorio y fuente.
+- Las medidas legales vigentes, indicando su ámbito de aplicación y fecha de consulta.
+- Las cuestiones discutidas, limitaciones e incertidumbres científicas.
+- Las simplificaciones didácticas realizadas.
+- El solucionario y orientaciones para desarrollar las actividades.
+- Una lista de afirmaciones que deben comprobarse antes de utilizar el material.
+
+**Distingue expresamente entre hechos documentados, interpretaciones, hipótesis y propuestas.**
+
+Evita presentar como vigentes normas derogadas o medidas que todavía sean propuestas.
+
+## 6. FORMATO Y ENTREGA FINAL OBLIGATORIA
+
+**Debes entregar dos productos diferentes, completos y claramente separados.**
+
+**PRODUCTO A. DOSSIER DEL ALUMNADO**
+
+- Documento completo de 7–9 páginas aproximadamente.
+- Portada, explicaciones, esquemas, gráficos, tablas, actividades y bibliografía.
+- Lenguaje adecuado para estudiantes de 14–15 años.
+- Diseño claro, visual y atractivo, preparado para imprimir en A4.
+- Espacios para responder y trabajar directamente sobre el documento.
+- Material autónomo que pueda utilizarse sin necesidad de redactar contenidos adicionales.
+
+**PRODUCTO B. INFORME DE INVESTIGACIÓN PARA EL DOCENTE**
+
+- Documento independiente de 2–4 páginas aproximadamente.
+- Metodología, fuentes, evidencias, normativa, incertidumbres, orientaciones y solucionario.
+- Referencias verificables y enlaces directos.
+
+ENTREGA OBLIGATORIA: DOS ARCHIVOS HTML COMPLETOS
+
+Tu respuesta final debe incluir los dos productos terminados como dos documentos HTML independientes, no solo el informe de búsqueda ni una explicación de cómo crearlos:
+
+- Producto A: `Dossier_Plasticos_3_ESO.html`.
+- Producto B: `Informe_Docente_Plasticos.html`.
+
+Cada archivo debe contener el documento completo desde `&lt;!DOCTYPE html&gt;` hasta `&lt;/html&gt;`, incluyendo todos los textos, tablas, actividades, referencias y demás contenidos solicitados para ese producto. No dejes apartados como instrucciones para completar después.
+
+Incluye en cada HTML su propio CSS dentro de `&lt;style&gt;`, con `@page { size: A4; }` y estilos de impresión. Debe abrirse directamente en un navegador y estar listo para imprimir en papel A4, con márgenes legibles, texto visible, tablas que no se salgan de la página y saltos de página adecuados. Si usas diagramas o gráficos, inclúyelos en el propio HTML para que no dependan de archivos externos.
+
+Si puedes crear archivos descargables, genera y adjunta los dos archivos `.html` con los nombres indicados y comprueba que ambos contienen el documento completo. Si no puedes adjuntar archivos, muestra obligatoriamente los dos códigos HTML completos en dos bloques de código separados, identificados con su nombre, para que pueda guardar cada uno como archivo `.html` y abrirlo en el navegador. No omitas ni resumas el código y no entregues solo fragmentos.
+
+**No sustituyas los documentos por un resumen, un índice, una explicación del proceso ni una descripción de lo que contendrían.**
+
+## 7. COMPROBACIÓN FINAL DE CALIDAD
+
+Antes de finalizar, verifica que:
+
+- Todas las afirmaciones importantes están respaldadas por fuentes reales.
+- Los enlaces corresponden a los documentos consultados.
+- Los datos incluyen fecha, territorio y unidades.
+- La normativa citada está vigente y correctamente interpretada.
+- Se distinguen evidencias, interpretaciones y propuestas.
+- Los gráficos representan fielmente los datos originales.
+- El vocabulario y las actividades son adecuados para 3.º de ESO.
+- El dossier contiene todos los textos y materiales completos.
+- El dossier y el informe docente están separados.
+- Ambos documentos están efectivamente disponibles para su lectura o descarga.
+
+**CRITERIO DE ÉXITO:** La tarea solo estará completa cuando hayas entregado el dossier real para el alumnado y el informe de investigación para el docente. Explicar qué has investigado sin entregar ambos documentos constituye un resultado incompleto.</pre><button class="copy" type="button">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details><p><strong>Revisa:</strong> la fecha y el ámbito de cada dato, y si las fuentes hablan del mismo tipo de plástico y del mismo contexto geográfico.</p><h3>Investigación personal docente · evaluación formativa</h3><p>Objetivo: orientarse sobre la evidencia educativa para preparar una decisión o una explicación profesional.</p><details class="research-prompt"><summary>Ver prompt completo · Docente · evaluación formativa</summary><div class="prompt"><pre># INVESTIGACIÓN AVANZADA: EVALUACIÓN FORMATIVA Y RETROALIMENTACIÓN EN EDUCACIÓN
+
+## 1. OBJETIVO Y ROL
+
+Actúa como un equipo formado por un investigador en ciencias de la educación, un especialista en evaluación educativa y un docente experto en Educación Primaria y Secundaria.
+
+Tu misión es investigar qué indica la evidencia científica sobre la evaluación formativa y la retroalimentación (*feedback*) y, a partir de los resultados, **elaborar una guía práctica y fundamentada para docentes de Primaria y Secundaria**.
+
+**IMPORTANTE:** No basta con explicar qué has investigado o resumir publicaciones científicas. Debes **crear y entregar una guía docente completa**, con explicaciones, ejemplos, estrategias y herramientas listas para adaptar al aula.
+
+## 2. FASE 1. PLANIFICACIÓN DE LA INVESTIGACIÓN
+
+Antes de comenzar la búsqueda:
+
+- Formula entre 4 y 5 preguntas de investigación.
+- Diseña un plan breve para responderlas.
+- Delimita el análisis a la enseñanza obligatoria, diferenciando Primaria y Secundaria.
+
+La investigación debe abordar:
+
+- Qué es la evaluación formativa y cómo se diferencia de la evaluación sumativa.
+- Qué efectos sobre el aprendizaje se han estudiado.
+- Qué tipos de retroalimentación se han comparado y con qué resultados.
+- Qué condiciones favorecen o dificultan su aplicación.
+- Qué diferencias se han observado entre etapas educativas.
+- Qué limitaciones e incertidumbres presenta la evidencia disponible.
+
+Distingue desde el principio los resultados científicamente respaldados de las interpretaciones y recomendaciones pedagógicas.
+
+## 3. FASE 2. INVESTIGACIÓN Y CONTRASTE DE FUENTES
+
+Busca y consulta entre 6 y 8 fuentes académicas y educativas fiables, priorizando:
+
+- Revisiones sistemáticas y metaanálisis.
+- Estudios científicos revisados por pares.
+- Universidades y centros de investigación educativa.
+- Organismos educativos nacionales e internacionales.
+
+Busca primero fuentes fiables en español e incorpora investigaciones internacionales relevantes cuando sea necesario, indicando expresamente las que estén publicadas en inglés.
+
+Para cada fuente, registra:
+
+- Autor o autores.
+- Año de publicación.
+- Título completo.
+- Revista, publicación o institución.
+- Tipo de estudio.
+- Etapa educativa y población estudiada.
+- Enlace directo verificable o DOI.
+- Principales aportaciones.
+
+**No inventes referencias ni completes datos bibliográficos mediante suposiciones.**
+
+Para cada hallazgo relevante, identifica la población, el contexto, la práctica evaluada y el resultado medido.
+
+Distingue asociación y causalidad, resultados consistentes y discutidos, y conclusiones científicas y recomendaciones de los autores.
+
+No generalices resultados obtenidos en contextos concretos a todos los centros educativos.
+
+## 4. FASE 3. ELABORACIÓN DE LA GUÍA PRÁCTICA PARA DOCENTES
+
+Esta es la fase principal y el producto más importante del trabajo.
+
+Debes elaborar una **guía profesional completa, clara y aplicable**, dirigida a docentes de Educación Primaria y Secundaria que desean mejorar sus prácticas de evaluación formativa.
+
+La guía debe incluir obligatoriamente las siguientes secciones:
+
+### PORTADA
+
+Título: **Evaluar para aprender: guía práctica de evaluación formativa y retroalimentación**
+
+Subtítulo: Evidencias científicas y estrategias para Educación Primaria y Secundaria.
+
+### SECCIÓN 1. ¿QUÉ ES LA EVALUACIÓN FORMATIVA?
+
+Explica de manera accesible:
+
+- Qué significa evaluar para mejorar el aprendizaje.
+- Diferencias entre evaluación formativa y sumativa.
+- Qué papel tienen las evidencias del aprendizaje y la retroalimentación.
+- Qué errores o interpretaciones simplistas conviene evitar.
+
+Incluye ejemplos de situaciones reales de aula.
+
+### SECCIÓN 2. ¿QUÉ NOS DICE LA INVESTIGACIÓN?
+
+Presenta los principales hallazgos científicos sobre evaluación formativa y retroalimentación.
+
+Para cada hallazgo, indica:
+
+- Qué se ha investigado.
+- Con qué estudiantes y en qué contexto.
+- Qué resultados se han observado.
+- Qué grado de confianza permite la evidencia.
+- Qué limitaciones deben considerarse.
+
+Utiliza un lenguaje comprensible para docentes sin formación especializada en investigación.
+
+Incluye referencias a las fuentes originales.
+
+### SECCIÓN 3. TIPOS DE RETROALIMENTACIÓN
+
+Explica y compara distintas prácticas:
+
+- Retroalimentación centrada en la tarea.
+- Retroalimentación centrada en el proceso.
+- Orientaciones para mejorar y revisar el trabajo.
+- Comentarios centrados en características personales.
+- Retroalimentación oral, escrita, entre iguales y autoevaluación.
+
+Incluye una tabla comparativa con ejemplos, posibles ventajas, limitaciones y condiciones de uso.
+
+Evita presentar una estrategia como universalmente superior si la evidencia no lo demuestra.
+
+### SECCIÓN 4. EJEMPLOS PRÁCTICOS PARA PRIMARIA Y SECUNDARIA
+
+Diseña al menos cuatro situaciones didácticas completas:
+
+**Ejemplo 1. Educación Primaria:** retroalimentación en una actividad de escritura.
+
+**Ejemplo 2. Educación Primaria:** evaluación formativa durante la resolución de problemas matemáticos.
+
+**Ejemplo 3. Educación Secundaria:** retroalimentación sobre un trabajo de investigación o proyecto.
+
+**Ejemplo 4. Educación Secundaria:** evaluación formativa mediante preguntas, revisión de errores y mejora de respuestas.
+
+Cada ejemplo debe incluir:
+
+- Nivel educativo y materia.
+- Objetivo de aprendizaje.
+- Actividad inicial.
+- Cómo recoger evidencias del aprendizaje.
+- Ejemplo concreto de retroalimentación docente.
+- Oportunidad para que el estudiante mejore su trabajo.
+- Forma de comprobar el progreso.
+
+Los ejemplos deben ser realistas y adaptables, no supuestas prácticas cuya eficacia esté garantizada.
+
+### SECCIÓN 5. HERRAMIENTAS LISTAS PARA UTILIZAR
+
+Elabora materiales prácticos que el profesorado pueda copiar, imprimir o adaptar:
+
+1. Una plantilla sencilla de retroalimentación escrita.
+2. Una lista de cotejo para revisar aprendizajes.
+3. Una ficha de autoevaluación del alumnado.
+4. Una plantilla para planificar una actividad de evaluación formativa.
+
+Incluye instrucciones breves y ejemplos de uso.
+
+### SECCIÓN 6. ¿QUÉ CONDICIONES IMPORTAN?
+
+Analiza factores que pueden influir en la aplicación de estas estrategias:
+
+- Edad y conocimientos previos del alumnado.
+- Claridad de los objetivos y criterios de evaluación.
+- Comprensión y utilización de la retroalimentación.
+- Tiempo y carga de trabajo docente.
+- Contexto de aula y características de la tarea.
+
+Distingue las condiciones respaldadas por investigaciones de las recomendaciones prácticas razonables.
+
+### SECCIÓN 7. PLAN PARA EMPEZAR EN EL AULA
+
+Diseña una propuesta sencilla de implementación durante cuatro semanas.
+
+Incluye:
+
+- Una estrategia inicial fácil de aplicar.
+- Pasos para introducirla progresivamente.
+- Qué evidencias recoger.
+- Cómo observar si los estudiantes utilizan la retroalimentación.
+- Cómo revisar y ajustar la práctica.
+
+Presenta el plan como una propuesta adaptable, no como una intervención de eficacia garantizada.
+
+### SECCIÓN 8. CONCLUSIONES Y REFLEXIÓN DOCENTE
+
+Resume entre cinco y siete ideas clave.
+
+Añade preguntas para que cada docente valore la pertinencia de las estrategias en su centro educativo.
+
+Incluye una bibliografía con referencias y enlaces verificables.
+
+Relaciona las afirmaciones importantes con sus fuentes mediante citas [1], [2], [3], etc.
+
+## 5. FASE 4. INFORME DE INVESTIGACIÓN PARA EL DOCENTE
+
+Además de la guía práctica, elabora un **informe de evidencia científica independiente**.
+
+Debe contener:
+
+- Preguntas y plan inicial de investigación.
+- Descripción breve del procedimiento de búsqueda y selección de fuentes.
+- Tabla con las 6–8 referencias bibliográficas completas.
+- Síntesis temática de los hallazgos.
+- Comparación de resultados en Primaria y Secundaria, cuando existan datos suficientes.
+- Prácticas de retroalimentación estudiadas y resultados observados.
+- Resultados consistentes, contradictorios o insuficientemente investigados.
+- Limitaciones metodológicas y dificultades de generalización.
+- Diferencias entre evidencia científica y recomendaciones pedagógicas.
+- Lecturas prioritarias y aspectos que deben verificarse directamente antes de tomar decisiones.
+
+**No presentes esta búsqueda como una revisión sistemática exhaustiva.** Se trata de una investigación de orientación basada en fuentes académicas seleccionadas.
+
+## 6. FORMATO Y ENTREGA FINAL OBLIGATORIA
+
+**Debes entregar dos productos diferentes, completos y claramente separados.**
+
+**PRODUCTO A. GUÍA PRÁCTICA PARA DOCENTES**
+
+- Documento completo de 8–12 páginas aproximadamente.
+- Explicaciones, ejemplos para Primaria y Secundaria, tablas comparativas y herramientas de aula.
+- Lenguaje profesional, claro y accesible.
+- Diseño visual y bien organizado, preparado para leer o imprimir en A4.
+- Plantillas utilizables directamente.
+- Recomendaciones diferenciadas de los hallazgos científicos.
+
+**PRODUCTO B. INFORME DE INVESTIGACIÓN**
+
+- Documento independiente de 3–5 páginas aproximadamente.
+- Metodología, referencias, evidencias, resultados, incertidumbres y limitaciones.
+- Fuentes académicas con enlaces verificables.
+- Orientaciones sobre qué documentos originales consultar antes de adoptar decisiones.
+
+ENTREGA OBLIGATORIA: DOS ARCHIVOS HTML COMPLETOS
+
+Tu respuesta final debe incluir los dos productos terminados como dos documentos HTML independientes, no solo el informe de búsqueda ni una explicación de cómo crearlos:
+
+- Producto A: `Guia_Evaluacion_Formativa_Docentes.html`.
+- Producto B: `Informe_Investigacion_Evaluacion_Formativa.html`.
+
+Cada archivo debe contener el documento completo desde `&lt;!DOCTYPE html&gt;` hasta `&lt;/html&gt;`, incluyendo todos los textos, tablas, actividades, referencias y demás contenidos solicitados para ese producto. No dejes apartados como instrucciones para completar después.
+
+Incluye en cada HTML su propio CSS dentro de `&lt;style&gt;`, con `@page { size: A4; }` y estilos de impresión. Debe abrirse directamente en un navegador y estar listo para imprimir en papel A4, con márgenes legibles, texto visible, tablas que no se salgan de la página y saltos de página adecuados. Si usas diagramas o gráficos, inclúyelos en el propio HTML para que no dependan de archivos externos.
+
+Si puedes crear archivos descargables, genera y adjunta los dos archivos `.html` con los nombres indicados y comprueba que ambos contienen el documento completo. Si no puedes adjuntar archivos, muestra obligatoriamente los dos códigos HTML completos en dos bloques de código separados, identificados con su nombre, para que pueda guardar cada uno como archivo `.html` y abrirlo en el navegador. No omitas ni resumas el código y no entregues solo fragmentos.
+
+**No sustituyas los documentos por un resumen, un índice, una descripción del contenido ni una explicación de cómo se elaborarían.**
+
+## 7. COMPROBACIÓN FINAL DE CALIDAD
+
+Antes de finalizar, verifica que:
+
+- Las referencias bibliográficas son reales y verificables.
+- Los hallazgos están vinculados a sus fuentes.
+- Se identifica la población y el contexto de los estudios cuando están disponibles.
+- Se distinguen resultados científicos, interpretaciones y recomendaciones.
+- No se exagera la eficacia de ninguna estrategia.
+- Se explican las principales incertidumbres y limitaciones.
+- Los ejemplos son adecuados para Primaria y Secundaria.
+- Las plantillas y herramientas están completas.
+- La guía contiene materiales directamente utilizables.
+- El informe científico y la guía práctica están separados.
+- Ambos documentos están disponibles para su lectura o descarga.
+
+**CRITERIO DE ÉXITO:** La tarea solo estará completa cuando hayas entregado la guía práctica real para docentes y el informe de investigación con sus evidencias científicas. Un resumen de publicaciones, sin los dos documentos terminados, constituye un resultado incompleto.</pre><button class="copy" type="button">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details><p><strong>Revisa:</strong> métodos, población estudiada, etapa educativa y contexto; una conclusión no se traslada automáticamente a cualquier grupo o centro.</p><div class="drawer-example"><strong>Importante · de la investigación al HTML</strong><p>La investigación profunda de ChatGPT y Gemini suele entregar un <strong>informe con fuentes</strong>. Aunque los prompts anteriores solicitan archivos HTML, <strong>su descarga directa no está garantizada</strong> y depende del servicio, la cuenta y las herramientas disponibles.</p><ol><li><strong>Primero, investiga:</strong> solicita el contenido completo del dossier o guía y del informe, con sus fuentes. Comprueba que no se limita a describir lo que habría que elaborar.</li><li><strong>Después, prepara cada archivo:</strong> en la misma conversación, pide en el chat normal o en Canvas que convierta uno de los documentos completos en HTML con estilos de impresión A4. Repite la petición para el segundo documento.</li></ol><p>Cuando termine el informe, puedes escribir: <strong>«Ahora genera los HTML que te pedí».</strong></p><p>Si recibes código, cópialo en un editor de texto, guarda el archivo con extensión <strong>.html</strong> y ábrelo en el navegador para revisarlo e imprimirlo. Comprueba que el código está completo, que conserva las fuentes y que las páginas se imprimen correctamente.</p><p>Consulta la ayuda oficial: <a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT · investigación profunda ↗</a> (en inglés) y <a href="https://support.google.com/gemini/answer/15719111?hl=es" target="_blank" rel="noopener noreferrer">Gemini · Deep Research ↗</a>.</p></div></div></details></div></aside></div><nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#editable">← Anterior</a><a href="#preguntas">Siguiente →</a></nav></section>
 <section class="slide" id="preguntas" data-topic="preguntas"><div class="slide-body"><div class="slide-content"><p class="kicker"><span>06 / 13</span> DEL DISEÑO AL BANCO DE PREGUNTAS</p><h2>Preguntas para <em>importar</em><span class="period">.</span></h2><div class="question-stages" aria-label="Dos tareas diferentes: diseñar y dar formato a las preguntas"><article class="question-stage"><p class="question-stage-label"><span>01</span> DISEÑAR Y VALIDAR</p><strong>Primero, la pregunta</strong><p>Definir qué se evalúa, el nivel, la respuesta correcta y distractores plausibles requiere <strong>dominio del contenido y criterio docente</strong>. La IA puede proponer un borrador; tú compruebas su calidad. Para formular la petición, vuelve a <a href="#peticion">Construir una petición · 03/13</a>.</p></article><article class="question-stage question-stage-format"><p class="question-stage-label"><span>02</span> DAR FORMATO E IMPORTAR</p><strong>Después, el archivo</strong><p>Con las preguntas revisadas, solicita la sintaxis que acepta el banco de preguntas. El formato de importación permite trasladarlas a <strong>distintos espacios educativos compatibles</strong> sin introducirlas una por una.</p></article></div><blockquote class="takeaway question-quote">«El formato facilita la importación; <strong>el criterio docente determina la calidad de la pregunta.</strong>»</blockquote></div><aside class="slide-aside"><div class="slide-hook question-format-hook"><div class="question-format-list" aria-label="Tres formatos de preguntas"><span><strong>AIKEN</strong><small>Opción múltiple · texto plano</small></span><span><strong>GIFT</strong><small>Varios tipos · texto plano</small></span><span><strong>Moodle XML</strong><small>Más tipos y propiedades</small></span></div></div><div class="extras"><details><summary>Ampliación · AIKEN paso a paso</summary><div class="longread"><p class="drawer-intro">AIKEN es un formato de texto sencillo para preguntas de opción múltiple con una sola respuesta correcta. Cada pregunta contiene el enunciado, las opciones y una línea <code>ANSWER:</code> en mayúsculas con la letra correcta. No sirve para todos los tipos de pregunta ni permite expresar tantas propiedades como GIFT o Moodle XML.</p><h3>Ejemplo AIKEN</h3><div class="prompt"><strong>Dos preguntas de opción múltiple</strong><pre>¿Cuándo estalló la Revolución Francesa?
 A) 1733
 B) 1743

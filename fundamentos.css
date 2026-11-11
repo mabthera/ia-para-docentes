@@ -442,10 +442,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 #llm .prediction-figure { width: min(100%, calc(26svh * 3.75)); }
 #llm .prediction-figure img { width: 100%; height: auto; max-height: none; object-fit: contain; }
 
-
 .chapter-nav .survey-nav-link { margin-left: auto; color: #8f302e; background: #f6e6e5; }
 .chapter-nav .survey-nav-link:hover, .chapter-nav .survey-nav-link:focus-visible { color: #fff; background: #9b302e; }
 #cierre .survey-entry { margin-right: 24px; }
 #cierre .secondary-link { display: inline-flex; align-items: center; min-height: 38px; color: #66737a; font-size: 14px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 #cierre .secondary-link:hover { color: var(--accent); }
-@media (max-width: 600px) { .chapter-nav .survey-nav-link { margin-left: 0; } #cierre .survey-entry { margin-right: 0; } #cierre .secondary-link { margin: 12px 0 0; } }
+@media (max-width: 600px) {
+  .chapter-nav .survey-nav-link { margin-left: 0; }
+  #cierre .survey-entry { margin-right: 0; }
+  #cierre .secondary-link { margin: 12px 0 0; }
+}

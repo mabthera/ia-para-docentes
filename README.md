@@ -7,7 +7,7 @@ El recorrido consta de fundamentos, herramientas online, el puente de proyectos 
 ## Organización
 
 - `index.html`: portada y acceso a las cinco secciones.
-- `fundamentos.html`, `online.html`, `proyectos.html`, `escritorio.html` y `local.html`: páginas de las secciones.
+- `fundamentos.html`, `online.html`, `proyectos.html`, `escritorio.html` y `local.html`: páginas de las secciones; `encuesta.html` contiene el cuestionario enlazado desde el cierre de Fundamentos.
 - `assets/`: imágenes utilizadas por la web.
 - Archivos `.css` y `.js`: estilos e interacciones de la presentación.
 - `ejemplos/`: archivos de muestra para practicar la importación de preguntas en Moodle.

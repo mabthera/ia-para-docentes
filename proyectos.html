@@ -3,32 +3,1481 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Una estación breve entre las herramientas online y los asistentes de escritorio para organizar proyectos con fuentes.">
-  <title>Proyectos y GeminiNotebook · IA para docentes</title>
+  <meta name="description" content="Proyectos y Gemini Notebook: trabajar con archivos, recetas reutilizables y rigor documental en la docencia.">
+  <title>Proyectos y Gemini Notebook · IA para docentes</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="portada.css">
-  <link rel="stylesheet" href="seccion.css">
+  <link rel="stylesheet" href="fundamentos.css?v=39">
+  <link rel="stylesheet" href="proyectos.css?v=33">
   <link rel="stylesheet" href="licencia.css?v=2">
+  <script src="proyectos.js?v=1" defer></script>
   <script src="licencia.js?v=2" defer></script>
 </head>
 <body data-fase="proyectos">
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="index.html" aria-label="IA para docentes, inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
-      <span class="top-note"><span class="status-dot"></span> FASE 02.5 · PUENTE</span>
-      <span class="top-index">DAVID RODRÍGUEZ <span class="slash">/</span> 02.5</span>
+      <a class="brand" href="index.html" aria-label="Volver al inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
+      <span class="top-note"><span class="status-dot"></span> FASE 02.5 · PROYECTOS Y FUENTES</span>
+      <a class="volver" href="index.html#recorrido">← Volver al recorrido</a>
     </header>
-    <main class="section-start phase-bridge">
-      <p class="eyebrow"><span class="eyebrow-line"></span> ENTRE LA WEB Y EL ESCRITORIO</p>
-      <h1>Proyectos y <em>GeminiNotebook</em><span class="period">.</span></h1>
-      <p class="intro">Una etapa breve para explorar proyectos basados en fuentes organizadas antes de pasar a los asistentes de escritorio.</p>
-      <p class="section-note">El contenido de esta sección está en preparación.</p>
-      
-      <a class="return-link" href="index.html#recorrido">← Volver al recorrido</a>
+
+    <nav class="chapter-nav" aria-label="Índice de Proyectos y Gemini Notebook">
+      <a href="#inicio" data-topic="inicio">Inicio</a>
+      <a href="#archivos" data-topic="archivos">1 · Archivos</a>
+      <a href="#proyectos" data-topic="proyectos">2 · Proyectos</a>
+      <a href="#recetas" data-topic="recetas">3 · Recetas</a>
+      <a href="#cuadernos" data-topic="cuadernos">4 · Cuadernos</a>
+      <a href="#integracion" data-topic="integracion">5 · Integración</a>
+      <a href="#cierre" data-topic="cierre">6 · Cierre</a>
+    </nav>
+
+    <main id="recorrido-proyectos">
+      <!-- 00 · PORTADA -->
+      <section class="slide cover" id="inicio" data-topic="inicio">
+        <div class="slide-content">
+          <p class="kicker"><span>02.5</span> ENTRE LA WEB Y EL ESCRITORIO</p>
+          <h1>Proyectos y<br><em>Gemini Notebook</em><span class="period">.</span></h1>
+          <p class="lead">Pasar de la conversación aislada a espacios de trabajo persistentes donde la IA conoce tus documentos, tus criterios pedagógicos y tus recetas de trabajo.</p>
+          <div class="cover-actions">
+            <div class="extras">
+              <details>
+                <summary>¿Qué significa trabajar con proyectos y fuentes?</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Esta fase actúa como un <strong>puente didáctico</strong> entre el chat conversacional generalista de la web y el trabajo avanzado con archivos en el escritorio.</p>
+                  
+                  <div class="visual-flow" aria-label="Evolución del trabajo con IA">
+                    <span>Chat puntual (efímero)</span>
+                    <b aria-hidden="true">→</b>
+                    <span>Proyecto con archivos</span>
+                    <b aria-hidden="true">→</b>
+                    <span>Cuaderno cerrado (citas auditables)</span>
+                    <b aria-hidden="true">→</b>
+                    <span>Asistente integrado</span>
+                  </div>
+
+                  <h3>De la ocurrencia a la memoria documental</h3>
+                  <p>En un chat abierto tradicional, cada conversación empieza desde cero. Si necesitas que el asistente adapte un texto para 3.º de ESO siguiendo los principios del DUA y con el formato de tu centro, tienes que volver a escribir esas instrucciones una y otra vez.</p>
+                  <p>Al trabajar con <strong>Proyectos</strong> (en ChatGPT o Claude) y con <strong>Cuadernos</strong> (en Gemini Notebook / NotebookLM), el asistente recibe de antemano tus programaciones, tus decretos oficiales y tus guías de estilo. Las respuestas dejan de ser genéricas y pasan a fundamentarse en tu realidad docente.</p>
+
+                  <h3>Diferencia entre las opciones de trabajo</h3>
+                  <table class="comp-table">
+                    <thead>
+                      <tr>
+                        <th>Entorno</th>
+                        <th>Dónde residen los datos</th>
+                        <th>Comportamiento de la IA</th>
+                        <th>Uso docente idóneo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Chat general online</strong></td>
+                        <td>Nube del proveedor (efímero por chat)</td>
+                        <td>Conocimiento global, creativo, propenso a inventar leyes</td>
+                        <td>Lluvia de ideas, consultas rápidas, borradores iniciales</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Proyectos (ChatGPT / Claude)</strong></td>
+                        <td>Nube privada del proyecto</td>
+                        <td>Memoria compartida, instrucciones fijas y archivos de consulta</td>
+                        <td>Crear unidades temáticas, mantener estilo y aplicar recetas</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Gemini Notebook (NotebookLM)</strong></td>
+                        <td>Nube de Google (recinto cerrado)</td>
+                        <td>Anclaje estricto en fuentes: solo responde con citas a tus PDFs</td>
+                        <td>Legislación (LOMLOE), rigor en apuntes, pódcasts de audio</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Asistentes locales (Fase 04)</strong></td>
+                        <td>Tu propio ordenador (sin conexión externa)</td>
+                        <td>Procesamiento privado en local, sin envío de datos a servidores</td>
+                        <td>Privacidad estricta, transcripción de audios escolares</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h3>Cómo utilizar este recurso de consulta</h3>
+                  <p>La pantalla principal presenta las ideas clave para reflexionar y proyectar. Los botones de ampliación lateral contienen <strong>el manual completo</strong>: explicaciones paso a paso, tablas comparativas, advertencias legales y plantillas copiables que puedes consultar y reutilizar durante todo el curso escolar.</p>
+                  
+                  <div class="drawer-example">
+                    <strong>Nota sobre cuentas y accesos</strong>
+                    <p>La inmensa mayoría de las funciones explicadas en esta guía pueden aprovecharse con <strong>cuentas gratuitas</strong>. Cuando una funcionalidad avanzada (como mayor ventana de contexto, cuotas ampliadas de cómputo o integración completa con Workspace) requiera un plan de pago o educativo institucional, se indica expresamente.</p>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <a class="primary-link" href="#archivos">Comenzar el recorrido <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="cover-graphic">
+          <div class="orbit"></div>
+          <div class="project-folder" role="img" aria-label="Carpeta con archivos de proyectos y cuadernos">
+            <svg viewBox="0 0 260 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path class="folder-paper" d="M87 38h81l21 22v94H87z" />
+              <path class="folder-paper folder-paper-back" d="M105 24h69l20 21v91h-89z" />
+              <path class="folder-paper-line" d="M122 62h42M122 77h52M122 92h46" />
+              <path class="folder-body" d="M35 73h73l17 17h100v75a13 13 0 0 1-13 13H48a13 13 0 0 1-13-13z" />
+              <path class="folder-tab" d="M35 73h73l17 17H35z" />
+              <path class="folder-front" d="M45 99h170l-13 66a13 13 0 0 1-13 10H55a13 13 0 0 1-13-15z" />
+              <path class="folder-front-line" d="m66 132 6-3m15-5 6-3m16-5 6-3m17-5 6-3" />
+            </svg>
+          </div>
+          <span class="orbit-label label-a">ARCHIVOS</span>
+          <span class="orbit-label label-b">PROYECTOS</span>
+          <span class="orbit-label label-c">CUADERNOS</span>
+        </div>
+      </section>
+
+      <!-- 01 · ARCHIVOS -->
+      <section class="slide" id="archivos" data-topic="archivos">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>01 / 05</span> CONTEXTO, VELOCIDAD Y PRECISIÓN</p>
+            <h2>El valor del<br><em>contexto</em><span class="period">.</span></h2>
+            <p class="lead">Subir archivos no es almacenar documentos: es dar memoria y contexto exacto a la IA para ahorrar tiempo, erradicar invenciones y reutilizar tu trabajo.</p>
+            
+            <ol class="context-points" aria-label="Ventajas de aportar contexto documental">
+              <li><span>01</span><div><strong>Ahorra tiempo</strong><p>Evita repetir el nivel del grupo, las pautas DUA y los criterios de evaluación del centro.</p></div></li>
+              <li><span>02</span><div><strong>Afina las respuestas</strong><p>La IA consulta tus apuntes, decretos autonómicos y programaciones oficiales.</p></div></li>
+              <li><span>03</span><div><strong>Reutiliza tu trabajo</strong><p>Los documentos del curso pueden servir para preparar actividades, rúbricas y exámenes.</p></div></li>
+            </ol>
+
+            <p class="takeaway"><strong>Regla fundamental:</strong> Sin contexto, la IA generaliza o alucina; con tus archivos, responde como un asistente especializado de tu departamento.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook context-hook">
+              <p>AÑADE CONTEXTO AL PROYECTO</p>
+              <div class="context-upload" role="group" aria-label="Añadir documentos al proyecto">
+                <div class="upload-source">
+                  <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                    <path d="M23 14h36l17 17v55H23z" fill="#fffdfa" stroke="#b99a5e" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M59 14v18h17M34 48h31M34 59h31M34 70h21" fill="none" stroke="#c4a76b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 26v58a6 6 0 0 0 6 6h44" fill="none" stroke="#d7c49b" stroke-width="3" stroke-linecap="round" />
+                  </svg>
+                  <strong>Tus documentos</strong>
+                  <small>Apuntes · criterios · programación</small>
+                </div>
+                <span class="upload-arrow" aria-hidden="true">→</span>
+                <div class="upload-target">
+                  <svg viewBox="0 0 120 100" aria-hidden="true" focusable="false">
+                    <path d="M12 29h39l10 11h47v43a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8z" fill="#d8bd80" stroke="#9b6f24" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M16 46h88l-9 34a7 7 0 0 1-7 5H22a7 7 0 0 1-7-9z" fill="#ead8af" stroke="#9b6f24" stroke-width="3" stroke-linejoin="round" />
+                  </svg>
+                  <strong>Proyecto</strong>
+                </div>
+              </div>
+              <p class="upload-question">¿Cómo añado el contexto?</p>
+            </div>
+
+            <div class="extras">
+              <details>
+                <summary>Ampliar: cómo lee la IA nuestros documentos</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Comprender cómo procesan texto los modelos de lenguaje te permitirá preparar tus archivos para obtener respuestas mucho más precisas y evitar errores de lectura.</p>
+
+                  <h3>La ventana de contexto explicada para docentes</h3>
+                  <p>Cuando subes un documento (PDF, Word o texto plano), la IA no lo "aprende" para siempre ni lo memoriza en su cerebro global: lo coloca temporalmente dentro de su <strong>ventana de contexto</strong> mientras dura la conversación o el proyecto.</p>
+                  <p>La ventana de contexto se mide en <em>tokens</em> (fragmentos de palabras; aproximadamente 1.000 tokens equivalen a unas 750 palabras en español). Los modelos modernos disponen de ventanas enormes (desde 128.000 tokens en GPT-4o hasta 1 o 2 millones de tokens en Gemini 3). Esto permite cargar libros enteros, leyes completas o programaciones anuales en una sola sesión.</p>
+
+                  <h3>Formatos recomendados y sus peculiaridades</h3>
+                  <ul class="resource-list">
+                    <li><strong>Markdown (`.md`) y texto plano (`.txt`):</strong> Son los formatos más limpios y eficientes. No contienen código invisible de maquetación, consumen menos tokens y permiten estructurar títulos jerárquicos (`#`, `##`) que la IA comprende a la perfección.</li>
+                    <li><strong>Microsoft Word (`.docx`) y Google Docs:</strong> Muy recomendables. El modelo interpreta limpiamente títulos, párrafos y listas sin problemas de codificación.</li>
+                    <li><strong>Documentos PDF (`.pdf`):</strong> Son muy habituales en educación, pero su eficacia depende de cómo fueron creados:
+                      <ul>
+                        <li><em>PDF digital nativo:</em> Creado desde Word o Canva con texto seleccionable. Se lee con alta precisión.</li>
+                        <li><em>PDF escaneado (imagen):</em> Si es una fotocopia de un libro antiguo o apuntes manuscritos, la IA debe aplicar OCR (reconocimiento óptico de caracteres). Puede confundir números, tildes, símbolos matemáticos o notas al margen.</li>
+                      </ul>
+                    </li>
+                    <li><strong>Libros electrónicos (`.epub`):</strong> Formato ideal para novelas o monografías completas, ya que preserva el texto fluido sin saltos de página artificiales.</li>
+                  </ul>
+
+                  <h3>El fenómeno de la "pérdida en el medio" (*Lost in the Middle*)</h3>
+                  <p>Aunque un modelo admita 500 páginas de texto, diversos estudios de computación demuestran que la IA presta más atención a la información situada al <strong>principio</strong> y al <strong>final</strong> del contexto aportado, pudiendo pasar por alto detalles secundarios ubicados en las páginas intermedias.</p>
+                  <div class="drawer-example">
+                    <strong>Pauta de buena práctica</strong>
+                    <p>Si necesitas que la IA aplique un criterio de evaluación muy concreto o una fórmula específica, menciónalo explícitamente en tu petición: <em>«Fíjate especialmente en la tabla de ponderaciones que aparece en el apartado 4.2 del documento adjunto»</em>.</p>
+                  </div>
+                </div>
+              </details>
+
+
+
+              <details>
+                <summary>Ampliar: cómo preparar y optimizar tus documentos</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Un documento bien formateado ahorra tokens y permite a la IA localizar los datos con exactitud milimétrica.</p>
+
+                  <h3>Recomendaciones prácticas antes de subir un archivo</h3>
+                  <ol>
+                    <li><strong>Nombres de archivo claros y descriptivos:</strong> Evita nombres genéricos como <code>documento1.pdf</code> o <code>apuntes.docx</code>. Utiliza convenciones como:
+                      <pre>2ESO_Geografia_Tema03_Climas_Apuntes.pdf
+LOMLOE_Galicia_Decreto_Secundaria_Matematicas.pdf</pre>
+                      De este modo, en tus peticiones podrás indicar: <em>«Usa exclusivamente el archivo de Climas para redactar la ficha»</em>.
+                    </li>
+                    <li><strong>Jerarquía tipográfica consistente:</strong> Asegúrate de que los títulos principales utilicen el estilo <em>Título 1 (H1)</em>, los apartados <em>Título 2 (H2)</em> y los subapartados <em>Título 3 (H3)</em>. La IA reconoce esta jerarquía y sabe exactamente qué contenidos pertenecen a cada unidad.</li>
+                    <li><strong>Tablas simples y limpias:</strong> Evita celdas combinadas vertical y horizontalmente en documentos Word, ya que pueden descolocar el orden de lectura de la IA. Si la tabla es muy compleja, es preferible desglosarla en una lista con viñetas.</li>
+                    <li><strong>Elimina páginas superfluas:</strong> Portadas pesadas con fotos decorativas, índices extensos con números de página o anexos irrelevantes consumen presupuesto de contexto innecesariamente. Sube solo la carne del documento.</li>
+                  </ol>
+                </div>
+              </details>
+              <details class="legal-expansion">
+                <summary>Ampliar: privacidad, RGPD y datos escolares</summary>
+                <div class="longread legal-expansion-content">
+                  <div class="legal-expansion-intro">
+                    <p><strong>Criterio de seguridad docente:</strong> Trabajar con archivos en la nube implica enviar su contenido a servidores de proveedores tecnológicos. La regla de oro del RGPD es la <strong>minimización de datos</strong>: no subas nunca información personal que no sea estrictamente imprescindible para la tarea didáctica.</p>
+                  </div>
+
+                  <h3>Semáforo de documentación docente</h3>
+                  <div class="traffic-light">
+                    <div class="traffic-item traffic-green">
+                      <div>
+                        <strong>🟢 VERDE: Documentos de libre uso y seguros</strong>
+                        <p>Currículos y decretos oficiales publicados en boletines (BOE, DOG, etc.), programaciones didácticas de departamento, temarios propios del docente, apuntes de clase, modelos de examen de convocatorias pasadas, lecturas clásicas y artículos científicos divulgativos.</p>
+                      </div>
+                    </div>
+                    <div class="traffic-item traffic-yellow">
+                      <div>
+                        <strong>🟡 AMARILLO: Precaución y anonimización obligatoria</strong>
+                        <p>Fichas o redacciones de alumnado usadas como ejemplo (deben borrarse previamente todos los nombres, apellidos, cursos y centros), casos prácticos de convivencia basados en hechos reales (con nombres y detalles ficticios), materiales creados por terceros con derechos de autor restrictivos.</p>
+                      </div>
+                    </div>
+                    <div class="traffic-item traffic-red">
+                      <div>
+                        <strong>🔴 ROJO: Estrictamente prohibido en servicios comerciales</strong>
+                        <p>Listas oficiales con nombres, apellidos y DNI del alumnado; actas de evaluación con notas numéricas; informes psicopedagógicos o diagnósticos médicos (ACNEAE, ACIS, altas capacidades); expedientes disciplinarios o grabaciones de voz e imagen de menores sin consentimiento institucional expreso.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3>Cuentas personales frente a cuentas institucionales de centro</h3>
+                  <p>En cuentas comerciales gratuitas de consumo, las empresas pueden reservarse el derecho de utilizar los textos subidos para reentrenar sus futuros modelos (salvo que desactives expresamente el historial y entrenamiento en la configuración de privacidad).</p>
+                  <p>En cuentas educativas institucionales (como <em>Google Workspace for Education</em> o licencias de centro acordadas por la Consejería de Educación), existen acuerdos de tratamiento de datos (*Data Processing Agreements*) que garantizan la confidencialidad y prohíben el entrenamiento con los datos del centro. Aun así, consulta siempre las directrices de tu Delegado de Protección de Datos (DPD) antes de gestionar expedientes académicos con herramientas de IA.</p>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#inicio">← Anterior</a><a href="#proyectos">Siguiente →</a></nav>
+      </section>
+
+      <!-- 02 · PROYECTOS -->
+      <section class="slide" id="proyectos" data-topic="proyectos">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>02 / 05</span> ESPACIOS DE TRABAJO PERSISTENTES</p>
+            <h2>Tu propio<br><em>despacho temático</em><span class="period">.</span></h2>
+            <p class="lead">Empieza por decidir qué quieres hacer con el proyecto. Después reúne los documentos y ejemplos que necesita ese trabajo.</p>
+
+            <h3 class="project-question"><span class="project-question-chip">¿Para qué?</span><b aria-hidden="true">→</b><span class="project-question-chip">¿Con qué?</span></h3>
+            <div class="project-examples" aria-label="Objetivos posibles y materiales necesarios para cada proyecto">
+              <article>
+                <h4>ADAPTAR</h4>
+                <span class="project-files-label">Archivos para subir</span>
+                <ul><li>Texto original</li><li>Nivel del grupo y pautas de adaptación</li><li>Ejemplo del formato esperado</li></ul>
+              </article>
+              <article>
+                <h4>EVALUAR</h4>
+                <span class="project-files-label">Archivos para subir</span>
+                <ul><li>Temario y programación</li><li>Criterios y ponderaciones</li><li>Modelo de examen o rúbrica</li></ul>
+              </article>
+              <article>
+                <h4>ORGANIZAR</h4>
+                <span class="project-files-label">Archivos para subir</span>
+                <ul><li>Acuerdos del departamento</li><li>Plantillas y calendario</li><li>Normativa aplicable</li></ul>
+              </article>
+              <article>
+                <h4>PREPARAR PRÁCTICA</h4>
+                <span class="project-files-label">Archivos para subir</span>
+                <ul><li>Tema y apuntes de la materia</li><li>Tipo de ejercicio y nivel</li><li>Ejemplo de pregunta con solución</li></ul>
+              </article>
+            </div>
+
+            <p class="takeaway"><strong>Memoria compartida:</strong> Todas las conversaciones que crees dentro del proyecto heredan automáticamente los mismos archivos y reglas, sin necesidad de reconfigurarlos.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook">
+              <p>UN PROYECTO ÚTIL</p>
+              <div class="project-purpose-symbol" role="img" aria-label="Una carpeta de trabajo en el centro de un objetivo">
+                <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <circle cx="120" cy="95" r="78" fill="none" stroke="#d8c99e" stroke-width="2" />
+                  <circle cx="120" cy="95" r="56" fill="none" stroke="#d8c99e" stroke-width="2" stroke-dasharray="4 6" />
+                  <circle cx="120" cy="95" r="34" fill="#f7f1e4" stroke="#c4a76b" stroke-width="2" />
+                  <path d="M78 82h33l9 10h42v38a7 7 0 0 1-7 7H85a7 7 0 0 1-7-7z" fill="#d8bd80" stroke="#9b6f24" stroke-width="3" stroke-linejoin="round" />
+                  <path d="M83 99h74l-7 27a6 6 0 0 1-6 5H89a6 6 0 0 1-6-7z" fill="#ead8af" stroke="#9b6f24" stroke-width="3" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="project-purpose-caption"><strong>Define el propósito.</strong><strong>Añade el contexto necesario.</strong></div>
+            </div>
+
+            <div class="extras">
+              <details>
+                <summary>Ampliar: Proyectos en ChatGPT paso a paso</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Los <strong>Proyectos de ChatGPT</strong> permiten crear carpetas especializadas de trabajo para organizar tu labor docente por materias, grupos o tareas periódicas.</p>
+
+                  <h3>Cómo crear un Proyecto en ChatGPT</h3>
+                  <ol>
+                    <li>Abre ChatGPT y despliega el menú lateral izquierdo.</li>
+                    <li>Busca la sección <strong>Proyectos</strong> y haz clic en <strong>«Nuevo proyecto»</strong>.</li>
+                    <li>Asigna un nombre reconocible (por ejemplo: <code>Física y Química 3.º ESO</code> o <code>Elaboración de Rúbricas DUA</code>).</li>
+                    <li>En la pestaña <strong>Archivos</strong>, arrastra tu programación didáctica, el decreto de currículo y tus apuntes de la materia.</li>
+                    <li>En el apartado <strong>Instrucciones del proyecto</strong>, define las directrices fijas que deben regir todas las respuestas de esa carpeta.</li>
+                  </ol>
+
+                  <div class="drawer-example">
+                    <strong>Nota de actualización</strong>
+                    <p>OpenAI ha anunciado la retirada de los GPT personalizados para el <strong>11 de diciembre de 2026</strong>; algunas cuentas o espacios de trabajo pueden tener otra fecha. Esta guía se centra en Proyectos para organizar el trabajo docente con archivos e instrucciones. <a href="https://help.openai.com/es-es/articles/20001519-custom-gpt-retirement-and-migration-faq" target="_blank" rel="noopener noreferrer">Consultar el aviso oficial de OpenAI (traducción automática) ↗</a></p>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: Proyectos en Claude paso a paso</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Anthropic ofrece en Claude uno de los sistemas de proyectos más potentes del mercado gracias a su gran ventana de contexto y a la integración con <strong>Artefactos (*Artifacts*)</strong>.</p>
+
+                  <h3>Puntos fuertes de los Proyectos en Claude</h3>
+                  <ul>
+                    <li><strong>Capacidad masiva de documentos (*Project Knowledge*):</strong> Claude admite un volumen muy elevado de texto simultáneo, lo que permite cargar libros de texto enteros o colecciones de artículos académicos sin degradación en el razonamiento.</li>
+                    <li><strong>Artefactos interactivos en ventana lateral:</strong> Cuando pides a Claude una ficha de actividades, una rúbrica en tabla, un diagrama visual en SVG o un esquema interactivo, no ensucia el hilo del chat: abre un panel lateral específico donde puedes leer, copiar, previsualizar e incluso editar el contenido generado.</li>
+                    <li><strong>Pautas de estilo rigurosas:</strong> Las instrucciones personalizadas de Claude destacan por seguir con precisión directrices de tono académico, neutralidad y rigor metodológico.</li>
+                  </ul>
+
+                  <div class="drawer-example">
+                    <strong>Consejo para docentes de ciencias o humanidades</strong>
+                    <p>Usa los Proyectos de Claude cuando necesites analizar textos históricos extensos, cotejar varias obras literarias simultáneas o estructurar programaciones completas con tablas de doble entrada.</p>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Proyecto ejemplo · Adaptar materiales · 5.º de Primaria</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Este proyecto contiene perfiles ficticios A y B. En cada chat adjuntas una ficha o actividad; el proyecto la analiza para el perfil indicado y devuelve un informe con la propuesta adaptada.</p>
+                  <p class="drawer-example"><strong>Ejemplo simulado:</strong> los perfiles y las necesidades que aparecen aquí son ficticios; no representan a alumnado real.</p>
+
+                  <h3>1 · Crea el proyecto</h3>
+                  <p><strong>Nombre sugerido:</strong> <code>5.º Primaria · Adaptación de materiales</code></p>
+                  <p>Crea un proyecto nuevo y pega las instrucciones siguientes en el campo de instrucciones del proyecto. La ficha que quieras adaptar se adjunta después en el chat, para que el proyecto la contraste con sus perfiles y criterios.</p>
+
+                  <h3>2 · Instrucciones generales del proyecto</h3>
+                  <div class="prompt">
+                    <pre>Actúa como profesional de orientación educativa y pedagogía terapéutica con experiencia en DUA y adaptación de materiales para Educación Primaria.
+
+En los archivos de este proyecto encontrarás la programación, las orientaciones del centro y los perfiles ficticios de Alumno A y Alumno B. En cada chat adjuntaré una ficha o actividad. Usa el perfil identificado en el chat y estructura siempre la respuesta así:
+1. Valoración de adecuación: adecuada, parcialmente adecuada o no adecuada.
+2. Informe breve con evidencias concretas de la ficha y comparación con el perfil.
+3. Ficha o actividad completa adaptada a ese perfil.
+4. Nota final para revisión docente.
+
+Cuando reciba un material:
+1. Comprueba a qué perfil se dirige. Si no indico Alumno A o Alumno B, pregúntame antes de analizarlo.
+2. Contrasta la actividad con las necesidades de acceso, formato y, cuando corresponda, los contenidos adaptados que constan exactamente en el perfil seleccionado.
+3. Justifica la valoración con detalles observables; distingue barreras de acceso y formato de diferencias de contenido.
+4. Para Alumno A, respeta los contenidos exactos de su adaptación; no añadas contenidos excluidos ni objetivos nuevos. Para Alumno B, conserva los objetivos y contenidos de 5.º, ajusta el acceso y la presentación según su perfil y usa el ejemplo de formato de Alumno B como referencia visual.
+5. Basa las decisiones solo en los archivos ficticios aportados. No infieras diagnósticos, necesidades ni datos personales. Si falta información, pregúntame o marca [por concretar].
+6. Entrega un borrador profesional para revisión docente; no sustituye la decisión del equipo educativo.</pre>
+                    <button class="copy" type="button">Copiar instrucciones</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>3 · Archivos de contexto (máximo 5)</h3>
+                  <ol>
+                    <li><strong>Programación o unidad didáctica de 5.º:</strong> aporta los objetivos y contenidos que deben conservarse al adaptar la actividad.</li>
+                    <li><strong>Orientaciones de accesibilidad o DUA aprobadas por el centro:</strong> fija las pautas de acceso que el centro considera adecuadas, para que la adaptación siga criterios compartidos.</li>
+                    <li><strong>Perfil ficticio de Alumno A —con adaptación de contenidos—:</strong> aporta sus necesidades y los contenidos exactos que debe trabajar. En el ejemplo del ciclo del agua, identifica evaporación y precipitación con esquemas; no trabaja condensación ni otros procesos excluidos. Necesita frases breves, una instrucción cada vez y apoyo visual.</li>
+                    <li><strong>Perfil ficticio de Alumno B —sin adaptación de contenidos—:</strong> aclara que mantiene los objetivos de 5.º y concreta las necesidades de presentación: letra de 14 puntos, texto alineado a la izquierda, espacio entre ejercicios, instrucciones divididas en pasos y palabras clave en negrita.</li>
+                    <li><strong>Ejemplo de formato para Alumno B:</strong> aporta una ficha de muestra con letra de 14 puntos, espaciado amplio, texto alineado a la izquierda, una columna y ejercicios separados. Le enseña al proyecto cómo presentar el material según sus necesidades de acceso, sin cambiar los objetivos ni los contenidos.</li>
+                  </ol>
+
+                  <div class="adaptation-privacy-reminder" role="note">
+                    <img src="assets/pitufo-rgpd-blanco.png" alt="Pitufo del RGPD que recuerda proteger los datos personales">
+                    <p><strong>Perfiles ficticios, sin datos personales.</strong> Describe solo las necesidades educativas y de formato necesarias para esta tarea. No subas nombres, fechas, informes reales ni detalles que permitan reconocer a un alumno.</p>
+                  </div>
+
+                  <p class="drawer-example"><strong>La ficha que se quiere adaptar se añade en el chat.</strong> El archivo de contexto contiene los perfiles; no hace falta copiar sus necesidades en cada petición.</p>
+
+                  <h3>4 · Ejemplo de conversación en el proyecto</h3>
+                  <p>La valoración y la actividad que aparecen aquí son una simulación basada en los perfiles ficticios, no el análisis de una ficha real.</p>
+                  <div class="prompt">
+                    <pre>Docente: He adjuntado una ficha sobre el ciclo del agua, adáptala para Alumno A.
+
+Asistente:
+INFORME DE ADECUACIÓN · PERFIL A
+
+Valoración: parcialmente adecuada en el ejemplo simulado.
+
+Análisis: La ficha trabaja evaporación y precipitación, que aparecen en los contenidos del perfil A. También pide explicar la condensación; ese contenido está excluido de su adaptación. Conviene retirarlo y presentar una sola instrucción cada vez.
+
+FICHA ADAPTADA · CICLO DEL AGUA
+
+Objetivo: reconocer evaporación y precipitación.
+
+1. EVAPORACIÓN
+El sol calienta el agua.
+Parte del agua sube al aire como vapor.
+
+2. PRECIPITACIÓN
+El agua cae de las nubes a la tierra.
+Puede caer en forma de lluvia.
+
+3. UNE CADA PALABRA CON SU IDEA
+Evaporación → El agua sube al aire como vapor.
+Precipitación → El agua cae de las nubes.
+
+4. COMPLETA
+Cuando el agua sube al aire como vapor, ocurre la __________.
+Cuando el agua cae de las nubes, ocurre la __________.
+
+REVISIÓN DOCENTE
+Comprobar que las imágenes de apoyo correspondan a las dos ideas trabajadas y que no introduzcan contenidos excluidos.</pre>
+                    <button class="copy" type="button">Copiar ejemplo de conversación</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Proyecto ejemplo · Preparar prácticas · 5.º de Primaria</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Este proyecto sirve para Matemáticas de 5.º de Primaria en general. En cada chat se indica la unidad concreta y los apuntes deben identificar claramente el tema que desarrollan.</p>
+                  <p class="drawer-example"><strong>Cuenta gratuita:</strong> son cinco archivos en total. La programación de la asignatura y sus referencias curriculares se reúnen en un único documento.</p>
+
+                  <h3>1 · Crea el proyecto</h3>
+                  <p><strong>Nombre sugerido:</strong> <code>5.º Primaria · Prácticas de Matemáticas</code></p>
+                  <p>Crea un proyecto nuevo y añade las instrucciones antes de iniciar un chat.</p>
+
+                  <h3>2 · Instrucciones generales del proyecto</h3>
+                  <div class="prompt">
+                    <pre>Actúa como docente de Matemáticas de 5.º de Primaria con experiencia en crear fichas de práctica claras y adecuadas al currículo.
+
+En cada chat te indicaré el tema, el propósito y las condiciones de la ficha. Utiliza los cinco archivos del proyecto con estas funciones:
+- Apuntes o teoría: identifican la unidad y el tema concretos; comprueba que coincidan con el tema que te pido en cada chat y usa sus conceptos y procedimientos.
+- Programación y normativa de Matemáticas: referencia para el curso, los contenidos y los criterios aplicables.
+- Banco de ejercicios: modelo del estilo, la formulación, la progresión y la dificultad que quiero.
+- Formato de salida: plantilla visual de la ficha, cabecera, numeración y espacio de respuesta.
+- Modelo de solucionario: referencia para el tipo de respuesta y el nivel de explicación.
+
+Reglas de trabajo:
+1. Comprueba que los ejercicios se ajustan a la teoría, al curso y a los contenidos y criterios del documento de programación y normativa. Cita códigos o criterios solo si aparecen allí; no inventes normativa.
+2. Toma del banco el estilo y la estructura, pero crea ejercicios nuevos. No añadas procedimientos que no se hayan trabajado.
+3. Gradúa la dificultad según mi petición y redacta consignas breves, claras y adecuadas para alumnado de 10-11 años.
+4. Aplica el formato de salida sin cambiar su cabecera, numeración, distribución ni espacios previstos.
+5. Genera el solucionario con la modalidad que indique en el chat: solo las respuestas finales, o respuestas explicadas paso a paso para que el alumnado pueda autocorregirse. Usa el quinto archivo como modelo.
+6. Comprueba las operaciones, las respuestas y que cada ejercicio tenga solución con los datos proporcionados.
+7. Si falta información, si la normativa y los apuntes parecen contradecirse o si no queda clara la modalidad del solucionario, pregúntame antes de decidir.
+8. Entrega la ficha y el solucionario como borradores para revisión docente.</pre>
+                    <button class="copy" type="button">Copiar instrucciones</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>3 · Archivos de contexto (máximo 5)</h3>
+                  <ol>
+                    <li><strong>Teoría o apuntes de la unidad:</strong> identifica de forma explícita el tema concreto —en este ejemplo, fracciones equivalentes— y aporta sus conceptos y procedimientos, para que la ficha no introduzca contenidos que el grupo aún no ha trabajado.</li>
+                    <li><strong>Asignatura, programación y normativa:</strong> identifica Matemáticas de 5.º y reúne objetivos, contenidos y criterios; sirve para comprobar que la práctica se ajusta al currículo aplicable.</li>
+                    <li><strong>Banco de ejercicios modelo:</strong> muestra cómo quieres que se redacten, ordenen y gradúen los ejercicios; orienta el estilo sin tener que repetir esas pautas en cada chat.</li>
+                    <li><strong>Formato de salida:</strong> aporta la cabecera, las instrucciones, la numeración, la distribución y el espacio de respuesta para que la ficha tenga la presentación esperada.</li>
+                    <li><strong>Modelo de solucionario:</strong> enseña el nivel de detalle y la forma de presentar las soluciones, ya sean respuestas finales o explicaciones para la autocorrección.</li>
+                  </ol>
+
+                  <h3>4 · Ejemplo de conversación en el proyecto</h3>
+                  <div class="prompt">
+                    <pre>Docente: Prepara una hoja de ejercicios sobre fracciones equivalentes, según las instrucciones del proyecto.
+
+Asistente:
+RESUMEN DEL CONTEXTO APLICADO
+- Apuntes: he identificado el tema como fracciones equivalentes y he usado los procedimientos incluidos allí.
+- Programación y normativa: he mantenido el nivel de Matemáticas de 5.º y los contenidos y criterios que aparecen en el documento.
+- Banco de ejercicios: he seguido su estilo y progresión, redactando preguntas nuevas.
+- Formato de salida: he aplicado la cabecera, la numeración y los espacios de respuesta de la plantilla.
+- Solucionario: he incluido explicaciones paso a paso para que el alumnado pueda autocorregirse.
+
+MATEMÁTICAS · FRACCIONES EQUIVALENTES
+Nombre: ____________________    Fecha: __________
+
+1. Colorea la mitad del primer rectángulo y dos cuartos del segundo. ¿Representan la misma cantidad?
+
+2. Completa: 1/2 = __/6
+
+3. Completa: 2/3 = __/9
+
+4. Rodea todas las fracciones equivalentes a 1/2: 2/4 · 3/6 · 3/5 · 4/8
+
+5. Dibuja un modelo que muestre por qué 3/6 y 1/2 son equivalentes.
+
+6. Ana bebió 2/4 de una botella y Leo bebió 1/2 de otra botella igual. ¿Bebieron la misma cantidad? Explica cómo lo sabes.
+
+SOLUCIONARIO EXPLICADO
+1. Sí. La mitad y dos de cuatro partes iguales ocupan la misma cantidad.
+2. 3. Multiplicamos el numerador y el denominador de 1/2 por 3: 1/2 = 3/6.
+3. 6. Multiplicamos ambos términos de 2/3 por 3: 2/3 = 6/9.
+4. 2/4, 3/6 y 4/8. Cada una representa la mitad; 3/5 no.
+5. En seis partes iguales, se colorean tres. En dos partes iguales, se colorea una; ambas zonas representan la mitad.
+6. Sí. 2/4 se simplifica dividiendo ambos términos por 2 y queda 1/2.</pre>
+                    <button class="copy" type="button">Copiar ejemplo de conversación</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Proyecto ejemplo · Evaluar · 2.º de ESO</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Un proyecto de evaluación reúne el currículo, los criterios y el formato de prueba para que cada pregunta tenga un propósito verificable.</p>
+                  <p class="drawer-example"><strong>Cuenta gratuita:</strong> no superes los cinco archivos; combina documentos relacionados si hace falta.</p>
+
+                  <h3>1 · Crea el proyecto</h3>
+                  <p><strong>Nombre sugerido:</strong> <code>2.º ESO · Evaluación de Matemáticas</code></p>
+                  <p>Crea un proyecto para esta materia y este curso; añade las instrucciones y las fuentes antes de pedir una prueba.</p>
+
+                  <h3>2 · Instrucciones generales del proyecto</h3>
+                  <div class="prompt">
+                    <pre>Actúa como especialista en evaluación educativa y diseño de pruebas de Matemáticas para 2.º de ESO.
+
+Prepara borradores de pruebas de evaluación, rúbricas y solucionarios usando los archivos del proyecto como contexto:
+- Los apuntes delimitan los contenidos y procedimientos que se pueden evaluar.
+- La normativa y programación aportan los contenidos y criterios de evaluación aplicables.
+- El banco de modelos orienta el estilo, la variedad y el nivel de exigencia.
+- El examen y la rúbrica completos muestran el formato de entrega esperado y la escala sobre 10 con su distribución de puntuaciones.
+- El examen resuelto sirve de referencia para elaborar y comprobar los solucionarios.
+
+En cada propuesta:
+1. Relaciona cada ejercicio con el criterio correspondiente y cita su código solo si aparece en las fuentes.
+2. No incluyas contenidos ajenos a los apuntes ni al nivel indicado.
+3. Usa la escala sobre 10 y las ponderaciones que aparecen en el examen y la rúbrica de referencia o en las fuentes curriculares. No pidas al docente que las repita; si faltan o se contradicen, señálalo y no las inventes. Comprueba que la puntuación total suma 10.
+4. Cuando prepares una prueba, entrega también su solucionario y, si se solicita, una rúbrica coherente con los criterios. Sigue el modelo de corrección del examen resuelto.
+5. No inventes criterios, porcentajes ni contenidos. Señala como [por concretar] lo que falte y pregunta si impide elaborar una propuesta válida.
+6. Presenta siempre un borrador para revisión docente y verifica enunciados, cálculos, soluciones, puntuaciones y correspondencia con los criterios.</pre>
+                    <button class="copy" type="button">Copiar instrucciones</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>3 · Archivos de contexto (máximo 5)</h3>
+                  <ol>
+                    <li><strong>Apuntes o teoría de la unidad:</strong> delimita los conceptos, procedimientos y ejemplos que pueden aparecer en las pruebas de ese tema.</li>
+                    <li><strong>Normativa y programación de Matemáticas:</strong> reúne la referencia curricular aplicable, con los contenidos y criterios de evaluación necesarios para mantener la prueba alineada con lo establecido.</li>
+                    <li><strong>Banco de ejemplos de pruebas y rúbricas:</strong> muestra el tipo de enunciados, variedad, dificultad y descriptores que sirven de referencia; usa modelos revisados y sin datos personales del alumnado.</li>
+                    <li><strong>Un examen completo y una rúbrica completa en el formato deseado:</strong> enseñan cómo presentar la prueba —cabecera, duración, ejercicios— y cómo organizar la rúbrica; incluyen la escala sobre 10 y el reparto de puntuaciones que sirven de referencia.</li>
+                    <li><strong>Un examen resuelto con su solucionario:</strong> aporta un modelo de respuestas y explicaciones para que los nuevos exámenes incluyan soluciones correctas y una pauta de corrección coherente.</li>
+                  </ol>
+
+                  <h3>4 · Ejemplo de conversación en el proyecto</h3>
+                  <div class="prompt">
+                    <pre>Docente: Prepara un borrador de una prueba de 50 minutos sobre ecuaciones de primer grado, usando las instrucciones del proyecto. Entrega también el solucionario y la rúbrica de corrección.
+
+Asistente:
+
+RESUMEN DE ELABORACIÓN BASADO EN LOS ARCHIVOS
+
+1. Alcance de los contenidos
+He tomado de los apuntes de la unidad los procedimientos de ecuaciones de primer grado que se han trabajado. La propuesta se limita a esos contenidos y al nivel de 2.º de ESO; no añade técnicas que no estén en el material.
+
+2. Relación con los criterios
+He contrastado los ejercicios con los criterios de evaluación del documento curricular. En la prueba, cada ejercicio lleva el criterio correspondiente tal como aparece en la fuente. La rúbrica usa esos mismos criterios para describir qué evidencias se observarán, sin crear códigos ni criterios nuevos.
+
+3. Tiempo y puntuación
+He organizado la prueba para 50 minutos y he aplicado la escala sobre 10 y el reparto de puntos del modelo de examen y rúbrica del proyecto. La suma de los ejercicios se comprueba para que dé 10; la ponderación no se vuelve a pedir en el chat porque ya está documentada en los archivos.
+
+4. Formato y estilo
+He seguido la estructura del examen completo de referencia y el estilo de los ejemplos: enunciados claros, dificultad progresiva y espacio para desarrollar los cálculos. La rúbrica conserva la organización y los descriptores del modelo.
+
+5. Solucionario y revisión
+He resuelto cada ejercicio y comprobado las operaciones y las respuestas. Después he verificado que la rúbrica valore los procedimientos y resultados que realmente pide la prueba y que su puntuación coincida con la distribución del examen.
+
+ENTREGA · TRES ARCHIVOS POR SEPARADO
+1. Prueba de evaluación · 50 minutos
+2. Solucionario del examen
+3. Rúbrica de corrección</pre>
+                    <button class="copy" type="button">Copiar ejemplo de conversación</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Proyecto ejemplo · Organizar el departamento · Secundaria</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Un proyecto para preparar borradores de documentos del departamento a partir de acuerdos, modelos y procedimientos aprobados.</p>
+                  <p class="drawer-example"><strong>Cuenta gratuita:</strong> esta plantilla usa un máximo de cinco archivos. Comprueba que los documentos estén autorizados para la cuenta y el servicio utilizados.</p>
+
+                  <h3>1 · Crea el proyecto</h3>
+                  <p><strong>Nombre sugerido:</strong> <code>Departamento de Lengua · Organización 2026-2027</code></p>
+                  <p>Crea un proyecto para el departamento y añade las instrucciones antes de empezar un chat.</p>
+
+                  <h3>2 · Instrucciones generales del proyecto</h3>
+                  <div class="prompt">
+                    <pre>Actúa como asistente de coordinación y redacción documental para un departamento de Educación Secundaria.
+
+Ayúdame a preparar borradores de actas, órdenes del día, calendarios de trabajo e informes utilizando exclusivamente los documentos de este proyecto y los datos que yo escriba en cada chat.
+
+Mantén estas reglas:
+1. Respeta los acuerdos, las plantillas, las fechas y los procedimientos aportados.
+2. No inventes decisiones, asistentes, fechas, normativa ni tareas asignadas. Señala la información ausente con [por completar].
+3. Distingue claramente los acuerdos ya aprobados de las propuestas pendientes de revisión.
+4. Usa un tono institucional, claro y conciso; conserva los títulos y apartados de la plantilla oficial.
+5. Evita incluir datos personales del alumnado o del personal que no sean necesarios y estén autorizados.
+6. Devuelve siempre un borrador para revisión del departamento, no un acta ni una comunicación definitiva.</pre>
+                    <button class="copy" type="button">Copiar instrucciones</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>3 · Archivos de contexto (máximo 5)</h3>
+                  <ol>
+                    <li><strong>Acuerdos y objetivos anuales aprobados:</strong> aportan las decisiones de partida del departamento, para que los borradores no conviertan propuestas en acuerdos.</li>
+                    <li><strong>Plantilla oficial para actas, órdenes del día o comunicaciones:</strong> define los apartados y el orden que deben respetar los documentos.</li>
+                    <li><strong>Calendario escolar y fechas internas:</strong> proporciona los plazos y las referencias temporales necesarias para planificar.</li>
+                    <li><strong>Normativa y procedimientos del centro:</strong> establece los requisitos que deben cumplirse en cada documento o proceso.</li>
+                    <li><strong>Ejemplo ficticio o anonimizado de un acta:</strong> sirve solo como referencia de estructura, tono y nivel de detalle; debe estar completamente libre de datos personales.</li>
+                  </ol>
+
+                  <div class="adaptation-privacy-reminder" role="note">
+                    <img src="assets/pitufo-rgpd-blanco.png" alt="Pitufo del RGPD que recuerda proteger los datos personales">
+                    <p><strong>Actas de ejemplo sin datos personales.</strong> No subas actas reales ni documentos con nombres, firmas, datos de contacto, ausencias, calificaciones, incidencias u otra información que identifique a alumnado o personal. Usa únicamente un ejemplo ficticio o completamente anonimizado. El proyecto sirve para ayudar a redactar borradores; revisa y completa el texto en un documento aparte, usando el espacio aprobado por el centro. No lo uses para archivar actas oficiales.</p>
+                  </div>
+
+                  <h3>4 · Ejemplo de conversación en el proyecto</h3>
+                  <div class="prompt">
+                    <pre>Docente: Prepara el orden del día de la próxima reunión: programación, evaluaciones y actividades de lectura.
+
+Asistente:
+
+CÓMO HE APLICADO EL CONTEXTO DEL PROYECTO
+- He seguido los apartados y el orden de la plantilla de reuniones.
+- He contrastado los tres asuntos con los objetivos y acuerdos anuales: los presento como temas para tratar, no como decisiones ya aprobadas.
+- He consultado el calendario y los procedimientos aportados. Como la petición no da una fecha concreta, dejo ese campo pendiente en vez de inventarla.
+- He tomado el tono y el nivel de detalle del ejemplo de referencia, sin copiar datos ni incluir información personal.
+
+BORRADOR · ORDEN DEL DÍA
+Departamento de Lengua
+Reunión: [fecha por completar]
+Asistentes: [por completar]
+
+1. Revisión de la programación didáctica.
+2. Organización del calendario de evaluaciones.
+3. Coordinación de las actividades de lectura.
+
+Borrador para revisar y completar en el documento oficial del centro.</pre>
+                    <button class="copy" type="button">Copiar ejemplo de conversación</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: límites de tu cuenta</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Los proyectos están disponibles en cuentas gratuitas, aunque el número de archivos, el uso y la capacidad de contexto cambian según el plan. Esta comparación se limita a Gratis y a los primeros niveles de pago individuales.</p>
+
+                  <h3>ChatGPT · Gratis, Go y Plus</h3>
+                  <table class="comp-table">
+                    <thead>
+                      <tr>
+                        <th>Plan</th>
+                        <th>Proyectos y archivos</th>
+                        <th>Qué aporta</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Gratis</strong></td>
+                        <td>Proyectos con instrucciones y hasta 5 archivos por proyecto.</td>
+                        <td>Uso suficiente para probar el flujo con un tema y unos pocos documentos esenciales. Los archivos y otras herramientas tienen límites de uso.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Go</strong></td>
+                        <td>Hasta 25 archivos por proyecto.</td>
+                        <td>Amplía los límites de uso, cargas de archivos e imágenes frente a Gratis. Referencia: unos 8 USD/mes en EE. UU.; el precio local puede variar.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Plus</strong></td>
+                        <td>Hasta 25 archivos por proyecto, igual que Go.</td>
+                        <td>Añade límites de uso superiores y más acceso a razonamiento avanzado, investigación y Codex. Referencia: 20 USD/mes en EE. UU.; precio e impuestos locales pueden variar.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h3>Claude · Gratis y Pro</h3>
+                  <table class="comp-table">
+                    <thead>
+                      <tr><th>Plan</th><th>Proyectos y contexto</th><th>Qué aporta</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Gratis</strong></td>
+                        <td>Hasta 5 proyectos. Puedes añadir documentos; el contenido total debe caber en la capacidad disponible.</td>
+                        <td>Uso limitado por sesión. Sirve para probar proyectos y trabajar con un conjunto acotado de fuentes.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Más capacidad para proyectos grandes mediante RAG, que puede ampliar hasta 10 veces el contenido recuperable al acercarse al límite de contexto.</td>
+                        <td>Más uso por sesión y acceso prioritario. Referencia: 20 USD/mes en EE. UU.; el precio local y los impuestos pueden variar.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="drawer-example">
+                    <strong>Para empezar</strong>
+                    <p>No hace falta pagar para probar. En ChatGPT Gratis puedes crear un proyecto, añadir instrucciones y subir hasta cinco archivos. Empieza con una tarea concreta y los documentos imprescindibles; comprueba si esos límites te bastan antes de plantearte cualquier cambio de plan. Claude Gratis también permite crear hasta cinco proyectos, con límites de uso propios de la cuenta gratuita.</p>
+                  </div>
+
+                  <h3>Fuentes oficiales</h3>
+                  <ul class="resource-list">
+                    <li><a href="https://help.openai.com/es-es/articles/10169521-proyectos-en-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI · Proyectos y límite de archivos por plan ↗</a></li>
+                    <li><a href="https://openai.com/es-ES/index/introducing-chatgpt-go/" target="_blank" rel="noopener noreferrer">OpenAI · ChatGPT Go y diferencias con Plus ↗</a></li>
+                    <li><a href="https://support.claude.com/en/articles/9517075-what-are-projects" target="_blank" rel="noopener noreferrer">Anthropic · Proyectos en Claude (en inglés) ↗</a></li>
+                    <li><a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan" target="_blank" rel="noopener noreferrer">Anthropic · Plan Pro, precio regional y límites de uso (en inglés) ↗</a></li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#archivos">← Anterior</a><a href="#recetas">Siguiente →</a></nav>
+      </section>
+
+      <!-- 03 · RECETAS -->
+      <section class="slide" id="recetas" data-topic="recetas">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>03 / 05</span> AUTOMATIZACIÓN MEDIANTE SEUDOCOMANDOS</p>
+            <h2>Recetas y<br><em>skills docentes</em><span class="period">.</span></h2>
+            <p class="lead">Abreviaturas inteligentes para tareas repetitivas: convierte peticiones de tres párrafos en órdenes directas como /ficha, /multinivel o /solucionario.</p>
+
+            <div class="recipe-builder" aria-label="Ejemplo de una receta compuesta">
+              <p class="recipe-caption"><strong>Una petición puede combinar varias instrucciones</strong></p>
+              <div class="recipe-command" aria-label="didáctico, multinivel y solucionario">
+                <code>/didactico</code><span aria-hidden="true">+</span><code>/multinivel</code><span aria-hidden="true">+</span><code>/solucionario</code>
+              </div>
+              <ol class="recipe-notes">
+                <li><strong>Atajos acordados</strong><span>No son códigos secretos: son instrucciones con un significado definido.</span></li>
+                <li><strong>Recetas guardadas</strong><span>El archivo <code>COMANDOS.md</code> describe el procedimiento de cada atajo.</span></li>
+                <li><strong>Uso modular</strong><span>Combina solo las piezas que necesita la tarea.</span></li>
+              </ol>
+            </div>
+
+            <p class="takeaway"><strong>Menos esfuerzo mecánico:</strong> No pierdas tiempo redactando la estructura del prompt cada semana; céntrate en revisar el contenido pedagógico que devuelve el modelo.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook">
+              <p>EL PODER DE LA ABREVIATURA</p>
+              <div class="recipe-shortcut-compare" role="img" aria-label="Una hoja llena de texto, tachada en rojo, se transforma en una petición breve representada por una sola línea verde">
+                <div class="recipe-shortcut-stage recipe-shortcut-before">
+                  <svg viewBox="0 0 150 104" aria-hidden="true" focusable="false">
+                    <path d="M39 12h54l20 20v61H39z" fill="#fff" stroke="#9aa4a8" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M93 12v20h20" fill="#edf0f1" stroke="#9aa4a8" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M51 45h48M51 55h52M51 65h46M51 75h50M51 85h33" stroke="#8a969b" stroke-width="3" stroke-linecap="round" />
+                    <path d="m27 91 96-76" stroke="#bd4946" stroke-width="8" stroke-linecap="round" />
+                  </svg>
+                  <strong>PROMPT LARGO</strong>
+                </div>
+                <span class="recipe-shortcut-arrow" aria-hidden="true">→</span>
+                <div class="recipe-shortcut-stage recipe-shortcut-after">
+                  <svg viewBox="0 0 150 104" aria-hidden="true" focusable="false">
+                    <path d="M18 52h98" stroke="#39835c" stroke-width="8" stroke-linecap="round" />
+                    <circle cx="31" cy="52" r="5" fill="#fff" />
+                    <path d="m112 38 15 14-15 14" fill="none" stroke="#39835c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <strong>UNA LÍNEA</strong>
+                  <code>/ficha + tema</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="extras">
+              <details>
+                <summary>Ampliar: los códigos secretos: desmontando el mito</summary>
+                <div class="longread">
+                  <div class="secret-codes-opening">
+                    <span>¿LOS HAS VISTO EN INSTAGRAM O YOUTUBE?</span>
+                    <strong>«10 códigos secretos de ChatGPT»</strong>
+                    <p>Reels, vídeos y tutoriales suelen presentar expresiones como <code>KIDS</code>, <code>/ELI5</code>, <code>/teacher</code> o <code>/stepbystep</code> como trucos ocultos. Esta ampliación trata de esos famosos «códigos»: por qué parecen funcionar y qué está haciendo realmente el modelo.</p>
+                  </div>
+
+                  <h3>La palabra ya contiene una pista</h3>
+                  <p>Muchas de estas abreviaturas no activan una función interna. El modelo reconoce una palabra o una expresión cuyo significado ya sugiere la tarea, y la interpreta junto con el resto del mensaje.</p>
+                  <ul class="resource-list">
+                    <li><strong><code>KIDS</code>:</strong> la palabra inglesa significa «niños». Si aparece junto a una explicación, el modelo puede inferir que se busca un lenguaje infantil o sencillo; no se ha abierto por ello un modo secreto para niños.</li>
+                    <li><strong><code>ELI5</code>:</strong> abrevia la expresión inglesa <em>Explain Like I’m 5</em> («explícalo como si tuviera cinco años»). Su propio significado pide una explicación simple; no garantiza una edad exacta ni un resultado fijo.</li>
+                    <li><strong><code>/teacher</code>:</strong> sugiere el papel de docente, pero sin más indicaciones puede significar explicar, preguntar, corregir o preparar actividades. El contexto condiciona la interpretación.</li>
+                    <li><strong><code>/quiz</code> y <code>/stepbystep</code>:</strong> las palabras «cuestionario» y «paso a paso» ya apuntan a un formato o procedimiento. La barra inclinada puede hacerlas más visibles, pero no es la que ejecuta una función oculta.</li>
+                  </ul>
+
+                  <div class="drawer-example">
+                    <strong>Una abreviación semántica</strong>
+                    <p>El modelo ve una palabra que tiene significado y deduce una intención probable. Por eso es más preciso hablar de <strong>seudocomando</strong> o <strong>abreviación semántica</strong> que de «código secreto» cuando no hay una función documentada detrás.</p>
+                  </div>
+
+                  <h3>Por qué los vídeos dicen que son «secretos»</h3>
+                  <p>Algunas palabras son cortas, llamativas y fáciles de recordar; además, las versiones en inglés aparecen a menudo en ejemplos de prompts. Si el resultado mejora, puede parecer que la palabra ha desbloqueado una capacidad especial. Pero normalmente la expresión solo condensa una instrucción evidente: «KIDS» apunta a niños, «quiz» a preguntas y «step by step» a una secuencia.</p>
+                  <p>La barra <code>/</code>, las mayúsculas y las siglas dan aspecto técnico. Por sí solas no demuestran que exista un comando programado. También puede influir el resto del prompt, el tema, los ejemplos previos de la conversación o la variabilidad normal de las respuestas.</p>
+
+                  <h3>Una comparación sencilla</h3>
+                  <p>Prueba la misma tarea con la supuesta palabra clave y con una petición directa. Mantén igual el tema y el resto del contexto:</p>
+                  <div class="prompt">
+                    <strong>Con la palabra viral</strong>
+                    <pre>KIDS
+Explícame las fracciones equivalentes.</pre>
+                    <strong>Con la intención escrita claramente</strong>
+                    <pre>Explícame las fracciones equivalentes con palabras sencillas, ejemplos cotidianos y frases breves, para alumnado de 5.º de Primaria.</pre>
+                  </div>
+                  <p>La segunda petición aclara qué significa «sencillo» para esta tarea: concreta curso, estilo y apoyos. Si la primera produce algo parecido, no prueba que KIDS sea una función secreta; muestra que el modelo pudo deducir una intención a partir de la palabra.</p>
+
+                  <h3>Cómo comprobar una promesa de «código secreto»</h3>
+                  <ol>
+                    <li><strong>Busca una fuente oficial:</strong> una función real debe aparecer en la propia interfaz o en documentación de la herramienta. Un vídeo viral, por sí solo, no demuestra que el comando exista.</li>
+                    <li><strong>Quita la barra o la sigla:</strong> cambia <code>/quiz</code> por «crea un cuestionario» o <code>ELI5</code> por «explícalo con palabras muy sencillas». Compara las respuestas en condiciones parecidas.</li>
+                    <li><strong>Haz explícito el significado:</strong> indica público, nivel, extensión y formato. Una palabra ambigua no especifica todos esos detalles.</li>
+                    <li><strong>No esperes una salida idéntica:</strong> una respuesta acertada una vez no convierte la expresión en una función estable ni garantiza que siempre se interprete igual.</li>
+                  </ol>
+
+                  <div class="drawer-example">
+                    <strong>La idea que queremos desmontar</strong>
+                    <p>En la mayoría de los vídeos sobre estos atajos, no se está revelando un código interno que active poderes ocultos de la IA. Se está usando una palabra comprensible —a menudo en inglés— que orienta al modelo por su significado. Si existe una función real, debe poder identificarse en la herramienta o en su documentación; si no, probablemente estamos ante una abreviación semántica.</p>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: el archivo COMANDOS.md completo</summary>
+                <div class="longread">
+                  <p class="drawer-intro">El archivo <strong>`COMANDOS.md`</strong> es un diccionario de procedimientos pedagógicos listo para subir a tu proyecto. La IA lo lee y aplica automáticamente la receta correspondiente cada vez que detecta una barra inclinada (`/`).</p>
+
+                  <div class="prompt">
+                    <strong>Instrucción maestra para activar el diccionario en tu proyecto</strong>
+                    <pre>El archivo COMANDOS.md contiene el diccionario de seudocomandos de este proyecto.
+
+Cuando mi mensaje incluya una o varias expresiones que comiencen por la barra (/):
+1. Comprueba si están definidas en COMANDOS.md.
+2. Aplica secuencialmente los procedimientos establecidos en el documento.
+3. Considera el resto de mi mensaje como el tema, contenido o parámetros de la tarea.
+4. No sustituyas las directrices definidas por otras inventadas.
+5. Si dos comandos combinados contienen instrucciones contradictorias, señálalo antes de responder.</pre>
+                    <button class="copy" type="button">Copiar instrucción</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>Recurso descargable para el claustro</h3>
+                  <p>Hemos preparado el archivo completo listo para descargar e importar en tus proyectos de ChatGPT o Claude:</p>
+                  <ul class="resource-list">
+                    <li><a href="ejemplos/COMANDOS.md" target="_blank" download>Descargar archivo plantilla COMANDOS.md ↗</a><br>Contiene las definiciones completas de <code>/didactico</code>, <code>/adaptacion-dua</code>, <code>/ficha</code>, <code>/multinivel</code>, <code>/solucionario</code>, <code>/rubrica</code>, <code>/kahoot</code> y <code>/pau</code>.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: catálogo de recetas docentes comentadas</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Detalle de los procedimientos pedagógicos codificados en cada receta para entender por qué funcionan con tanta eficacia en el aula.</p>
+
+                  <div class="command-grid">
+                    <div class="command-badge">
+                      <code>/didactico</code>
+                      <span>Transforma un contenido complejo en una explicación progresiva con analogías cotidianas y preguntas de autocomprobación.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/adaptacion-dua</code>
+                      <span>Reescribe el texto con sintaxis directa, párrafos breves, términos clave en negrita y mapa conceptual jerárquico final.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/ficha</code>
+                      <span>Maqueta una hoja imprimible para el alumnado: encabezado, contexto breve, 5 actividades graduadas y tiempos estimados.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/multinivel</code>
+                      <span>Genera de forma paralela 3 variantes de la tarea: nivel Apoyo (con pistas), nivel Estándar y nivel Ampliación.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/solucionario</code>
+                      <span>Desglosa las respuestas correctas justificando el razonamiento pedagógico y señalando los errores más habituales.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/rubrica</code>
+                      <span>Crea una matriz analítica en 4 niveles de desempeño (1 al 4) basada en descriptores observables y criterios LOMLOE.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/kahoot</code>
+                      <span>Genera una tabla con preguntas de opción múltiple con restricciones exactas de caracteres para importar en Kahoot.</span>
+                    </div>
+                    <div class="command-badge">
+                      <code>/pau</code>
+                      <span>Redacta preguntas de examen conforme a la tipología oficial y los criterios de puntuación de las pruebas de acceso a la universidad.</span>
+                    </div>
+                  </div>
+
+                  <div class="drawer-example">
+                    <strong>Ejemplo de uso combinado</strong>
+                    <p>Escribe en tu proyecto: <code>/ficha /multinivel /solucionario</code> seguido de <em>«El ciclo del agua para 1.º de ESO»</em>. El modelo ejecutará los tres procedimientos en una única respuesta organizada en secciones.</p>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: cómo diseñar tus propias recetas</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Cada especialidad o etapa educativa tiene necesidades particulares. Puedes diseñar tus propios seudocomandos siguiendo esta estructura en tu archivo Markdown.</p>
+
+                  <h3>Estructura estándar de un buen seudocomando</h3>
+                  <ol>
+                    <li><strong>Nombre intuitivo:</strong> Debe comenzar por <code>/</code> y ser una palabra corta en minúsculas (ej. <code>/laboratorio</code>, <code>/comentario</code>, <code>/debate</code>).</li>
+                    <li><strong>Objetivo explícito:</strong> Una frase clara que resuma qué debe lograr la instrucción.</li>
+                    <li><strong>Procedimiento paso a paso:</strong> Lista numerada con los 5 o 6 pasos que la IA debe ejecutar sin saltarse ninguno.</li>
+                    <li><strong>Restricciones de formato:</strong> Qué debe incluir (tablas, negritas, listas) y qué debe evitar expresamente.</li>
+                  </ol>
+
+                  <div class="prompt">
+                    <strong>Ejemplo: Seudocomando para prácticas de laboratorio</strong>
+                    <pre>## /laboratorio
+
+### Objetivo
+Diseñar un guion de práctica experimental de laboratorio escolar adaptado a las medidas de seguridad del centro.
+
+### Procedimiento
+1. Título de la práctica y relación con los saberes básicos de la materia.
+2. Marco teórico sintetizado en un párrafo breve.
+3. Lista de materiales necesarios clasificados en "material de laboratorio común" y "reactivos/sustancias".
+4. Normas de seguridad específicas y pictogramas de precaución aplicables.
+5. Protocolo experimental paso a paso mediante oraciones imperativas numeradas.
+6. Cuestionario de análisis con 4 preguntas que el alumnado debe responder a partir de sus observaciones.
+7. Pautas para el tratamiento y recogida de residuos al finalizar.</pre>
+                    <button class="copy" type="button">Copiar receta</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: una skill con formato de salida · apuntes HTML A4</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Una skill puede definir el proceso completo de creación de un material y también cómo debe entregarse. Este ejemplo prepara apuntes en un archivo HTML autónomo, listo para imprimir en A4, con una estética clara y espacio amplio para responder.</p>
+
+                  <div class="drawer-example">
+                    <strong>Diseño propuesto · «Cuaderno claro»</strong>
+                    <p>Página blanca para imprimir sin gastar tinta de más; texto azul marino de alto contraste; acentos verde petróleo y fondos menta muy suaves para separar definiciones y ejemplos. Títulos grandes, bloques cortos, márgenes generosos y actividades claramente separadas. El color acompaña la jerarquía, pero nunca es la única señal.</p>
+                  </div>
+
+                  <h3>Qué fija la skill antes de generar los apuntes</h3>
+                  <ol>
+                    <li><strong>Entrada:</strong> tema, curso o grupo, fuentes disponibles y necesidades concretas de lectura o respuesta.</li>
+                    <li><strong>Organización didáctica:</strong> título, objetivo, explicación por pasos, vocabulario esencial, ejemplos resueltos y actividades. Mantiene el contenido dentro de las fuentes y del nivel indicado.</li>
+                    <li><strong>Lectura:</strong> tipografía sans serif, tamaño de letra amplio, interlineado generoso, texto alineado a la izquierda, frases breves y espacio entre bloques. Evita columnas estrechas, justificación, párrafos densos y ornamentos que distraigan.</li>
+                    <li><strong>Respuesta:</strong> reserva líneas o recuadros de tamaño suficiente bajo cada pregunta; deja más espacio cuando haya que explicar, dibujar o desarrollar cálculos.</li>
+                    <li><strong>Impresión:</strong> prepara A4 vertical, márgenes definidos y saltos de página que mantengan cada pregunta junto a su espacio de respuesta. El diseño conserva legibilidad también en escala de grises.</li>
+                    <li><strong>Comprobación:</strong> revisa estructura semántica, contraste, tamaño, espacios, cortes de página y que el archivo se pueda abrir sin conexión.</li>
+                  </ol>
+
+                  <p>Las preferencias de lectura varían. La plantilla puede facilitar el acceso a alumnado con dislexia o baja visión, pero no es una adaptación universal ni sustituye las indicaciones concretas de cada persona o del centro. La skill debe aplicar las necesidades aportadas y permitir ajustar tamaño y contraste.</p>
+
+                  <div class="prompt">
+                    <strong>Ejemplo de instrucciones de la skill</strong>
+                    <pre>## Skill: apuntes-a4-accesibles
+
+Objetivo
+Transformar el tema y las fuentes que aporte el docente en apuntes claros, revisables e imprimibles.
+
+Entrega
+Genera un único archivo HTML autónomo, en español, con CSS incluido y preparado para A4 vertical. No dependas de fuentes, imágenes ni bibliotecas externas.
+
+Contenido
+1. Identifica el tema, el curso y los conceptos de las fuentes.
+2. Organiza una explicación progresiva con subtítulos, vocabulario clave y ejemplos resueltos.
+3. Añade las actividades solicitadas y un espacio de respuesta suficiente para cada una.
+4. No introduzcas datos o contenidos ajenos a las fuentes; señala lo que falte.
+
+Estética «Cuaderno claro»
+- Fondo blanco; texto azul marino; acentos verde petróleo y fondos menta muy pálidos.
+- Usa tipografía sans serif, base de 18 pt en impresión, títulos claramente mayores e interlineado aproximado de 1.6.
+- Alinea el texto a la izquierda; usa frases y párrafos breves y separa visualmente cada actividad.
+- Evita columnas, justificación, bloques largos, cursivas extensas y elementos decorativos.
+- Coloca cada enunciado junto a su zona de respuesta. Deja varias líneas para explicar y más espacio para dibujar o desarrollar operaciones.
+- Asegura contraste alto y no uses el color como único indicador.
+
+Impresión y revisión
+- Define página A4 vertical y márgenes de impresión.
+- Evita partir una actividad entre páginas y elimina elementos que no se necesiten en papel.
+- Revisa que el contenido no se corte, que las zonas de respuesta tengan espacio y que el tamaño resulte legible.
+- Aplica los ajustes individuales que indique el docente; no afirmes que un único diseño sirve igual para todas las personas.</pre>
+                    <button class="copy" type="button">Copiar instrucciones de la skill</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>Un fragmento del CSS de impresión</h3>
+                  <div class="prompt">
+                    <pre>@page { size: A4 portrait; margin: 17mm 18mm; }
+
+body {
+  background: #fff;
+  color: #17324d;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 18pt;
+  line-height: 1.6;
+}
+
+h1 { font-size: 28pt; line-height: 1.2; }
+h2 { font-size: 22pt; margin-top: 1.4em; }
+
+.concepto {
+  padding: 10mm;
+  border-left: 5px solid #287b78;
+  background: #eef6f5;
+}
+
+.actividad { break-inside: avoid; margin: 12mm 0; }
+.espacio-respuesta {
+  min-height: 28mm;
+  border-bottom: 1px solid #647783;
+}
+
+@media print {
+  .no-imprimir { display: none; }
+  .concepto { background: #fff; }
+}</pre>
+                    <button class="copy" type="button">Copiar fragmento CSS</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <div class="drawer-example">
+                    <strong>La petición puede seguir siendo breve</strong>
+                    <p><code>Aplica la skill «apuntes-a4-accesibles» al tema de fracciones equivalentes de 5.º de Primaria. Usa los apuntes adjuntos.</code></p>
+                    <p>La skill aporta la estructura pedagógica y el formato; el docente solo añade el tema, el nivel y las fuentes. Después revisa el contenido y comprueba la impresión antes de utilizar el material.</p>
+                  </div>
+                </div>
+              </details>
+
+              <details class="bridge-expansion">
+                <summary>Ampliar: el puente hacia los asistentes de escritorio</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Aprender a organizar tus directrices en archivos de recetas prepara directamente el terreno para los asistentes de escritorio de la Fase 03.</p>
+
+                  <p>Cuando trabajas en la web, colocas <code>COMANDOS.md</code> dentro de las instrucciones del proyecto. Cuando pasemos a herramientas como <strong>VS Code, Codex o Antigravity</strong> en la siguiente fase, verás que esta lógica se estandariza mediante archivos de configuración en el directorio de trabajo (archivos como <code>.cursorrules</code>, <code>SKILL.md</code> o <code>AGENTS.md</code>).</p>
+                  <p>En el escritorio, el asistente no solo lee las recetas, sino que puede ejecutar scripts locales, crear archivos en tu disco duro y transformar documentos en lote de manera desatendida. Dominar las recetas en la web es el primer paso natural hacia ese entorno profesional.</p>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#proyectos">← Anterior</a><a href="#cuadernos">Siguiente →</a></nav>
+      </section>
+
+      <!-- 04 · CUADERNOS -->
+      <section class="slide" id="cuadernos" data-topic="cuadernos">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>04 / 05</span> RECINTO CERRADO Y ANCLAJE EN FUENTES</p>
+            <h2>Rigor con<br><em>Gemini Notebook</em><span class="period">.</span></h2>
+            <p class="lead">Frente a los chatbots abiertos, Gemini Notebook opera en un recinto documental cerrado: responde únicamente a partir de tus fuentes y cita el párrafo exacto.</p>
+
+            <ol class="notebook-flow" aria-label="De las fuentes a los materiales en Gemini Notebook">
+              <li><span class="notebook-step">01</span><div><h3>Parte de tus fuentes</h3><p>El cuaderno consulta los documentos que has añadido, en vez de responder desde el chat abierto.</p></div></li>
+              <li><span class="notebook-step">02</span><div><h3>Comprueba las citas</h3><p>Abre cada referencia para contrastar la respuesta con el fragmento original.</p></div></li>
+              <li><span class="notebook-step">03</span><div><h3>Prepara materiales</h3><p>Studio transforma las fuentes en pódcasts, guías, tarjetas y presentaciones.</p></div></li>
+            </ol>
+
+            <p class="takeaway"><strong>Garantía contra la alucinación:</strong> Si un dato o criterio no aparece en tus documentos, la IA te informa con transparencia de que no está en las fuentes en lugar de inventarlo.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook">
+              <p>LA INTERFAZ TRIPARTITA</p>
+              <div class="studio-layout-diagram">
+                <div class="studio-panel-col">
+                  <h4>1. FUENTES</h4>
+                  <ul>
+                    <li>PDFs y Word</li>
+                    <li>Vídeos YouTube</li>
+                    <li>Webs y EPUBs</li>
+                    <li>Casillas on/off</li>
+                  </ul>
+                </div>
+                <div class="studio-panel-col">
+                  <h4>2. CHAT</h4>
+                  <ul>
+                    <li>Preguntas</li>
+                    <li>Citas al párrafo</li>
+                    <li>Guardar notas</li>
+                    <li>Cero invención</li>
+                  </ul>
+                </div>
+                <div class="studio-panel-col">
+                  <h4>3. STUDIO</h4>
+                  <ul>
+                    <li>Pódcast audio</li>
+                    <li>Guías de estudio</li>
+                    <li>Flashcards CSV</li>
+                    <li>Slides PPTX</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="extras">
+              <details>
+                <summary>Ampliar: guía completa de uso y subida de fuentes</summary>
+                <div class="longread">
+                  <p class="drawer-intro"><strong>Gemini Notebook</strong> (conocido históricamente como <em>NotebookLM</em> y unificado formalmente por Google en 2026 bajo el dominio <code>notebook.google.com</code>) es un entorno de investigación y síntesis documental con anclaje estricto (*source grounding*).</p>
+
+                  <h3>Tipos de fuentes admitidas y su uso pedagógico</h3>
+                  <ul class="resource-list">
+                    <li><strong>Documentos PDF y Word (.docx):</strong> Admite libros de texto, normativas oficiales, decretos curriculares y programaciones didácticas de hasta 500.000 palabras por fuente.</li>
+                    <li><strong>Transcripciones de vídeos de YouTube:</strong> Pegando el enlace de cualquier vídeo público de YouTube, la herramienta extrae su transcripción textual completa en segundos (sin anuncios) y permite interrogar al vídeo o generar resúmenes automáticos.</li>
+                    <li><strong>Libros electrónicos (.epub) y Google Play Books:</strong> Soporte nativo para cargar manuales escolares y monografías académicas completas en un solo paso.</li>
+                    <li><strong>Hojas de cálculo (.csv / Google Sheets) e imágenes:</strong> Permite analizar matrices de datos, tablas de calificaciones anonimizadas o esquemas gráficos.</li>
+                    <li><strong>Investigación profunda (*Deep Research*):</strong> Un agente autónomo puede rastrear la web en segundo plano sobre un tema docente y generar un informe fundamentado que se añade como nueva fuente al cuaderno.</li>
+                  </ul>
+
+                  <h3>El control mediante casillas de verificación</h3>
+                  <p>En el panel izquierdo de fuentes, cada documento tiene una casilla de verificación. Al desmarcar una o varias casillas, la IA ignora temporalmente esos archivos en el chat y en el panel Studio. Esto permite, por ejemplo, aislar únicamente los apuntes de la *Unidad 3* sin que se mezclen con el resto del curso.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: el Panel Studio al detalle (Pódcasts y Guías)</summary>
+                <div class="longread">
+                  <p class="drawer-intro">El panel Studio actúa como una fábrica de recursos didácticos listos para el aula a partir de los documentos seleccionados.</p>
+
+                  <h3>Resúmenes de Audio (*Audio Overviews* / Pódcasts docentes)</h3>
+                  <p>Genera una conversación en audio realista entre dos locutores virtuales (hombre y mujer) que debaten y explican los conceptos clave de tus fuentes en más de 80 idiomas, incluido el español.</p>
+                  <ul>
+                    <li><strong>Modalidades:</strong> *Deep Dive* (conversación a fondo de 10-15 min), *Brief* (resumen ejecutivo de 2-3 min con un locutor) y *Debate* (dos posturas contrapuestas).</li>
+                    <li><strong>Personalización de enfoque:</strong> Puedes indicar instrucciones previas a los locutores (ej. <em>«Hablad para alumnos de 1.º de ESO, usad analogías con el fútbol y centraros en el concepto de densidad»</em>).</li>
+                    <li><strong>Aplicación en el aula:</strong> Ideal para metodologías de aula invertida (*Flipped Classroom*), repaso para estudiantes con dificultades lectoras o dislexia, y recursos de comprensión oral en materias de idiomas.</li>
+                  </ul>
+
+                  <h3>Otros artefactos generables en el Studio</h3>
+                  <ul class="resource-list">
+                    <li><strong>Guías de estudio (*Study Guides*):</strong> Documento estructurado con resumen temático, preguntas cortas de autoevaluación, claves de corrección y glosario de términos.</li>
+                    <li><strong>Tarjetas de memoria (*Flashcards*):</strong> Preguntas y respuestas de anverso/reverso que pueden practicarse dentro del cuaderno o descargarse en formato <code>.csv</code> para importarlas en Quizlet, Knowt o Anki.</li>
+                    <li><strong>Mapas mentales interactivos:</strong> Árbol de nodos interactivo para proyectar en la pizarra digital. Al pulsar sobre cualquier nodo, se despliega la explicación respaldada en las fuentes.</li>
+                    <li><strong>Presentaciones descargables (.pptx):</strong> Generación de láminas estructuradas con descarga nativa en formato de PowerPoint editable.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: metodología del Bucle "Nota a Fuente"</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Cuando subes entre 20 y 50 documentos densos a un cuaderno, pedir un artefacto directamente al Studio puede producir resúmenes dispersos. La metodología del <strong>Bucle Nota-a-Fuente (*Note-to-Source Loop*)</strong> resuelve este problema.</p>
+
+                  <div class="visual-flow" style="flex-direction:column; align-items:stretch;">
+                    <span>1️⃣ <strong>Consulta estructurada en el chat:</strong> Pides a la IA que destile únicamente los 5 conceptos nucleares con sus citas.</span>
+                    <span>2️⃣ <strong>Fijar como Nota:</strong> Guardas esa respuesta depurada haciendo clic en el icono de chincheta (*pushpin*).</span>
+                    <span>3️⃣ <strong>Reinyectar como fuente:</strong> Pulsas en los tres puntos de la nota y seleccionas <em>«Usar como fuente» (*Use as source*)</em>.</span>
+                    <span>4️⃣ <strong>Generación filtrada:</strong> Desmarcas todos los documentos brutos del panel izquierdo y generas el pódcast o la guía basándote <em>únicamente</em> en la nota curada.</span>
+                  </div>
+
+                  <p>Este flujo garantiza que los materiales generados en el Studio se ciñan con precisión quirúrgica a lo que el docente considera esencial, eliminando datos secundarios o ruido documental.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: comparativa Cuenta Gratuita vs Google AI Pro</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Aunque la versión gratuita de Gemini Notebook es extraordinariamente generosa para el profesorado, las cuentas Pro ofrecen capacidades ampliadas para departamentos completos.</p>
+
+                  <table class="comp-table">
+                    <thead>
+                      <tr>
+                        <th>Característica</th>
+                        <th>Cuenta Gratuita ($0)</th>
+                        <th>Cuenta Google AI Pro</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Número de cuadernos</strong></td>
+                        <td>Hasta 100 cuadernos</td>
+                        <td>Hasta 500 cuadernos</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Fuentes por cuaderno</strong></td>
+                        <td>Hasta 50 fuentes</td>
+                        <td>Hasta 300 fuentes</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Límite de palabras por fuente</strong></td>
+                        <td>500.000 palabras por archivo</td>
+                        <td>500.000 palabras por archivo</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Modelos de razonamiento</strong></td>
+                        <td>Acceso estándar a Gemini</td>
+                        <td>Acceso prioritario a modelos Gemini Pro y Thinking</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Presupuesto de cómputo</strong></td>
+                        <td>Cuota básica ($1\times$)</td>
+                        <td>Cuota cuádruple ($4\times$) con recarga cada 5 horas</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Informes Deep Research</strong></td>
+                        <td>~10 búsquedas profundas al mes</td>
+                        <td>Hasta 20 informes profundos al día</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+
+              <details class="legal-expansion">
+                <summary>Ampliar: legislación educativa (LOMLOE) y diseño curricular</summary>
+                <div class="longread legal-expansion-content">
+                  <div class="legal-expansion-intro">
+                    <p><strong>El fin de las citas legales inventadas:</strong> En los chatbots abiertos, la IA suele inventar numeraciones de criterios de evaluación o mezclar decretos de distintas comunidades autónomas. La arquitectura de anclaje de Gemini Notebook erradica este problema por completo.</p>
+                  </div>
+
+                  <h3>Cómo montar tu cuaderno curricular</h3>
+                  <ol>
+                    <li>Sube el <strong>Decreto del currículo autonómico oficial</strong> en PDF (descargado del boletín de tu comunidad).</li>
+                    <li>Sube la <strong>programación didáctica anual</strong> de tu departamento.</li>
+                    <li>Sube la <strong>plantilla estándar de Situación de Aprendizaje (SdA)</strong> que utilice tu centro.</li>
+                  </ol>
+
+                  <div class="prompt">
+                    <strong>Petición estructurada para Situaciones de Aprendizaje</strong>
+                    <pre>Basándote exclusivamente en el Decreto curricular y en la programación subidos a este cuaderno:
+1. Diseña una Situación de Aprendizaje para [Materia y Curso] sobre [Tema].
+2. Asocia con literalidad exacta las Competencias Específicas y los Criterios de Evaluación oficiales correspondientes.
+3. Desglosa los Saberes Básicos aplicados indicando la página y el epígrafe exacto del Decreto donde figuran.
+4. Diseña una rúbrica analítica en 4 niveles de logro basada únicamente en los descriptores observables de los documentos.</pre>
+                    <button class="copy" type="button">Copiar petición</button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                  </div>
+
+                  <h3>Auditoría de contradicciones (*Find Gaps / Contradictions*)</h3>
+                  <p>Puedes cargar dos libros de texto de distintas editoriales o dos artículos científicos y pedir al chat: <em>«Localiza tres aspectos en los que estas fuentes discrepen o se contradigan entre sí y cita las páginas exactas de cada autor»</em>. Es una herramienta extraordinaria para preparar debates de pensamiento crítico con el alumnado.</p>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#recetas">← Anterior</a><a href="#integracion">Siguiente →</a></nav>
+      </section>
+
+      <!-- 05 · INTEGRACIÓN -->
+      <section class="slide" id="integracion" data-topic="integracion">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>05 / 06</span> ECOSISTEMA UNIFICADO</p>
+            <h2>Lo cerrado y<br><em>lo abierto</em><span class="period">.</span></h2>
+            <p class="lead">La unificación de Gemini y los Cuadernos permite combinar el rigor documental de tus archivos con la conexión a internet en tiempo real, imágenes y Canvas.</p>
+
+            <div class="integration-compare" aria-label="Dos entornos y una forma de conectarlos">
+              <article class="integration-mode closed-mode"><span>FUENTES CERRADAS</span><h3>Cuadernos</h3><p><code>notebook.google.com</code></p><small>Estudiar documentos, consultar citas y generar pódcasts.</small></article>
+              <article class="integration-mode open-mode"><span>WEB ABIERTA</span><h3>Gemini</h3><p><code>gemini.google.com</code></p><small>Buscar información reciente y crear materiales interactivos.</small></article>
+            </div>
+            <div class="integration-bridge"><span aria-hidden="true">↔</span><p><strong>El puente: @Gemini Notebook</strong><br>Consulta tus fuentes desde una conversación de Gemini.</p></div>
+
+            <p class="takeaway"><strong>No tienes que elegir:</strong> La sincronización bidireccional inmediata te permite alternar entre el rigor cerrado y la creatividad abierta según el momento de la clase.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook">
+              <p>MATRIZ DE DECISIÓN DOCENTE</p>
+              <div class="visual-flow" style="flex-direction:column; align-items:stretch;">
+                <span style="font-size:12px;">🎯 <strong>¿Exámenes, LOMLOE o pódcasts?</strong><br>➔ Abre <strong>notebook.google.com</strong></span>
+                <span style="font-size:12px;">🌐 <strong>¿Noticias de hoy o burocracia Gmail?</strong><br>➔ Abre <strong>gemini.google.com</strong></span>
+                <span style="font-size:12px;">🎮 <strong>¿Juegos interactivos en pizarra (Canvas)?</strong><br>➔ Llama al cuaderno desde <strong>Gemini</strong></span>
+              </div>
+            </div>
+
+            <div class="extras">
+              <details>
+                <summary>Ampliar: casos prácticos de integración combinada</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Ejemplos reales de cómo la unión de ambas herramientas multiplica las posibilidades didácticas.</p>
+
+                  <h3>Caso 1: Actualizar apuntes con noticias de actualidad</h3>
+                  <ul>
+                    <li><strong>El problema:</strong> Tus apuntes en PDF sobre economía, ciencia o geografía son de cursos anteriores y quieres conectarlos con un evento ocurrido esta semana.</li>
+                    <li><strong>Cómo hacerlo:</strong> Abres tu cuaderno desde el chat de Gemini y pides: <em>«Toma la unidad de inflación de mi cuaderno, busca en Google los datos del IPC publicados este mes en España y crea una actividad práctica de aula con datos de hoy»</em>.</li>
+                  </ul>
+
+                  <h3>Caso 2: Crear un juego interactivo en Canvas para la pizarra digital</h3>
+                  <ul>
+                    <li><strong>El problema:</strong> Quieres una actividad gamificada para repasar un tema denso proyectándolo en la pizarra digital interactiva.</li>
+                    <li><strong>Cómo hacerlo:</strong> En Gemini, con la herramienta <strong>Canvas</strong> activa, pides: <em>«Basándote exclusivamente en el vocabulario de la Unidad 2 de mi cuaderno de inglés, programa en HTML/JS un juego interactivo tipo Pasapalabra o Trivial con marcador de aciertos para jugar en clase»</em>.</li>
+                  </ul>
+
+                  <h3>Caso 3: Burocracia docente y comunicación con familias</h3>
+                  <ul>
+                    <li><strong>El problema:</strong> Tienes el Reglamento de Régimen Interior (RRI) o el protocolo de excursiones en un cuaderno y debes redactar comunicados oficiales.</li>
+                    <li><strong>Cómo hacerlo:</strong> Pides a Gemini conectado a Workspace: <em>«Según el protocolo de salidas escolares de mi cuaderno, redacta un borrador en Gmail dirigido a las familias explicando los horarios y autorizaciones, y crea una hoja de firmas en Google Docs»</em>.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: gestionar cuadernos por comandos en Gemini</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Puedes pedirle a Gemini en cualquier conversación natural que actúe como tu secretario y gestione tus cuadernos sin salir del chat.</p>
+
+                  <p><em>(La primera vez que uses esta función, escribe <code>@Gemini Notebook</code> en el chat para autorizar la conexión en tu cuenta).</em></p>
+
+                  <h3>Peticiones directas en lenguaje natural:</h3>
+                  <ul>
+                    <li><strong>Consultar cuadernos y fuentes:</strong><br>
+                      <em>«¿Qué cuadernos tengo creados y qué documentos hay dentro de mi cuaderno de Historia?»</em></li>
+                    <li><strong>Crear nuevos cuadernos sobre la marcha:</strong><br>
+                      <em>«Créame un cuaderno nuevo llamado 'Orientación Académica 2026-2027'»</em>.</li>
+                    <li><strong>Añadir enlaces o documentos desde el chat:</strong><br>
+                      <em>«Guarda este enlace web y el documento adjunto como nuevas fuentes de mi cuaderno de Biología»</em>.</li>
+                    <li><strong>Cruzar dos cuadernos distintos:</strong><br>
+                      <em>«Compara las fuentes de mi cuaderno de 'Física' con las de 'Química' y propón un proyecto interdisciplinar (ABP) conjunto»</em>.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>Ampliar: integración en Google Docs y plataformas</summary>
+                <div class="longread">
+                  <p class="drawer-intro">La interoperabilidad con procesadores de texto y entornos virtuales de aprendizaje consolida a Gemini Notebook como una herramienta institucional de centro.</p>
+
+                  <h3>Referenciar cuadernos en Google Docs con el símbolo @</h3>
+                  <p>Mientras redactas una programación didáctica, un examen o una guía docente en Google Docs, puedes escribir <strong>`@`</strong> seguido del nombre de tu cuaderno para insertar tablas, resúmenes o citas verificadas directamente en tu documento sin cambiar de pestaña.</p>
+
+                  <h3>Integración con plataformas educativas (LMS)</h3>
+                  <ul class="resource-list">
+                    <li><strong>Google Classroom:</strong> Permite crear cuadernos con un solo clic importando automáticamente todas las lecturas y guías publicadas en la pestaña *Trabajo de clase* (*Classwork*), compartiéndolos con el alumnado en modo lectura protegida.</li>
+                    <li><strong>Canvas LMS y Schoology:</strong> Integración mediante el estándar <em>Gemini LTI</em> para incrustar cuadernos de estudio interactivos dentro de las asignaturas virtuales del centro.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="legal-expansion">
+                <summary>Ampliar: protocolo de revisión y fuentes fiables</summary>
+                <div class="longread legal-expansion-content">
+                  <div class="legal-expansion-intro">
+                    <p><strong>Criterio profesional indelegable:</strong> La inteligencia artificial redacta borradores y sintetiza información a una velocidad sin precedentes, pero la responsabilidad ética, pedagógica y legal de lo que entra en el aula corresponde exclusivamente al docente.</p>
+                  </div>
+
+                  <h3>Lista de comprobación antes de usar material generado</h3>
+                  <ol>
+                    <li>¿He verificado que los datos sensibles o personales de menores no han sido expuestos?</li>
+                    <li>¿He contrastado las afirmaciones teóricas con la fuente original mediante las citas interactivas?</li>
+                    <li>¿El vocabulario, la complejidad sintáctica y los ejemplos son verdaderamente adecuados a la madurez de mi grupo?</li>
+                    <li>¿He revisado los enunciados de los problemas numéricos para comprobar que tienen solución exacta y no contienen erratas de cálculo?</li>
+                  </ol>
+
+                  <h3>Fuentes institucionales y divulgativas en español</h3>
+                  <ul class="resource-list">
+                    <li><a href="https://intef.es/Noticias/nueva-version-de-la-guia-sobre-el-uso-de-la-inteligencia-artificial-en-el-ambito-educativo/" target="_blank" rel="noopener noreferrer">INTEF · Guía sobre IA en educación (versión 2.0) ↗</a><br>Marco oficial con recomendaciones éticas y didácticas para profesorado y centros educativos.</li>
+                    <li><a href="https://support.google.com/gemini/answer/15229592?hl=es-ES" target="_blank" rel="noopener noreferrer">Google Workspace · Centro de Ayuda de Gemini en español ↗</a><br>Documentación técnica oficial sobre extensiones, privacidad y conexiones con Docs y Drive.</li>
+                    <li><a href="https://descargas.intef.es/cedec/proyectoedia/guias/contenidos/inteligencia_artificial/html/busqueda-e-investigacion.html" target="_blank" rel="noopener noreferrer">CEDEC-INTEF · Búsqueda e investigación con IA ↗</a><br>Guías de aplicación metodológica en el aula.</li>
+                    <li><a href="https://www.aepd.es/es/guias-y-herramientas/guias/orientaciones-para-centros-educativos" target="_blank" rel="noopener noreferrer">AEPD · Orientaciones sobre protección de datos en centros educativos ↗</a><br>Criterios de la Agencia Española de Protección de Datos sobre el tratamiento de información escolar.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#cuadernos">← Anterior</a><a href="#cierre">Cierre →</a></nav>
+      </section>
+      <!-- 06 · CIERRE Y PUENTE AL ESCRITORIO -->
+      <section class="slide" id="cierre" data-topic="cierre">
+        <div class="slide-body">
+          <div class="slide-content">
+            <p class="kicker"><span>06 / 06</span> CIERRE · DEL OBJETIVO A LA HERRAMIENTA</p>
+            <h2>Primero, el<br><em>objetivo</em><span class="period">.</span></h2>
+            <p class="lead">Decide qué necesitas hacer y qué trabajo quieres <strong>reutilizar</strong>: fichas, textos, fuentes o formatos que preparas una y otra vez.</p>
+
+            <div class="closing-choices" aria-label="Dos opciones para trabajar con instrucciones y fuentes">
+              <article>
+                <span>INSTRUCCIONES Y TAREAS RECURRENTES</span>
+                <h3>Proyecto</h3>
+                <p>Guarda instrucciones y archivos para repetir tareas con el mismo contexto. Útil para rutinas docentes que comparten pautas.</p>
+              </article>
+              <article>
+                <span>CONSULTA DE FUENTES</span>
+                <h3>Gemini Notebook</h3>
+                <p>Reúne fuentes para volver a consultarlas, contrastarlas y reutilizar su contenido en nuevas preguntas y materiales.</p>
+              </article>
+            </div>
+
+            <p class="takeaway"><strong>Pregunta clave:</strong> ¿qué necesitas hacer y qué quieres reutilizar? El objetivo orienta la herramienta.</p>
+          </div>
+
+          <aside class="slide-aside">
+            <div class="slide-hook local-bridge-hook">
+              <p>PUENTE A LOS ASISTENTES DE ESCRITORIO</p>
+              <div class="local-bridge-diagram" role="img" aria-label="Del procesamiento en un servicio en la nube al trabajo con archivos desde el ordenador">
+                <div class="local-bridge-step">
+                  <svg viewBox="0 0 100 74" aria-hidden="true" focusable="false">
+                    <path d="M25 54h48a15 15 0 0 0 1-30 22 22 0 0 0-42-4A17 17 0 0 0 25 54z" fill="#f1e6cd" stroke="#9b6f24" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M39 37h22M39 45h16" stroke="#9b6f24" stroke-width="3" stroke-linecap="round" />
+                  </svg>
+                  <strong>EN LA NUBE</strong>
+                </div>
+                <span aria-hidden="true">→</span>
+                <div class="local-bridge-step local-bridge-device">
+                  <svg viewBox="0 0 100 74" aria-hidden="true" focusable="false">
+                    <rect x="15" y="10" width="70" height="46" rx="5" fill="#e4e7f7" stroke="#374b99" stroke-width="3" />
+                    <path d="M9 64h82l-7-8H16z" fill="#fff" stroke="#374b99" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M39 26h26M39 34h21" stroke="#374b99" stroke-width="3" stroke-linecap="round" />
+                    <path d="M69 39h9v12H69z" fill="#fff" stroke="#374b99" stroke-width="2" />
+                  </svg>
+                  <strong>EN TU EQUIPO</strong>
+                </div>
+              </div>
+              <span class="local-bridge-caption">De adjuntar y descargar a trabajar directamente con archivos del ordenador.</span>
+            </div>
+
+            <div class="extras">
+              <details class="bridge-expansion">
+                <summary>Ampliar: de la nube a los archivos locales</summary>
+                <div class="longread">
+                  <p class="drawer-intro">La diferencia principal está en dónde se procesan los documentos y dónde acaba el material generado.</p>
+
+                  <table class="comp-table cloud-local-table">
+                    <thead>
+                      <tr><th>Aspecto</th><th>Proyectos y Gemini Notebook</th><th>Asistente de escritorio</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Archivos e instrucciones</th>
+                        <td>Subimos o vinculamos fuentes y añadimos contexto e instrucciones; el servicio los procesa en sus servidores.</td>
+                        <td>Los originales y las instrucciones pueden permanecer en carpetas del ordenador; el asistente abre los archivos seleccionados según los permisos.</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Dónde se procesa</th>
+                        <td>El proveedor procesa el contenido en sus servidores; los detalles de conservación dependen del servicio y la cuenta.</td>
+                        <td>Depende del modelo: si es de nube, puede enviarle el contenido pertinente; si se ejecuta en local, el procesamiento ocurre en el ordenador.</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Archivos nuevos</th>
+                        <td>La respuesta aparece en la aplicación; normalmente hay que exportarla o descargarla y después organizarla en el equipo.</td>
+                        <td>Puede guardar documentos directamente en la carpeta elegida, sin tener que descargarlos desde la aplicación.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p>En esta fase aportamos contexto e instrucciones, pero trabajamos con servicios externos. En la siguiente veremos asistentes que pueden operar sobre archivos del equipo. <strong>Que un asistente acceda a archivos locales no garantiza que el modelo también procese en local</strong>: esa diferencia depende de cómo se ejecute.</p>
+                </div>
+              </details>
+            </div>
+          </aside>
+        </div>
+        <nav class="slide-navigation" aria-label="Navegación de la diapositiva"><a href="#integracion">← Anterior</a><a href="escritorio.html">Asistentes de escritorio →</a></nav>
+      </section>
     </main>
+
+    <footer>
+      <span>IA PARA DOCENTES <span class="slash">/</span> DAVID RODRÍGUEZ</span>
+      <span>FASE 02.5 · PROYECTOS Y GEMINI NOTEBOOK</span>
+    </footer>
   </div>
-<details class="license-badge"><summary><span>@David</span><span class="license-more"> Rodríguez · CC BY-NC-SA 4.0</span></summary><div class="license-info"><p>El contenido original de este recurso es obra de <strong>David Rodríguez</strong> y se comparte bajo la licencia <strong>CC BY-NC-SA 4.0</strong>.</p><p>Se permite compartir y adaptar citando la autoría, enlazando la licencia e indicando los cambios, sin uso comercial. Las adaptaciones deben distribuirse bajo la misma licencia o una compatible.</p><p>Los materiales de terceros pueden tener derechos y condiciones propias.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noopener noreferrer">Consultar las condiciones de la licencia ↗</a></p></div></details>
+
+  <details class="license-badge">
+    <summary><span>@David</span><span class="license-more"> Rodríguez · CC BY-NC-SA 4.0</span></summary>
+    <div class="license-info">
+      <p>El contenido original de este recurso es obra de <strong>David Rodríguez</strong> y se comparte bajo la licencia <strong>CC BY-NC-SA 4.0</strong>.</p>
+      <p>Se permite compartir y adaptar citando la autoría, enlazando la licencia e indicando los cambios, sin uso comercial. Las adaptaciones deben distribuirse bajo la misma licencia o una compatible.</p>
+      <p>Los materiales de terceros pueden tener derechos y condiciones propias.</p>
+      <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noopener noreferrer">Consultar las condiciones de la licencia ↗</a></p>
+    </div>
+  </details>
 </body>
 </html>
-
-
