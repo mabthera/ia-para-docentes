@@ -15,4 +15,14 @@ if (avisoLicencia) {
       }
     });
   });
+
+  // Garantía de apertura durante la impresión
+  let licenciaEstabaAbierta = false;
+  window.addEventListener('beforeprint', () => {
+    licenciaEstabaAbierta = avisoLicencia.open;
+    avisoLicencia.open = true;
+  });
+  window.addEventListener('afterprint', () => {
+    avisoLicencia.open = licenciaEstabaAbierta;
+  });
 }

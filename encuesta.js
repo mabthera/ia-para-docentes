@@ -120,4 +120,3 @@ formulario.addEventListener('submit', async evento => {
   }, { once: true });
   envio.submit();
 });
-

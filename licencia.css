@@ -14,3 +14,130 @@
 .drawer .license-badge { z-index: 5; }
 @media (max-width: 600px) { .license-badge { right: 8px; bottom: 6px; } }
 @media (prefers-reduced-motion: reduce) { .license-badge, .license-badge .license-more { transition: none; } }
+
+/* ==========================================================================
+   Restricción de impresión: Solo licencia Creative Commons
+   Oculta toda la presentación (diapositivas, menús, gráficos, diálogos)
+   y muestra únicamente la tarjeta de licencia en una sola página limpia.
+   ========================================================================== */
+@media print {
+  @page {
+    size: auto;
+    margin: 25mm 20mm;
+  }
+
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Ocultar absolutamente todo el contenido de la aplicación */
+  body > *:not(.license-badge),
+  dialog,
+  .drawer,
+  [popover] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Mostrar exclusivamente la tarjeta de licencia en el flujo de impresión */
+  body > .license-badge {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 40px auto 0 auto !important;
+    padding: 24px 28px !important;
+    border: 1px solid #d0d7de !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  body > .license-badge summary {
+    display: block !important;
+    visibility: visible !important;
+    cursor: default !important;
+    list-style: none !important;
+    padding: 0 0 12px 0 !important;
+    margin: 0 0 16px 0 !important;
+    border: none !important;
+    border-bottom: 2px solid #8d302f !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #8d302f !important;
+    font-size: 16pt !important;
+    font-weight: 700 !important;
+    white-space: normal !important;
+    box-shadow: none !important;
+  }
+
+  body > .license-badge summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  body > .license-badge .license-more {
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #24292f !important;
+    font-size: 13pt !important;
+    font-weight: 600 !important;
+  }
+
+  body > .license-badge .license-info {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #24292f !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+  }
+
+  body > .license-badge .license-info p {
+    margin: 0 0 10pt 0 !important;
+    color: #24292f !important;
+  }
+
+  body > .license-badge .license-info p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  body > .license-badge a {
+    color: #8d302f !important;
+    text-decoration: underline !important;
+  }
+
+  body > .license-badge a[href]::after {
+    content: " (" attr(href) ")" !important;
+    font-size: 9pt !important;
+    color: #57606a !important;
+    text-decoration: none !important;
+  }
+}
