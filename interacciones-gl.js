@@ -19,7 +19,7 @@ function seleccionar(fase) {
 botones.forEach(boton => boton.addEventListener('click', () => {
   const fase = boton.dataset.fase;
   if (boton.getAttribute('aria-pressed') === 'true') {
-    window.location.href = ['fundamentos', 'online', 'proyectos'].includes(fase) ? `${fase}-gl.html` : `${fase}.html`;
+    window.location.href = `${fase}-gl.html`;
   } else {
     seleccionar(fase);
   }

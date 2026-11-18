@@ -2,12 +2,14 @@
 
 Web de apoyo a una formación sobre inteligencia artificial aplicada a la docencia, creada por **David Rodríguez**, profesor de Matemáticas y divulgador en IA.
 
-El recorrido consta de fundamentos, herramientas online, el puente de proyectos y GeminiNotebook, asistentes de escritorio y trabajo en local. Fundamentos y herramientas online están desarrolladas; las demás secciones se encuentran en preparación.
+El recorrido consta de fundamentos, herramientas online, el puente de proyectos y GeminiNotebook, asistentes de escritorio y trabajo en local. Las cinco secciones cuentan con versiones en español y gallego.
 
 ## Organización
 
 - `index.html`: portada y acceso a las cinco secciones.
-- `fundamentos.html`, `online.html`, `proyectos.html`, `escritorio.html` y `local.html`: páginas de las secciones; `encuesta.html` contiene el cuestionario enlazado desde el cierre de Fundamentos.
+- `fundamentos.html`, `online.html`, `proyectos.html`, `escritorio.html` y `local.html`: páginas en español; `encuesta.html` contiene el cuestionario enlazado desde el cierre de Fundamentos.
+- `index-gl.html`, `fundamentos-gl.html`, `online-gl.html`, `proyectos-gl.html`, `escritorio-gl.html` y `local-gl.html`: versiones en gallego. El selector GL/ES enlaza cada página con su equivalente; la encuesta y algunos recursos descargables continúan en español.
+- `idioma.js` y `idioma.css`: selector de idioma y conservación de la sección consultada.
 - `assets/`: imágenes utilizadas por la web.
 - Archivos `.css` y `.js`: estilos e interacciones de la presentación.
 - `ejemplos/`: archivos de muestra para practicar la importación de preguntas en Moodle.

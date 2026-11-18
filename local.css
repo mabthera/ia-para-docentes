@@ -1,0 +1,118 @@
+body[data-fase="local"] {
+  --accent: #703f85;
+  --accent-soft: #e8dfee;
+  --local-ink: #4d305c;
+  --local-rule: #d8cbdc;
+}
+.chapter-nav a:is(:hover, :focus-visible, [aria-current]) {
+  background: var(--accent-soft);
+  color: var(--local-ink);
+}
+.slide h1 { font-size: clamp(44px, min(5.4vw, 8vh), 78px); }
+.slide h1 em, .slide h2 em { display: block; }
+#recorrido-local .takeaway, .drawer blockquote {
+  margin: 0;
+  padding: 10px 16px;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(105deg, #e9dff0, #f1edf480);
+  color: var(--local-ink);
+  font: italic clamp(16px, 1.4vw, 21px)/1.42 Georgia, serif;
+}
+.takeaway strong, .drawer-content strong { color: var(--local-ink); }
+.lc-icon { width: 24px; height: 24px; flex: none; }
+.lc-figure {
+  margin: 0;
+  padding: clamp(16px, 2vw, 30px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  border: 1px solid white;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #fff 8%, #faf8fc 52%, #e9e3ef);
+  box-shadow: 10px 10px 26px #cbd2d7, -7px -7px 22px #fff;
+  color: var(--local-ink);
+}
+.lc-figure figcaption {
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #6b5476;
+}
+.lc-figure p { margin: 0; line-height: 1.4; }
+.route { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 10px; border: 1px solid var(--local-rule); border-radius: 13px; }
+.illustrated { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 14px; }
+.route .illustrated .lc-icon { width: 38px; height: 38px; }
+.local-route { background: #e9dfef; border-color: #c8aecf; }
+.model-size, .notice, .class-note { display: flex; align-items: center; gap: clamp(15px, 2.6vw, 38px); }
+.model-size > .lc-icon, .notice > .lc-icon, .class-note > .lc-icon { width: clamp(46px, 5.7vw, 80px); height: auto; }
+.model-size strong, .notice strong { font-size: clamp(38px, 4.3vw, 66px); letter-spacing: -.06em; line-height: 1; }
+.model-size small { font-size: .45em; letter-spacing: -.02em; }
+.model-size + p { font: 14px/1.4 ui-monospace, Consolas, monospace; }
+.notice p { margin-top: 4px; font-weight: 600; }
+.key-rows, .steps { margin: 0; padding: 0; }
+.key-rows > div { display: grid; grid-template-columns: minmax(90px, .35fr) 1fr; align-items: baseline; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.key-rows dt { color: var(--local-ink); font-weight: 750; }
+.key-rows dd { margin: 0; color: #48565c; line-height: 1.4; }
+.steps { padding-left: 1.5em; }
+.steps li { padding: 4px 0 4px 4px; }
+.steps li::marker { font-weight: 750; color: var(--accent); }
+.file-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.file-cards > div { display: grid; grid-template-columns: auto 1fr; column-gap: 9px; row-gap: 4px; align-items: center; padding: 14px; border: 1px solid #dad1df; border-radius: 14px; background: #f8f7fa; }
+.file-cards .lc-icon { color: var(--accent); grid-row: span 2; }
+.file-cards small { line-height: 1.35; color: #536068; }
+.shelf-art { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.shelf-art > .lc-icon { width: 78px; height: 78px; fill: #ebdfee; }
+.shelf-art > div { padding-left: 16px; border-left: 2px solid #c8b4d0; }
+.shelf-art .illustrated { flex-direction: row; margin: 9px 0; }
+.wave { display: flex; height: clamp(42px, 9vh, 82px); gap: 1.7%; align-items: center; justify-content: center; border-block: 1px solid var(--local-rule); }
+.wave i { width: 1.7%; border-radius: 5px; height: var(--bar); background: var(--accent); }
+.script-line, .class-note p { font: italic clamp(19px, 2vw, 28px)/1.4 Georgia, serif; }
+.decision { display: flex; flex-wrap: wrap; gap: 7px; color: var(--local-ink); font-weight: 700; }
+.decision b { margin-left: 7px; color: #8b6a99; }
+.slide-aside .open-drawer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  background: #ede6f1;
+  border-left-color: var(--accent);
+  color: var(--local-ink);
+}
+.slide-aside .open-drawer:is(:hover,:focus-visible) { background: #e3d4ea; color: var(--local-ink); }
+.open-drawer .drawer-arrow { background: var(--accent); color: white; width: 30px; height: 30px; }
+.open-drawer .lc-icon { color: var(--accent); width: 21px; height: 21px; }
+.extras summary .lc-icon { vertical-align: middle; margin-right: 10px; }
+.drawer { width: min(890px, 93vw); }
+.drawer-content { overflow-wrap: anywhere; }
+.drawer-content a, .close-drawer { color: var(--accent); }
+.drawer-content h3 { color: var(--local-ink); }
+.drawer-content blockquote { margin-block: 22px; }
+.prompt { padding: 16px 20px; margin-block: 14px; background: #eae3ee; border-left: 3px solid var(--accent); border-radius: 0 13px 13px 0; }
+.prompt pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 12px; font: 15px/1.6 ui-monospace, Consolas, monospace; }
+.copy { padding: 7px 13px; cursor: pointer; border-radius: 10px; border: 1px solid #c6adce; color: var(--local-ink); background: white; font: inherit; font-size: 14px; font-weight: 700; }
+.copy-status { margin-left: 10px; font-size: 13px; }
+.source { padding-top: 10px; border-top: 1px solid var(--local-rule); }
+.slide-navigation { padding-right: 30px; }
+@media (min-width: 851px) and (min-height: 560px) {
+  #inicio { min-height: calc(100svh - var(--chapter-nav-height, 58px) - clamp(72px, 10vh, 96px)); }
+}
+@media (min-width: 851px) and (max-height: 660px) {
+  .lc-figure { padding: 13px 18px; gap: 8px; }
+  .route { padding: 5px; }
+  .route .illustrated .lc-icon { width: 30px; height: 30px; }
+  .key-rows > div { padding-block: 5px; }
+  #recorrido-local .takeaway { padding-block: 6px; }
+}
+@media (max-width: 850px) {
+  .chapter-nav { flex-wrap: wrap; gap: 2px; position: static; }
+  .chapter-nav a { padding: 5px 8px; }
+  .slide { scroll-margin-top: 0; padding-block: 30px; }
+  .kicker { margin-bottom: 14px; }
+  .slide-content > :is(.key-rows,.file-cards,.decision,.steps) { margin-bottom: 18px; }
+  .slide-aside { margin-top: 22px; }
+  .slide-navigation { margin-top: 26px; }
+  .drawer { width: min(100%, 760px); }
+}

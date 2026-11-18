@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="portada.css">
   <link rel="stylesheet" href="fundamentos.css?v=39">
-  <link rel="stylesheet" href="proyectos.css?v=33">
+  <link rel="stylesheet" href="proyectos.css?v=38">
   <link rel="stylesheet" href="licencia.css?v=2">
   <link rel="stylesheet" href="idioma.css?v=4">
   <script src="idioma.js?v=2" defer></script>
@@ -711,18 +711,85 @@ Borrador para revisar e completar no documento oficial do centro.</pre><button c
 Explícame as fraccións equivalentes.</pre><strong>Coa intención escrita claramente</strong><pre>Explícame as fraccións equivalentes con palabras sinxelas, exemplos cotiáns e frases breves, para alumnado de 5.º de Primaria.</pre></div><p>A segunda petición aclara que significa «sinxelo» para esta tarefa: concreta curso, estilo e apoios. Se a primeira produce algo parecido, non proba que KIDS sexa unha función secreta; mostra que o modelo puido deducir unha intención a partir da palabra.</p>
 <h3>Como comprobar unha promesa de «código secreto»</h3><ol><li><strong>Busca unha fonte oficial:</strong> unha función real debe aparecer na propia interface ou na documentación da ferramenta. Un vídeo viral, por si só, non demostra que o comando exista.</li><li><strong>Quita a barra ou a sigla:</strong> cambia <code>/quiz</code> por «crea un cuestionario» ou <code>ELI5</code> por «explícao con palabras moi sinxelas». Compara as respostas en condicións parecidas.</li><li><strong>Fai explícito o significado:</strong> indica público, nivel, extensión e formato. Unha palabra ambigua non especifica todos eses detalles.</li><li><strong>Non esperes unha saída idéntica:</strong> unha resposta acertada unha vez non converte a expresión nunha función estable nin garante que sempre se interprete igual.</li></ol><div class="drawer-example"><strong>A idea que queremos desmontar</strong><p>Na maioría dos vídeos sobre estes atallos, non se está revelando un código interno que active poderes ocultos da IA. Estase usando unha palabra comprensible —a miúdo en inglés— que orienta o modelo polo seu significado. Se existe unha función real, debe poder identificarse na ferramenta ou na súa documentación; se non, probablemente estamos ante unha abreviación semántica.</p></div></div></details>
 
-              <details><summary>Ampliar: o arquivo COMANDOS.md completo</summary><div class="longread"><p class="drawer-intro">O arquivo <strong>`COMANDOS.md`</strong> é un dicionario de procedementos pedagóxicos listo para subir ao teu proxecto. Cando recibe unha expresión que comeza por barra inclinada (`/`), a IA pode consultar o arquivo e aplicar a receita correspondente.</p><div class="prompt"><strong>Instrución mestra para activar o dicionario no teu proxecto</strong><pre>O arquivo COMANDOS.md contén o dicionario de seudocomandos deste proxecto.
+              <details>
+  <summary>Ampliar: o arquivo COMANDOS.md completo</summary>
+  <div class="longread">
+    <p class="drawer-intro"><code>COMANDOS.md</code> converte unha instrución longa nunha receita breve que podes volver usar. O arquivo non activa funcións ocultas: garda procedementos explícitos que o proxecto consulta porque llos engadiches como contexto.</p>
 
-Cando a miña mensaxe inclúa unha ou varias expresións que comecen pola barra (/):
-1. Comproba se están definidas en COMANDOS.md.
-2. Aplica secuencialmente os procedementos establecidos no documento.
-3. Considera o resto da miña mensaxe como o tema, contido ou parámetros da tarefa.
-4. Non substitúas as directrices definidas por outras inventadas.
-5. Se dous comandos combinados conteñen instrucións contraditorias, sinálao antes de responder.</pre><button class="copy" type="button">Copiar instrución</button><span class="copy-status" role="status" aria-live="polite"></span></div><h3>Recurso descargable para o claustro</h3><p>Preparamos o arquivo completo listo para descargar e importar nos teus proxectos de ChatGPT ou Claude:</p><ul class="resource-list"><li><a href="ejemplos/COMANDOS.md" target="_blank" download>Descargar arquivo modelo COMANDOS.md ↗</a> (en castelán)<br>Contén as definicións completas de <code>/didactico</code>, <code>/adaptacion-dua</code>, <code>/ficha</code>, <code>/multinivel</code>, <code>/solucionario</code>, <code>/rubrica</code>, <code>/kahoot</code> e <code>/pau</code>.</li></ul></div></details>
+    <h3>Que contén unha receita reutilizable</h3>
+    <ol>
+      <li><strong>Nome e obxectivo:</strong> unha etiqueta curta, como <code>/ficha</code>, e unha frase que define que traballo pon en marcha.</li>
+      <li><strong>Entradas:</strong> que precisa saber a IA: curso, tema, documentos de referencia, duración, formato ou límites.</li>
+      <li><strong>Procedemento:</strong> unha secuencia de pasos que concreta como organizar a tarefa, que comprobar e que entregar.</li>
+      <li><strong>Formato e revisión:</strong> estrutura final, criterios de calidade e aspectos que debe sinalar se faltan datos.</li>
+    </ol>
 
-              <details><summary>Ampliar: catálogo de receitas docentes comentadas</summary><div class="longread"><p class="drawer-intro">Detalle dos procedementos pedagóxicos codificados en cada receita para entender por que funcionan con tanta eficacia na aula.</p><div class="command-grid"><div class="command-badge"><code>/didactico</code><span>Transforma un contido complexo nunha explicación progresiva con analoxías cotiás e preguntas de autocomprobación.</span></div><div class="command-badge"><code>/adaptacion-dua</code><span>Reescribe o texto con sintaxe directa, parágrafos breves, termos clave en negriña e mapa conceptual xerárquico final.</span></div><div class="command-badge"><code>/ficha</code><span>Maqueta unha folla imprimible para o alumnado: cabeceira, contexto breve, 5 actividades graduadas e tempos estimados.</span></div><div class="command-badge"><code>/multinivel</code><span>Xera de forma paralela 3 variantes da tarefa: nivel Apoio (con pistas), nivel Estándar e nivel Ampliación.</span></div><div class="command-badge"><code>/solucionario</code><span>Desagrega as respostas correctas xustificando o razoamento pedagóxico e sinalando os erros máis habituais.</span></div><div class="command-badge"><code>/rubrica</code><span>Crea unha matriz analítica en 4 niveis de desempeño (1 ao 4) baseada en descritores observables e criterios LOMLOE.</span></div><div class="command-badge"><code>/kahoot</code><span>Xera unha táboa con preguntas de opción múltiple con restricións exactas de caracteres para importar en Kahoot.</span></div><div class="command-badge"><code>/pau</code><span>Redacta preguntas de exame conforme á tipoloxía oficial e aos criterios de puntuación das probas de acceso á universidade.</span></div></div><div class="drawer-example"><strong>Exemplo de uso combinado</strong><p>Escribe no teu proxecto: <code>/ficha /multinivel /solucionario</code> seguido de <em>«O ciclo da auga para 1.º da ESO»</em>. O modelo executará os tres procedementos nunha única resposta organizada en seccións.</p></div></div></details>
+    <p>Así unha mesma instrución pode servir para moitos temas. Se cambian o nivel, as fontes ou o formato, actualízanse eses parámetros sen volver escribir o procedemento completo.</p>
 
-              <details><summary>Ampliar: como deseñar as túas propias receitas</summary><div class="longread"><p class="drawer-intro">Cada especialidade ou etapa educativa ten necesidades particulares. Podes deseñar os teus propios seudocomandos seguindo esta estrutura no teu arquivo Markdown.</p><h3>Estrutura estándar dun bo seudocomando</h3><ol><li><strong>Nome intuitivo:</strong> debe comezar por <code>/</code> e ser unha palabra curta en minúsculas (ex. <code>/laboratorio</code>, <code>/comentario</code>, <code>/debate</code>).</li><li><strong>Obxectivo explícito:</strong> unha frase clara que resuma que debe lograr a instrución.</li><li><strong>Procedemento paso a paso:</strong> listaxe numerada cos 5 ou 6 pasos que a IA debe executar sen saltar ningún.</li><li><strong>Restricións de formato:</strong> que debe incluír (táboas, negriñas, listaxes) e que debe evitar expresamente.</li></ol><div class="prompt"><strong>Exemplo: seudocomando para prácticas de laboratorio</strong><pre>## /laboratorio
+    <div class="prompt">
+      <strong>Exemplo de definición detallada: <code>/ficha</code></strong>
+      <pre>## /ficha
+
+Obxectivo
+Preparar unha ficha de práctica para Matemáticas de 2.º da ESO, lista para revisar e imprimir e aliñada co formato do centro.
+
+Entradas
+O curso e a materia son fixos: Matemáticas de 2.º da ESO. O proxecto contén programación, apuntamentos, criterios, exercicios modelo e formato. Pregunta sempre que contido exacto se quere practicar se o docente non o indica (por exemplo: ecuacións de primeiro grao con parénteses). Non escollas unidade pola túa conta.
+
+Procedemento
+1. Identifica que aprendizaxe se practica e comproba que aparece nas fontes.
+2. Escribe unha introdución breve que sitúe a tarefa sen anticipar as respostas.
+3. Para ecuacións de primeiro grao con parénteses, prepara seis exercicios duns 20 minutos: dous directos, dous con parénteses, un de comprobación e un problema breve que se traduza nunha ecuación.
+4. Usa o estilo de redacción dos exercicios de referencia, sen copiar os seus enunciados.
+5. Numera do 1 ao 6; deixa catro liñas para cada desenvolvemento e seis para o problema contextualizado.
+6. Comproba que cada exercicio se pode resolver cos apuntamentos e que as instrucións son claras.
+
+Entrega
+Un arquivo HTML autónomo, con CSS incluído e sen recursos externos, que xere unha ficha imprimible dunha páxina A4 vertical. Usa marxes de 16 mm, fondo branco, Arial de 14 pt, interliñado 1,5 e cabeceira azul escura cunha franxa turquesa discreta. Inclúe cabeceira «Matemáticas · 2.º ESO · [contido]», nome e data; obxectivo nunha frase; seis exercicios numerados; catro liñas para desenvolver e seis para o problema. Non asignes puntuación nin cualificación: é unha ficha de repaso, non unha proba de avaliación. Engade estilos de impresión A4 e non inclúas solucionario, agás petición.</pre>
+      <button class="copy" type="button">Copiar definición</button>
+      <span class="copy-status" role="status" aria-live="polite"></span>
+    </div>
+
+    <h3>Como se activa e se combina</h3>
+    <p>Sube o arquivo ao proxecto e engade unha instrución mestra que explique como interpretar as barras. Despois abonda con escribir unha petición breve: <em>«/ficha: ecuacións de primeiro grao con parénteses»</em>. A receita achega o proceso e o formato HTML; o docente concreta o contido e revisa o resultado.</p>
+    <div class="drawer-example">
+      <strong>Unha mesma base, tres encargos</strong>
+      <p><code>/ficha</code> entrega unha ficha HTML A4; <code>/ficha /multinivel</code> xera un único HTML con tres fichas imprimibles, unha por páxina, para o mesmo obxectivo; <code>/ficha /solucionario</code> engade unha clave separada. As definicións especifican que se conserva e que se suma.</p>
+    </div>
+    <p>Cando dúas receitas pidan cousas incompatibles —por exemplo, «sen respostas» e «engade o solucionario»— a instrución mestra pode pedir que se aclare o conflito. Convén manter o arquivo breve, con comandos ben separados e exemplos que representen o uso real.</p>
+
+    <h3>Descarga os arquivos modelo</h3>
+    <ul class="resource-list">
+      <li><a href="ejemplos/COMANDOS-gl.md" target="_blank" download>Descargar COMANDOS.md en galego ↗</a><br>Inclúe definicións ampliadas de didáctico, adaptación DUA, ficha, multinivel, solucionario, rúbrica, Kahoot e PAU.</li>
+    </ul>
+  </div>
+</details>
+
+              <details>
+  <summary>Ampliar: catálogo de receitas docentes comentadas</summary>
+  <div class="longread">
+    <p class="drawer-intro">Unha receita converte unha intención docente nun procedemento repetible. A barra só serve de etiqueta: a potencia está nos pasos, nos límites e no formato definidos no arquivo.</p>
+
+    <div class="command-grid">
+      <div class="command-badge"><code>/didactico</code><span><strong>Explicar con progresión.</strong> En 2.º da ESO, explicar densidade nunha clase de 50 minutos: unha páxina con pregunta inicial, tres apartados, vocabulario de catro termos, cálculo resolto con unidades e dúas preguntas de comprobación con respostas á parte.</span></div>
+      <div class="command-badge"><code>/adaptacion-dua</code><span><strong>Facilitar a lectura sen baleirar o contido.</strong> Para unha ficha do ciclo da auga de 5.º de Primaria, conservar evaporación, condensación e precipitación; entregar unha versión A4 con instrucións por pasos, frases breves, palabras clave destacadas e espazo de resposta, máis unha nota docente de cinco viñetas sobre os apoios aplicados.</span></div>
+      <div class="command-badge"><code>/ficha</code><span><strong>Deseñar unha práctica para un curso concreto.</strong> Esta receita fíxase en Matemáticas de 2.º da ESO e pregunta o contido se falta. Entrega un HTML autónomo dunha páxina A4: Arial 14 pt, interliñado 1,5, fondo branco, cabeceira azul e turquesa, seis exercicios e espazos de resposta, sen puntuación, con CSS de impresión.</span></div>
+      <div class="command-badge"><code>/multinivel</code><span><strong>Crear tres fichas cun obxectivo común.</strong> Para equivalencia de fraccións en 5.º de Primaria, entrega un HTML autónomo con tres páxinas A4 e salto de páxina: Con apoio, Práctica común e Reto. Cada unha ten catro tarefas, instrucións, espazo de resposta e autoavaliación; conserva obxectivo e criterio común.</span></div>
+      <div class="command-badge"><code>/solucionario</code><span><strong>Preparar unha corrección que se poida usar.</strong> Para a ficha de ecuacións de 2.º da ESO, crea unha táboa separada con número, resposta, pasos verificables e puntuación parcial; acepta formas equivalentes e pecha con tres erros frecuentes. Non mostra razoamento interno privado.</span></div>
+      <div class="command-badge"><code>/rubrica</code><span><strong>Facer observables os criterios en FP.</strong> Para unha práctica de montaxe de rede dun ciclo medio de Sistemas Microinformáticos e Redes, entrega unha rúbrica dunha páxina con catro criterios, catro niveis, pesos 15/30/35/20 % e unha lista de cotexo de cinco evidencias para usar durante a práctica.</span></div>
+      <div class="command-badge"><code>/kahoot</code><span><strong>Converter contidos en preguntas revisables.</strong> Para repasar a táboa periódica en 3.º da ESO, entrega dez preguntas con catro opcións, resposta correcta e explicación docente nunha táboa. Se non se achega un modelo de importación, preséntao como borrador, non como arquivo importable.</span></div>
+      <div class="command-badge"><code>/pau</code><span><strong>Practicar cunha convocatoria documentada.</strong> Para Historia de 2.º de Bacharelato, prepara por separado un borrador de proba con duración, apartados e puntuación e unha pauta con evidencias e puntos parciais; marca como pendente calquera requisito que non figure na guía achegada.</span></div>
+    </div>
+
+    <div class="drawer-example">
+      <strong>Un caso completo: preparar, diferenciar e corrixir unha ficha</strong>
+      <p>O proxecto xa contén a programación de Matemáticas de 2.º da ESO, os apuntamentos, criterios, exercicios modelo e formato de saída. Como o contido da ficha debe vir do docente, este escribe: <em>«/ficha /multinivel /solucionario: ecuacións de primeiro grao con parénteses»</em>.</p>
+      <p>A entrega inclúe unha ficha HTML A4 con seis exercicios para uns 20 minutos, un HTML multinivel de tres páxinas (unha ficha por nivel) e unha clave separada con pasos verificables e puntuación parcial. Se o docente escribise só «/ficha», o proxecto preguntaría que contido traballar; non escollería unha unidade pola súa conta.</p>
+    </div>
+  </div>
+</details>
+
+              <details><summary>Ampliar: como deseñar as túas propias receitas</summary><div class="longread"><p class="drawer-intro">Cada especialidade ou etapa educativa ten necesidades particulares. Podes deseñar os teus propios seudocomandos seguindo esta estrutura no teu arquivo Markdown.</p><h3>Non tes que redactala desde cero</h3><p>Podes usar o propio chatbot como coautor: explícalle para que materia e curso queres a receita, que tarefa debe resolver, que materiais recibirá e como queres a entrega. Pídelle que che faga preguntas para completar o que falte, que prepare un borrador e despois próbao cun caso real para corrixilo.</p><p>Algunhas plataformas tamén ofrecen asistentes ou creadores guiados para construír instrucións paso a paso. E, aínda que non exista esa opción, podes pedir axuda directamente nunha conversa normal.</p><div class="prompt"><strong>Unha petición para empezar</strong><p>«Axúdame a crear unha receita para preparar prácticas de laboratorio de 3.º da ESO. Pregúntame o necesario e redacta un borrador en Markdown co obxectivo, os pasos, as normas de seguridade e o formato de entrega.»</p></div><p>Se xa tes unha receita escrita, podes gardala nun arquivo <code>.md</code> (Markdown) e cargalo onde a plataforma permita anexar instrucións ou arquivos de referencia. Lembra: pedirlle ao chatbot que redacte a receita non a converte automaticamente en reutilizable; terás que gardala e cargala ou configurala no espazo correspondente. Revisa sempre o borrador e comproba que funciona cun exemplo.</p><h3>Estrutura estándar dun bo seudocomando</h3><ol><li><strong>Nome intuitivo:</strong> debe comezar por <code>/</code> e ser unha palabra curta en minúsculas (ex. <code>/laboratorio</code>, <code>/comentario</code>, <code>/debate</code>).</li><li><strong>Obxectivo explícito:</strong> unha frase clara que resuma que debe lograr a instrución.</li><li><strong>Procedemento paso a paso:</strong> listaxe numerada cos 5 ou 6 pasos que a IA debe executar sen saltar ningún.</li><li><strong>Restricións de formato:</strong> que debe incluír (táboas, negriñas, listaxes) e que debe evitar expresamente.</li></ol><div class="prompt"><strong>Exemplo: seudocomando para prácticas de laboratorio</strong><pre>## /laboratorio
 
 ### Obxectivo
 Deseñar un guión de práctica experimental de laboratorio escolar adaptado ás medidas de seguridade do centro.
@@ -736,64 +803,43 @@ Deseñar un guión de práctica experimental de laboratorio escolar adaptado ás
 6. Cuestionario de análise con 4 preguntas que o alumnado debe responder a partir das súas observacións.
 7. Pautas para o tratamento e recollida de residuos ao finalizar.</pre><button class="copy" type="button">Copiar receita</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></details>
 
-              <details><summary>Ampliar: unha skill con formato de saída · apuntamentos HTML A4</summary><div class="longread"><p class="drawer-intro">Unha skill pode definir o proceso completo de creación dun material e tamén como debe entregarse. Este exemplo prepara apuntamentos nun arquivo HTML autónomo, listo para imprimir en A4, cunha estética clara e espazo amplo para responder.</p><div class="drawer-example"><strong>Deseño proposto · «Caderno claro»</strong><p>Páxina branca para imprimir sen gastar tinta de máis; texto azul mariño de alto contraste; acentos verde petróleo e fondos menta moi suaves para separar definicións e exemplos. Títulos grandes, bloques curtos, marxes xenerosas e actividades claramente separadas. A cor acompaña a xerarquía, pero nunca é o único sinal.</p></div>
-<h3>Que fixa a skill antes de xerar os apuntamentos</h3><ol><li><strong>Entrada:</strong> tema, curso ou grupo, fontes dispoñibles e necesidades concretas de lectura ou resposta.</li><li><strong>Organización didáctica:</strong> título, obxectivo, explicación por pasos, vocabulario esencial, exemplos resoltos e actividades. Mantén o contido dentro das fontes e do nivel indicado.</li><li><strong>Lectura:</strong> tipografía sans serif, tamaño de letra amplo, interliñado xeneroso, texto aliñado á esquerda, frases breves e espazo entre bloques. Evita columnas estreitas, xustificación, parágrafos densos e adornos que distraian.</li><li><strong>Resposta:</strong> reserva liñas ou recadros de tamaño suficiente baixo cada pregunta; deixa máis espazo cando haxa que explicar, debuxar ou desenvolver cálculos.</li><li><strong>Impresión:</strong> prepara A4 vertical, marxes definidas e saltos de páxina que manteñan cada pregunta xunto ao seu espazo de resposta. O deseño conserva lexibilidade tamén en escala de grises.</li><li><strong>Comprobación:</strong> revisa estrutura semántica, contraste, tamaño, espazos, cortes de páxina e que o arquivo se poida abrir sen conexión.</li></ol><p>As preferencias de lectura varían. O modelo pode facilitar o acceso ao alumnado con dislexia ou baixa visión, pero non é unha adaptación universal nin substitúe as indicacións concretas de cada persoa ou do centro. A skill debe aplicar as necesidades achegadas e permitir axustar tamaño e contraste.</p>
-<div class="prompt"><strong>Exemplo de instrucións da skill</strong><pre>## Skill: apuntes-a4-accesibles
+              <details><summary>Ampliar: unha skill con formato de saída · apuntamentos HTML A4</summary><div class="longread"><p class="drawer-intro">Unha skill pode converter uns apuntamentos que pegues no chat ou anexes como arquivo nun material cunha estrutura e unha presentación constantes. Aquí tes dúas versións completas: unha de lectura convencional e outra de lectura facilitada.</p>
+<h3>Versión 1 · Apuntamentos claros en formato convencional</h3><p>Esta receita organiza e maqueta os apuntamentos sen cambiar o seu contido. Serve para preparar un documento limpo, familiar e listo para imprimir, sen impor unha adaptación específica.</p><div class="prompt"><strong>Instrucións da skill · <code>apuntes-a4</code></strong><pre>## Skill: apuntes-a4
 
 Obxectivo
-Transformar o tema e as fontes que achegue o docente en apuntamentos claros, revisables e imprimibles.
+Converter os apuntamentos que o docente pegue no chat ou anexe como arquivo nun documento claro, ordenado e listo para imprimir.
 
-Entrega
-Xera un único arquivo HTML autónomo, en galego, con CSS incluído e preparado para A4 vertical. Non dependas de fontes, imaxes nin bibliotecas externas.
+Entrada
+Usa o texto ou arquivo proporcionado nesta conversa. Se non se identifica a materia, o tema ou o curso e esa información é necesaria para organizar o material, pregunta antes de completar eses datos. Non inventes contido.
 
 Contido
-1. Identifica o tema, o curso e os conceptos das fontes.
-2. Organiza unha explicación progresiva con subtítulos, vocabulario clave e exemplos resoltos.
-3. Engade as actividades solicitadas e un espazo de resposta suficiente para cada unha.
-4. Non introduzas datos ou contidos alleos ás fontes; sinala o que falte.
+1. Conserva as ideas, os datos e o vocabulario do material de orixe.
+2. Organiza a información con título, apartados e subtítulos descritivos.
+3. Converte enumeracións en listas e presenta definicións, exemplos e procedementos de forma diferenciada.
+4. Corrixe erros ortográficos e mellora frases confusas sen alterar o seu significado. Sinala calquera ambigüidade que non poidas resolver.
+5. Non engadas exercicios, respostas nin explicacións novas agás que o docente o pida.
 
-Estética «Caderno claro»
-- Fondo branco; texto azul mariño; acentos verde petróleo e fondos menta moi pálidos.
-- Usa tipografía sans serif, base de 18 pt en impresión, títulos claramente maiores e interliñado aproximado de 1.6.
-- Aliña o texto á esquerda; usa frases e parágrafos breves e separa visualmente cada actividade.
-- Evita columnas, xustificación, bloques longos, cursivas extensas e elementos decorativos.
-- Coloca cada enunciado xunto á súa zona de resposta. Deixa varias liñas para explicar e máis espazo para debuxar ou desenvolver operacións.
-- Asegura contraste alto e non uses a cor como único indicador.
+Entrega · «Apuntamentos claros»
+Xera un único arquivo HTML autónomo, con CSS incluído, preparado para imprimir en A4 vertical e abrirse sen conexión. Usa fondo branco, texto escuro, tipografía Arial ou sans serif de 12 pt, interliñado de 1,45 e marxes de impresión de 18 mm. Distingue os títulos con tamaños e pesos claros; utiliza unha única cor azul discreta para cabeceiras ou liñas de énfase. Mantén unha columna, parágrafos de lonxitude normal e listas cando axuden a ordenar a información. Evita adornos, fondos intensos e elementos que consuman tinta. Non forces todo o contido a caber nunha soa páxina.</pre><button class="copy" type="button">Copiar instrucións da skill</button><span class="copy-status" role="status" aria-live="polite"></span></div><div class="drawer-example"><strong>Petición breve</strong><p><code>Aplica a skill «apuntes-a4» a estes apuntamentos e entrégamos como HTML A4 imprimible.</code> Despois, o docente pega os apuntamentos no chat ou anexa o arquivo nesa conversa.</p></div>
+<h3>Versión 2 · Apuntamentos con lectura facilitada</h3><p>Esta versión cambia a presentación para facilitar a lectura: usa letra grande, fragmenta os parágrafos e fai visibles as ideas principais. A skill traballa sobre o material que se pega ou anexa na conversa.</p><div class="prompt"><strong>Instrucións da skill · <code>apuntes-a4-lectura-facilitada</code></strong><pre>## Skill: apuntes-a4-lectura-facilitada
 
-Impresión e revisión
-- Define páxina A4 vertical e marxes de impresión.
-- Evita partir unha actividade entre páxinas e elimina elementos que non se necesiten en papel.
-- Revisa que o contido non se corte, que as zonas de resposta teñan espazo e que o tamaño resulte lexible.
-- Aplica os axustes individuais que indique o docente; non afirmes que un único deseño serve igual para todas as persoas.</pre><button class="copy" type="button">Copiar instrucións da skill</button><span class="copy-status" role="status" aria-live="polite"></span></div>
-<h3>Un fragmento do CSS de impresión</h3><div class="prompt"><pre>@page { size: A4 portrait; margin: 17mm 18mm; }
+Obxectivo
+Transformar os apuntamentos que o docente pegue no chat ou anexe como arquivo nun HTML imprimible cunha presentación que facilite seguir e localizar a información.
 
-body {
-  background: #fff;
-  color: #17324d;
-  font-family: Arial, Verdana, sans-serif;
-  font-size: 18pt;
-  line-height: 1.6;
-}
+Contido
+1. Conserva as ideas, os conceptos e os datos do material de orixe. Non elimines contido curricular nin engadas información que non apareza nas fontes.
+2. Divide as explicacións en parágrafos breves, cada un centrado nunha idea.
+3. Usa frases directas e explica xunto á súa primeira aparición o vocabulario técnico imprescindible, sen cambiar o seu significado.
+4. Marca en negra as palabras clave e as relacións importantes, con moderación.
+5. Organiza a páxina cun título principal destacado, subtítulos descritivos, listas con viñetas para ideas enumerables e pasos numerados para procesos.
+6. Separa visualmente definicións, exemplos e procedementos. Non convertas un texto continuo nunha lista se iso rompe o seu sentido.
+7. Se unha frase ou dato dos apuntamentos resulta ambiguo, consérvao e sinala a dúbida ao docente en vez de adiviñar.
 
-h1 { font-size: 28pt; line-height: 1.2; }
-h2 { font-size: 22pt; margin-top: 1.4em; }
+Entrega · «Apuntamentos de lectura facilitada»
+Xera un único arquivo HTML autónomo, con CSS incluído, preparado para imprimir en A4 vertical e abrirse sen conexión. Usa unha soa columna, fondo branco, texto escuro de alto contraste, tipografía sans serif de 18 pt como base, interliñado de 1,6 e marxes amplas. Fai que o título e os subtítulos se distingan claramente polo tamaño, peso e espazo; utiliza negra para palabras clave e listas con viñetas para agrupar ideas. Deixa separación xenerosa entre parágrafos e bloques. Evita xustificar o texto, as columnas, os parágrafos longos, as cursivas extensas, os fondos saturados e depender só da cor para comunicar. Permite varias páxinas: non reduzas a letra nin comprimas o contido para que caiba nunha páxina. Revisa os saltos de páxina e que o texto non quede cortado.
 
-.concepto {
-  padding: 10mm;
-  border-left: 5px solid #287b78;
-  background: #eef6f5;
-}
-
-.actividad { break-inside: avoid; margin: 12mm 0; }
-.espacio-respuesta {
-  min-height: 28mm;
-  border-bottom: 1px solid #647783;
-}
-
-@media print {
-  .no-imprimir { display: none; }
-  .concepto { background: #fff; }
-}</pre><button class="copy" type="button">Copiar fragmento CSS</button><span class="copy-status" role="status" aria-live="polite"></span></div><div class="drawer-example"><strong>A petición pode seguir sendo breve</strong><p><code>Aplica a skill «apuntes-a4-accesibles» ao tema de fraccións equivalentes de 5.º de Primaria. Usa os apuntamentos anexos.</code></p><p>A skill achega a estrutura pedagóxica e o formato; o docente só engade o tema, o nivel e as fontes. Despois revisa o contido e comproba a impresión antes de utilizar o material.</p></div></div></details>
+Revisión
+Non afirmes que este formato serve igual para todas as persoas nin que substitúe unha adaptación individual. Mantén o contido fiel aos apuntamentos e deixa que o docente revise tanto o contido como a lexibilidade antes de compartilo.</pre><button class="copy" type="button">Copiar instrucións da skill</button><span class="copy-status" role="status" aria-live="polite"></span></div><div class="drawer-example"><strong>Petición breve</strong><p><code>Aplica a skill «apuntes-a4-lectura-facilitada» aos apuntamentos anexos e entrégame un HTML A4 imprimible.</code> Tamén se pode pegar o texto dos apuntamentos no chat e pedir a mesma transformación.</p></div></div></details>
 
               <details class="bridge-expansion"><summary>Ampliar: a ponte cara aos asistentes de escritorio</summary><div class="longread"><p class="drawer-intro">Aprender a organizar as túas directrices en arquivos de receitas prepara directamente o terreo para os asistentes de escritorio da Fase 03.</p><p>Cando traballas na web, colocas <code>COMANDOS.md</code> dentro das instrucións do proxecto. Cando pasemos a ferramentas como <strong>VS Code, Codex ou Antigravity</strong> na seguinte fase, verás que esta lóxica se estandariza mediante arquivos de configuración no directorio de traballo (arquivos como <code>.cursorrules</code>, <code>SKILL.md</code> ou <code>AGENTS.md</code>).</p><p>No escritorio, o asistente non só le as receitas, senón que pode executar scripts locais, crear arquivos no teu disco duro e transformar documentos por lotes de maneira desatendida. Dominar as receitas na web é o primeiro paso natural cara a ese contorno profesional.</p></div></details>
             </div>
@@ -855,43 +901,88 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
 
             <div class="extras">
               <details>
-                <summary>Ampliar: guía completa de uso e subida de fontes</summary>
+                <summary>Ampliar: engadir fontes e comezar a traballar con elas</summary>
                 <div class="longread">
-                  <p class="drawer-intro"><strong>Gemini Notebook</strong> (coñecido historicamente como <em>NotebookLM</em> e unificado formalmente por Google en 2026 baixo o dominio <code>notebook.google.com</code>) é un contorno de investigación e síntese documental con ancoraxe estrita (*source grounding*).</p>
+                  <p class="drawer-intro"><strong>Gemini Notebook (antes NotebookLM)</strong> permite crear un caderno para reunir fontes sobre unha pregunta, unidade ou proxecto concreto. O chat consulta as fontes seleccionadas e mostra citas para volver á pasaxe orixinal. As citas axudan a comprobar a resposta: non garanten que a interpretación sexa correcta, así que convén revisar o fragmento e o seu contexto.</p>
 
-                  <h3>Tipos de fontes admitidas e o seu uso pedagóxico</h3>
-                  <ul class="resource-list">
-                    <li><strong>Documentos PDF e Word (.docx):</strong> Admite libros de texto, normativas oficiais, decretos curriculares e programacións didácticas de ata 500.000 palabras por fonte.</li>
-                    <li><strong>Transcricións de vídeos de YouTube:</strong> Pegando a ligazón de calquera vídeo público de YouTube, a ferramenta extrae a súa transcrición textual completa en segundos (sen anuncios) e permite interrogar o vídeo ou xerar resumos automáticos.</li>
-                    <li><strong>Libros electrónicos (.epub) e Google Play Books:</strong> Soporte nativo para cargar manuais escolares e monografías académicas completas nun só paso.</li>
-                    <li><strong>Follas de cálculo (.csv / Google Sheets) e imaxes:</strong> Permite analizar matrices de datos, táboas de cualificacións anonimizadas ou esquemas gráficos.</li>
-                    <li><strong>Investigación profunda (*Deep Research*):</strong> Un axente autónomo pode rastrexar a web en segundo plano sobre un tema docente e xerar un informe fundamentado que se engade como nova fonte ao caderno.</li>
-                  </ul>
+                  <h3>1. Decide que irá no caderno</h3>
+                  <p>Comeza cun propósito acoutado: por exemplo, «preparar actividades sobre ecuacións de primeiro grao en 2.º da ESO» ou «comparar dúas explicacións do ciclo da auga para 5.º de Primaria». Un caderno non consulta automaticamente o contido dos teus outros cadernos; reúne as fontes dese traballo para que poidas localizar e seleccionar mellor a información.</p>
+                  <p>Escolle documentos que acheguen pezas distintas: os apuntamentos ou o material que estudará o grupo, os criterios ou a normativa que deben orientar a proposta e, se resulta útil, un modelo de actividade ou de formato. Evita subir moitos arquivos repetidos ou que non axuden a responder a pregunta. Pon nomes recoñecibles aos documentos e comproba que son a versión correcta.</p>
 
-                  <h3>O control mediante caixas de verificación</h3>
-                  <p>No panel esquerdo de fontes, cada documento ten unha caixa de verificación. Ao desmarcar unha ou varias caixas, a IA ignora temporalmente eses arquivos no chat e no panel Studio. Isto permite, por exemplo, illar unicamente os apuntamentos da *Unidade 3* sen que se mesturen co resto do curso.</p>
+                  <h3>2. Engade arquivos, ligazóns ou texto</h3>
+                  <ol>
+                    <li>Crea un caderno novo ou abre o que corresponda ao tema.</li>
+                    <li>No panel de fontes, preme <strong>Engadir fontes</strong>. Podes subir arquivos do ordenador, importar documentos compatibles de Drive, pegar texto ou engadir fontes web, segundo as opcións dispoñibles na túa conta.</li>
+                    <li>Entre os formatos habituais están PDF, Google Docs, Word, presentacións, follas de cálculo, CSV, texto, Markdown e imaxes. Tamén se poden engadir ligazóns web e vídeos públicos de YouTube que teñan subtítulos. A dispoñibilidade dalgúns formatos e opcións pode variar.</li>
+                    <li>Agarda a que remate a importación e abre cada fonte para comprobar o título e o texto que se leu. Se falta unha táboa, unha páxina ou parte dun documento escaneado, corrixe o arquivo ou achega esa información como texto.</li>
+                  </ol>
+                  <p>Ao engadir unha páxina web impórtase principalmente o seu texto, non todos os elementos incrustados; de YouTube úsase a transcrición dispoñible, non o vídeo como se se estivese vendo na aula. Nos documentos de Drive, os cambios poden sincronizarse coa fonte do caderno. Comproba a data ou o contido cando traballes con normativa, programación ou materiais que se actualizan. <a href="https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&amp;hl=es" target="_blank" rel="noopener">Axuda oficial sobre tipos de fontes e como engadilas (en español) ↗</a></p>
+
+                  <h3>3. Selecciona que fontes debe usar</h3>
+                  <p>No panel de fontes podes activar ou desactivar documentos. Antes dunha consulta, deixa seleccionados só os que achegan probas para esa pregunta. Por exemplo, para preparar unha ficha sobre ecuacións, selecciona o tema e os criterios relevantes; deixa fóra unha unidade anterior e as notas que non correspondan. Se mencionas unha fonte polo seu título na pregunta, axudas a precisar o alcance.</p>
+
+                  <h3>4. Formula preguntas que se poidan comprobar</h3>
+                  <p>Indica o tema, o grupo, a tarefa e o formato que precisas. Pide que distinga o que din as fontes do que non aparece nelas, e solicita citas localizables. Por exemplo:</p>
+                  <blockquote>«Usa só “Tema 4 · Ecuacións” e “Criterios de 2.º ESO”. Resume os pasos para resolver ecuacións con parénteses e prepara unha ficha breve. Inclúe unha cita por cada decisión curricular. Se o material non concreta un dato, indícao en vez de completalo pola túa conta.»</blockquote>
+                  <p>Para verificar a resposta, preme nunha cita e le o fragmento na súa fonte; revisa se a pasaxe realmente apoia a afirmación e se hai condicións ou excepcións no texto próximo. Se dous documentos discrepan, pregunta que di cada un e mostra ambas referencias en vez de pedir unha resposta que oculte a discrepancia. <a href="https://support.google.com/gemininotebook/answer/16179559?hl=es" target="_blank" rel="noopener">Axuda oficial sobre o chat e as citas (en español) ↗</a></p>
+
+                  <h3>5. Límites prácticos e coidado cos datos</h3>
+                  <p>Na axuda actual, Google indica para o plan gratuíto ata 50 fontes por caderno e un máximo de 500.000 palabras ou 200 MB por fonte; os límites poden cambiar e depender do plan. Para unha unidade, adoita ser máis útil unha selección pequena e ben organizada que esgotar o cupo con documentos redundantes. Consulta <a href="https://support.google.com/gemininotebook/answer/16269187?hl=es" target="_blank" rel="noopener">os límites e preguntas frecuentes oficiais (en español) ↗</a> antes de deseñar un fluxo que dependa dunha cifra concreta.</p>
+                  <p>Subir unha fonte implica traballar con ela nun servizo en liña. Antes de usar datos do alumnado, actas ou documentos internos, aplica as normas do centro e elimina datos persoais cando non sexan necesarios. Revisa tamén que tes dereito a cargar e reutilizar cada material.</p>
                 </div>
               </details>
 
-              <details>
-                <summary>Ampliar: o panel Studio ao detalle (Podcasts e guías)</summary>
-                <div class="longread">
-                  <p class="drawer-intro">O panel Studio actúa como unha fábrica de recursos didácticos listos para a aula a partir dos documentos seleccionados.</p>
+              
 
-                  <h3>Resumos de audio (*Audio Overviews* / Podcasts docentes)</h3>
-                  <p>Xera unha conversa en audio realista entre dous locutores virtuais (home e muller) que debaten e explican os conceptos clave das túas fontes en máis de 80 idiomas, incluído o español.</p>
-                  <ul>
-                    <li><strong>Modalidades:</strong> *Deep Dive* (conversa a fondo de 10-15 min), *Brief* (resumo executivo de 2-3 min cun locutor) e *Debate* (dúas posturas contrapostas).</li>
-                    <li><strong>Personalización do enfoque:</strong> Podes indicar instrucións previas aos locutores (ex. <em>«Falade para alumnado de 1.º da ESO, usade analoxías co fútbol e centrádevos no concepto de densidade»</em>).</li>
-                    <li><strong>Aplicación na aula:</strong> Ideal para metodoloxías de aula invertida (*Flipped Classroom*), repaso para estudantes con dificultades lectoras ou dislexia, e recursos de comprensión oral en materias de idiomas.</li>
+              <details>
+                <summary>Ampliar: recursos que podes xerar desde Studio</summary>
+                <div class="longread">
+                  <p class="drawer-intro">Studio converte as fontes do caderno en distintos tipos de recursos. Algúns consúltanse dentro do propio caderno; outros pódense exportar ou descargar como arquivo. Esta diferenza importa: que un recurso sexa interactivo na pantalla non significa que teña unha descarga editable en calquera formato.</p>
+
+                  <p><strong>Fluxo xeral:</strong> abre o caderno e deixa seleccionadas as fontes pertinentes; en Studio, escolle o tipo de recurso; axusta idioma, enfoque, duración, formato ou estilo cando aparezan esas opcións; xera e revisa o resultado. Para exportar ou descargar, abre o recurso e utiliza o seu menú. As opcións non son iguais para todos os artefactos.</p>
+
+                  <h3>Textos e documentos</h3>
+                  <ul class="resource-list">
+                    <li><strong>Notas:</strong> serven para gardar unha idea propia ou unha resposta do chat e seguir traballando con ela. Pódense editar e exportar a un documento de Google Docs. Se gardas unha resposta con citas, a nota conserva esa referencia; ao editala, as citas elimínanse. Na aula, pode servir como borrador dunha explicación, unha lista de dúbidas ou unha síntese que logo revisas.</li>
+                    <li><strong>Informes:</strong> crean un documento ou, na web, un informe interactivo a partir das fontes. Nos documentos podes escoller formatos como preguntas frecuentes, guía de estudo, documento informativo ou unha proposta personalizada. O documento expórtase a Google Docs; as táboas que inclúa pódense exportar a Google Sheets. Úsao para preparar unha síntese dunha unidade, unha guía de repaso ou un informe para o equipo docente, e comproba datos e citas antes de compartilo.</li>
+                    <li><strong>Táboas de datos:</strong> organizan información das fontes en filas e columnas. Podes indicar que campos queres, por exemplo «concepto, definición, exemplo e páxina de orixe». Expórtanse a Google Sheets: a táboa queda nunha pestana e as citas, cando as hai, noutra. É útil para comparar conceptos, ordenar vocabulario ou reunir datos; verifica que a táboa non omitise excepcións do texto.</li>
                   </ul>
 
-                  <h3>Outros artefactos que se poden xerar no Studio</h3>
+                  <h3>Recursos para estudar e practicar</h3>
                   <ul class="resource-list">
-                    <li><strong>Guías de estudo (*Study Guides*):</strong> Documento estruturado con resumo temático, preguntas curtas de autoavaliación, claves de corrección e glosario de termos.</li>
-                    <li><strong>Tarxetas de memoria (*Flashcards*):</strong> Preguntas e respostas de anverso/reverso que poden practicarse dentro do caderno ou descargarse en formato <code>.csv</code> para importalas en Quizlet, Knowt ou Anki.</li>
-                    <li><strong>Mapas mentais interactivos:</strong> Árbore de nodos interactiva para proxectar no encerado dixital. Ao premer sobre calquera nodo, desprégase a explicación respaldada nas fontes.</li>
-                    <li><strong>Presentacións descargables (.pptx):</strong> Xeración de láminas estruturadas con descarga nativa en formato de PowerPoint editable.</li>
+                    <li><strong>Tarxetas de memoria:</strong> un mazo interactivo de pregunta e resposta para repasar conceptos, datas ou vocabulario. Podes practicalo no caderno e descargar as tarxetas como <code>.csv</code>. Para importalas noutra aplicación, revisa primeiro como espera esa aplicación as columnas e a codificación do arquivo.</li>
+                    <li><strong>Cuestionarios:</strong> preguntas interactivas que o alumnado pode responder, revisar e volver intentar. Na axuda oficial a descarga CSV indícase para as tarxetas, non para os cuestionarios; por iso convén consideralos un recurso interactivo do caderno e non prometer un arquivo exportable.</li>
+                    <li><strong>Mapas mentais:</strong> diagramas ramificados para ver temas principais e relacións entre ideas. No visor podes ampliar ou contraer ramas e seleccionar un nodo para preguntar sobre ese concepto. Pódense descargar desde o visor, aínda que a axuda non fixa unha extensión única. Antes de usalos como esquema de estudo, revisa que as conexións entre conceptos sexan correctas.</li>
+                  </ul>
+
+                  <h3>Recursos de audio, vídeo e imaxe</h3>
+                  <ul class="resource-list">
+                    <li><strong>Resumos de audio:</strong> conversas ou explicacións xeradas a partir das fontes. As modalidades actuais inclúen unha conversa en profundidade, un resumo breve, unha crítica construtiva ou un debate. Podes axustar idioma, enfoque e duración segundo as opcións da túa conta. Escoítanse no caderno e pódense descargar; comproba pronunciación, datos e nomes propios antes de usalos co grupo.</li>
+                    <li><strong>Resumos de vídeo:</strong> explicacións audiovisuais xeradas con narración e elementos visuais. Hai formatos como Explainer, Short e Cinematic; algúns formatos ou estilos poden ter restricións de idade ou idioma. Pódense reproducir e descargar desde Studio. Revisa con especial coidado rótulos, imaxes e explicacións: son contido xerado e pode conter erros.</li>
+                    <li><strong>Infografías:</strong> unha síntese visual dos puntos principais, datos ou relacións entre conceptos. Podes axustar orientación, idioma, nivel de detalle e estilo. Descárganse como imaxe <code>.png</code>. Son útiles para unha visión xeral ou unha diapositiva de repaso, pero non substitúen a lectura da fonte.</li>
+                  </ul>
+
+                  <h3>Presentacións e recursos interactivos</h3>
+                  <ul class="resource-list">
+                    <li><strong>Presentacións:</strong> unha secuencia de diapositivas que podes revisar no caderno ou presentar a pantalla completa. Descárganse como <code>.pdf</code> ou PowerPoint <code>.pptx</code>. O PDF conserva a aparencia; o PPTX permite editar a presentación, aínda que despois convén revisar maquetación, texto e referencias.</li>
+                    <li><strong>Sitios web interactivos:</strong> páxinas con elementos para explorar datos, percorrer explicacións ou introducir respostas. Pódense abrir noutra pestana, compartir segundo os permisos do caderno e descargar. A axuda non promete unha extensión universal para o arquivo descargado; non o confundas cunha presentación ou cun documento de texto.</li>
+                  </ul>
+
+                  <div class="drawer-example">
+                    <strong>Escolle o recurso segundo o que queres facer</strong>
+                    <p>Para que o alumnado repase termos, crea tarxetas; para comprobar o que lembra, un cuestionario; para ver relacións, un mapa mental; para entregar un material imprimible, un informe exportado a Docs; para presentar, un PDF ou PPTX; para escoitar ou ver unha explicación, un resumo de audio ou vídeo. Se precisas comparar moitos elementos, utiliza unha táboa de datos e pásaa a Sheets.</p>
+                  </div>
+
+                  <p>A dispoñibilidade, as opcións de personalización e os límites poden variar entre contas e entre a web e a aplicación móbil. Todos estes recursos xéranse con IA: verifica os contidos e a adecuación ao grupo antes de utilizalos. <a href="https://support.google.com/gemininotebook/answer/16206563?co=GENIE.Platform%3DDesktop&amp;hl=es" target="_blank" rel="noopener">Axuda oficial: crear un caderno e ver os recursos de Studio (en español) ↗</a></p>
+                  <ul class="resource-list">
+                    <li><a href="https://support.google.com/gemininotebook/answer/18323649?hl=es" target="_blank" rel="noopener">Informes e exportación a Docs (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16262519?hl=es" target="_blank" rel="noopener">Notas e exportación a Google Docs (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16206563?co=GENIE.Platform%3DDesktop&amp;hl=es" target="_blank" rel="noopener">Táboas de datos e exportación a Sheets (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16958963?hl=es" target="_blank" rel="noopener">Tarxetas e cuestionarios (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16757456?hl=es" target="_blank" rel="noopener">Presentacións PDF e PPTX (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16758265?hl=es" target="_blank" rel="noopener">Infografías PNG (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/16212820?hl=es" target="_blank" rel="noopener">Resumos de audio (en español) ↗</a>, <a href="https://support.google.com/gemininotebook/answer/16454555?hl=es" target="_blank" rel="noopener">resumos de vídeo (en español) ↗</a> e <a href="https://support.google.com/gemininotebook/answer/16212283?hl=es" target="_blank" rel="noopener">mapas mentais (en español) ↗</a></li>
+                    <li><a href="https://support.google.com/gemininotebook/answer/18945748?hl=es" target="_blank" rel="noopener">Sitios web interactivos (en español) ↗</a> · Axuda oficial de Google; algunhas páxinas poden estar en inglés.</li>
                   </ul>
                 </div>
               </details>
@@ -909,6 +1000,43 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
                   </div>
 
                   <p>Este fluxo garante que os materiais xerados no Studio se cinxan con precisión cirúrxica ao que o docente considera esencial, eliminando datos secundarios ou ruído documental.</p>
+                </div>
+              </details>
+
+              <details class="youtube-guide-expansion">
+                <summary>Ampliar: enviar vídeos de YouTube a Gemini Notebook</summary>
+                <div class="longread youtube-guide">
+                  <p class="drawer-intro">Este é un exemplo de complemento opcional para Gemini Notebook; hai máis extensións para importar páxinas, organizar cadernos ou exportar materiais. A extensión <strong>YouTube to NotebookLM – YouTube to Gemini Notebook</strong> facilita enviar vídeos, listas e canles a un caderno. É dun desenvolvedor externo, non de Google. Se só queres engadir un vídeo público con subtítulos, tamén podes pegar a súa URL desde a función nativa de engadir fontes: a extensión serve sobre todo para aforrar pasos e facer importacións por lotes.</p>
+
+                  <h3>Antes de instalar: que fai e que precisa</h3>
+                  <p>A extensión engade accións desde YouTube e permite escoller un caderno existente ou crear un. A ficha de Chrome anuncia importación de vídeos, listas de reprodución, canles e resultados de busca; as opcións concretas poden cambiar segundo o navegador e as actualizacións. O caderno recibe as fontes de YouTube; Gemini Notebook utiliza o texto dos subtítulos dispoñibles para analizalas, non converte o vídeo nunha fonte audiovisual que o chat «vexa» como unha persoa.</p>
+                  <p>Para que unha fonte de YouTube se poida importar, o vídeo debe ser público e ter subtítulos dispoñibles. Os vídeos privados, sen subtítulos ou acabados de publicar poden fallar. Se a transcrición non aparece ou é deficiente, a extensión non pode inventar o texto que falta. <a href="https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&amp;hl=es" target="_blank" rel="noopener">Axuda oficial de Google: límites das fontes de YouTube (en español) ↗</a></p>
+
+                  <h3>Instalación en Chrome, paso a paso</h3>
+                  <ol>
+                    <li>Abre Chrome e inicia sesión na conta de Google coa que usas Gemini Notebook.</li>
+                    <li>Entra na <a href="https://chromewebstore.google.com/detail/youtube-to-notebooklm-you/kobncfkmjelbefaoohoblamnbackjggk" target="_blank" rel="noopener">ficha de YouTube to NotebookLM na Chrome Web Store ↗</a>. Comproba que o nome coincide e que a extensión a ofrece <code>yt.to.notebooklm</code>; non a descargues desde páxinas de terceiros.</li>
+                    <li>Preme <strong>Engadir a Chrome</strong> e, na xanela do navegador, confirma con <strong>Engadir extensión</strong>.</li>
+                    <li>Abre o menú de extensións (icona de peza de crebacabezas). Se queres tela a man, preme a chincheta para fixala xunto á barra de enderezos.</li>
+                    <li>Abre <a href="https://notebook.google.com" target="_blank" rel="noopener">Gemini Notebook ↗</a> polo menos unha vez e verifica que iniciaches sesión. Despois abre ou recarga YouTube.</li>
+                  </ol>
+                  <p>Hai tamén unha ficha do complemento para <a href="https://addons.mozilla.org/es-ES/firefox/addon/youtube-to-notebooklm/" target="_blank" rel="noopener">Firefox ↗</a>. En Firefox, preme <strong>Engadir a Firefox</strong> e confirma a instalación; despois usa o botón do complemento ou a icona de extensións en YouTube. A situación dos botóns pode variar coa versión.</p>
+
+                  <h3>Enviar un vídeo ou unha lista ao caderno</h3>
+                  <ol>
+                    <li>En YouTube, abre o vídeo que queres gardar. Usa o botón de envío que engade a extensión na páxina ou a icona fixada na barra do navegador.</li>
+                    <li>Escolle <strong>Crear caderno</strong> para abrir un novo ou <strong>Escoller caderno</strong> para seleccionar o destino. Para unha unidade, pon un nome claro, por exemplo «Ciencias · ecosistemas · vídeos de apoio».</li>
+                    <li>Se estás nunha lista, unha canle ou resultados de busca, revisa a selección antes de importar. Comeza polos vídeos que realmente precisas: cada vídeo pode converterse nunha fonte e o caderno ten un límite de fontes que depende do plan.</li>
+                    <li>Confirma o envío e agarda a que remate. Abre o caderno e comproba que cada vídeo aparece no panel de fontes co título correcto e texto utilizable.</li>
+                    <li>Selecciona eses vídeos e pregunta algo concreto, por exemplo: <em>«Compara as dúas explicacións do ciclo da auga. Resume que achega cada vídeo, cita as fontes e avísame se a transcrición non permite responder»</em>.</li>
+                  </ol>
+                  <p>Se non aparece o botón, recarga a páxina, comproba que a extensión está activada e que iniciaches sesión en Gemini Notebook coa conta correcta. Se o vídeo se engade pero o caderno non pode consultalo, revisa que sexa público e teña subtítulos; proba primeiro cun vídeo coñecido que si os inclúa.</p>
+
+                  <h3>Permisos e privacidade</h3>
+                  <p>É un complemento de terceiros. Chrome Web Store declara que xestiona actividade do usuario; Firefox solicita acceso ás pestanas e aos datos dos sitios web. Revisa a ficha e a política de privacidade antes de instalalo, e non o uses para enviar vídeos ou páxinas asociados a información confidencial ou datos persoais do alumnado. O complemento tampouco é necesario para pegar unha URL de YouTube compatible desde Gemini Notebook.</p>
+
+                  <h3>Outro complemento para o uso persoal diario</h3>
+                  <p>Se ademais de importar vídeos queres ordenar lecturas, páxinas e cadernos de temas cotiáns, podes valorar <a href="https://chromewebstore.google.com/detail/notebooklm-tools-for-gemi/hiibkpjljigehlnnecbgehkhfibmahjn" target="_blank" rel="noopener"><strong>NotebookLM Tools para Gemini Notebook</strong> na Chrome Web Store ↗</a>. A súa ficha ofrece importación de páxinas, pestanas e fontes por lotes, cartafoles e etiquetas para organizar cadernos, busca e exportación dalgúns recursos; certas funcións avanzadas son de pago. Un uso sinxelo sería gardar páxinas fiables sobre unha viaxe —transporte, visitas e horarios— nun caderno e pedir unha comparación baseada nesas fontes. Tamén é de terceiros, non está avalado por Google e a tenda indica que xestiona contido de sitios web: revisa permisos e privacidade, e evita cargar documentación sensible.</p>
                 </div>
               </details>
 
@@ -944,20 +1072,71 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
                       <tr>
                         <td><strong>Modelos de razoamento</strong></td>
                         <td>Acceso estándar a Gemini</td>
-                        <td>Acceso prioritario a modelos Gemini Pro e Thinking</td>
+                        <td>Maior acceso a modelos Gemini e prioridade para algunhas funcións novas</td>
                       </tr>
                       <tr>
-                        <td><strong>Orzamento de cómputo</strong></td>
-                        <td>Cota básica ($1\times$)</td>
-                        <td>Cota cuádrupla ($4\times$) con recarga cada 5 horas</td>
+                        <td><strong>Uso xeral da IA</strong></td>
+                        <td>Límites Standard</td>
+                        <td>Google publica ata 4 veces os límites xerais Standard; o uso concreto varía segundo a tarefa</td>
                       </tr>
                       <tr>
                         <td><strong>Informes Deep Research</strong></td>
                         <td>~10 buscas profundas ao mes</td>
                         <td>Ata 20 informes profundos ao día</td>
                       </tr>
+                      <tr>
+                        <td><strong>Resumos de audio</strong></td>
+                        <td>Ata 3 xeracións ao día</td>
+                        <td>Ata 20 xeracións ao día</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Resumos de vídeo</strong></td>
+                        <td>Ata 3 xeracións ao día</td>
+                        <td>Ata 20 ao día; ata 2 en formato Cinematic</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Informes, guías de estudo e documentos informativos</strong></td>
+                        <td>Ata 10 xeracións ao día</td>
+                        <td>Ata 100 xeracións ao día</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Tarxetas de memoria</strong></td>
+                        <td>Ata 10 xeracións ao día</td>
+                        <td>Ata 100 xeracións ao día</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Cuestionarios</strong></td>
+                        <td>Ata 10 xeracións ao día</td>
+                        <td>Ata 100 xeracións ao día</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Mapas mentais</strong></td>
+                        <td>Ata 10 xeracións ao día</td>
+                        <td>Ata 100 xeracións ao día</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Táboas de datos</strong></td>
+                        <td>Límite de uso, sen cifra publicada</td>
+                        <td>Límite ampliado, sen cifra publicada</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Infografías</strong></td>
+                        <td>Límite de uso, sen cifra publicada</td>
+                        <td>Límite ampliado, sen cifra publicada</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Presentacións e revisións</strong></td>
+                        <td>Límite de uso, sen cifra publicada</td>
+                        <td>Límite ampliado, sen cifra publicada</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Notas e sitios interactivos</strong></td>
+                        <td>Non aparecen cunha cota independente na táboa oficial</td>
+                        <td>Non aparecen cunha cota independente na táboa oficial</td>
+                      </tr>
                     </tbody>
                   </table>
+                  <p>Son xeracións de recursos, non o número de tarxetas, preguntas ou diapositivas que terá cada recurso. Google marca estes límites como suxeitos a cambios; ademais, o uso pode depender do custo de cómputo de cada petición. As táboas, infografías e presentacións aparecen con límites cualitativos, sen unha cifra diaria publicada. Algúns recursos que se xeran automaticamente ao engadir fontes non consumen cota. <a href="https://support.google.com/gemininotebook/answer/16213268?hl=es" target="_blank" rel="noopener">Consultar límites oficiais de Gemini Notebook (en español) ↗</a>.</p>
                 </div>
               </details>
 
@@ -1014,38 +1193,66 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
           </div>
 
           <aside class="slide-aside">
-            <div class="slide-hook">
-              <p>MATRIZ DE DECISIÓN DOCENTE</p>
-              <div class="visual-flow" style="flex-direction:column; align-items:stretch;">
-                <span style="font-size:12px;">🎯 <strong>Exames, LOMLOE ou podcasts?</strong><br>➔ Abre <strong>notebook.google.com</strong></span>
-                <span style="font-size:12px;">🌐 <strong>Noticias de hoxe ou burocracia Gmail?</strong><br>➔ Abre <strong>gemini.google.com</strong></span>
-                <span style="font-size:12px;">🎮 <strong>Xogos interactivos no encerado (Canvas)?</strong><br>➔ Chama o caderno desde <strong>Gemini</strong></span>
+            <div class="slide-hook integration-summary-hook" aria-label="Fontes documentais conectadas coa web">
+              <div class="integration-mini-diagram" aria-hidden="true">
+                <span class="integration-icon">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M12 14.5c7-3.1 14-2.3 20 2.2v34c-6-4.5-13-5.3-20-2.2z" fill="#fffaf0" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M52 14.5c-7-3.1-14-2.3-20 2.2v34c6-4.5 13-5.3 20-2.2z" fill="#f3e5c8" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M18 23h8M18 30h8M38 23h8M38 30h8" fill="none" stroke="#b28a48" stroke-width="2.4" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <b>↔</b>
+                <span class="integration-icon">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="23" fill="#fffaf0" stroke="currentColor" stroke-width="3"/>
+                    <path d="M9.8 32h44.4M32 9c7 6 10.5 13.7 10.5 23S39 49 32 55M32 9c-7 6-10.5 13.7-10.5 23S25 49 32 55M13.5 20h37M13.5 44h37" fill="none" stroke="#b28a48" stroke-width="2.4" stroke-linecap="round"/>
+                  </svg>
+                </span>
               </div>
+              <strong>Fontes ↔ Web</strong>
+              <small>Caderno + Gemini</small>
             </div>
 
             <div class="extras">
-              <details>
+                            <details>
                 <summary>Ampliar: casos prácticos de integración combinada</summary>
                 <div class="longread">
-                  <p class="drawer-intro">Exemplos reais de como a unión de ambas as ferramentas multiplica as posibilidades didácticas.</p>
+                  <p class="drawer-intro">A combinación funciona mellor cando cada contorno achega algo distinto: o caderno mantén o material de referencia e as súas citas; Gemini pode engadir busca web, redactar unha proposta ou construír un recurso interactivo. Revisa cada resultado e comproba que fontes o respaldan.</p>
 
-                  <h3>Caso 1: Actualizar apuntamentos con noticias de actualidade</h3>
-                  <ul>
-                    <li><strong>O problema:</strong> Os teus apuntamentos en PDF sobre economía, ciencia ou xeografía son de cursos anteriores e queres conectalos cun evento ocorrido esta semana.</li>
-                    <li><strong>Como facelo:</strong> Abres o teu caderno desde o chat de Gemini e pides: <em>«Toma a unidade de inflación do meu caderno, busca en Google os datos do IPC publicados este mes en España e crea unha actividade práctica de aula con datos de hoxe»</em>.</li>
-                  </ul>
+                  <h3>Caso 1 · Actualizar unha unidade con datos recentes</h3>
+                  <p><strong>Situación:</strong> vas traballar a inflación en 4.º da ESO. O teu caderno reúne apuntamentos, definicións e exercicios do tema, pero os datos do material son do curso pasado.</p>
+                  <ol>
+                    <li>Abre Gemini e invoca <strong>@Gemini Notebook</strong> para seleccionar o caderno de Economía ou Ciencias Sociais.</li>
+                    <li>Pídelle a Gemini que identifique nas túas fontes os conceptos e fórmulas que o alumnado xa estudou.</li>
+                    <li>Solicita que busque o dato máis recente do IPC nunha fonte oficial, indique a data e a ligazón, e deseñe unha actividade breve que compare ese dato cun exemplo dos apuntamentos.</li>
+                    <li>Revisa a cifra na fonte oficial e comproba que a actividade non atribúe ao caderno información que procede da web. Despois, adapta e comparte a ficha.</li>
+                  </ol>
+                  <p><strong>Exemplo de petición:</strong> <em>«Usa o caderno “Inflación · 4.º ESO” para recuperar os conceptos que traballamos. Busca o último IPC publicado polo INE, cita a ligazón e a data, e prepara unha actividade de 20 minutos para interpretar o dato e comparalo co exemplo do tema. Separa claramente a información do caderno da información actual.»</em></p>
 
-                  <h3>Caso 2: Crear un xogo interactivo en Canvas para o encerado dixital</h3>
-                  <ul>
-                    <li><strong>O problema:</strong> Queres unha actividade gamificada para repasar un tema denso proxectándoo no encerado dixital interactivo.</li>
-                    <li><strong>Como facelo:</strong> En Gemini, coa ferramenta <strong>Canvas</strong> activa, pides: <em>«Baseándote exclusivamente no vocabulario da Unidade 2 do meu caderno de inglés, programa en HTML/JS un xogo interactivo tipo Pasapalabra ou Trivial con marcador de acertos para xogar na clase»</em>.</li>
-                  </ul>
+                  <h3>Caso 2 · Crear un repaso interactivo para o encerado</h3>
+                  <p><strong>Situación:</strong> o caderno contén vocabulario e definicións da unidade 2 de Inglés de 2.º da ESO. Queres repasar antes da proba cun xogo que funcione no encerado da aula.</p>
+                  <ol>
+                    <li>Selecciona o caderno como referencia desde Gemini e pide unha lista de termos que aparezan realmente nas fontes.</li>
+                    <li>Activa Canvas e solicita un recurso web sinxelo —por exemplo, un concurso de preguntas con tres opcións, marcador e botón para volver comezar— usando só eses termos.</li>
+                    <li>Indica nivel, idioma, número de preguntas e regras: respostas claras, sen datos externos e cunha explicación breve tras cada resposta.</li>
+                    <li>Proba o recurso na pantalla da aula, corrixe erros e revisa que as preguntas e respostas coincidan co caderno antes de empregalo.</li>
+                  </ol>
+                  <p><strong>Exemplo de petición:</strong> <em>«Co vocabulario da unidade 2 do meu caderno de Inglés de 2.º da ESO, crea en Canvas un xogo tipo Trivial de 12 preguntas para o encerado. Inclúe tres opcións, marcador, reinicio e unha explicación curta. Non engadas palabras que non estean nas fontes.»</em></p>
 
-                  <h3>Caso 3: Burocracia docente e comunicación con familias</h3>
-                  <ul>
-                    <li><strong>O problema:</strong> Tes o Regulamento de Réxime Interior (RRI) ou o protocolo de excursións nun caderno e debes redactar comunicados oficiais.</li>
-                    <li><strong>Como facelo:</strong> Pídeslle a Gemini conectado a Workspace: <em>«Segundo o protocolo de saídas escolares do meu caderno, redacta un borrador en Gmail dirixido ás familias explicando os horarios e autorizacións, e crea unha folla de sinaturas en Google Docs»</em>.</li>
-                  </ul>
+                  <h3>Caso 3 · Preparar unha comunicación ás familias</h3>
+                  <p><strong>Situación:</strong> o caderno inclúe o protocolo dunha saída escolar e un modelo aprobado polo centro. Necesitas redactar un borrador claro, pero o caderno non contén os datos concretos da próxima excursión.</p>
+                  <ol>
+                    <li>En Gemini, consulta o caderno mediante <strong>@Gemini Notebook</strong> e pide que extraia só as indicacións do protocolo sobre horarios, autorizacións e materiais.</li>
+                    <li>Engade os datos ficticios ou xa autorizados da saída: curso, data, hora de saída e regreso, custo e prazo para entregar a autorización. Non inclúas nomes nin datos persoais do alumnado.</li>
+                    <li>Pide un borrador cun ton próximo, unha lista do que debe levar cada estudante e un espazo visible para completar os datos que falten.</li>
+                    <li>Contrasta cada indicación co protocolo do caderno e revisa o borrador antes de copialo a Gmail, Docs ou á canle que use o centro. A IA prepara o texto; o envío e a aprobación seguen sendo do docente.</li>
+                  </ol>
+                  <p><strong>Exemplo de petición:</strong> <em>«Consulta o protocolo de saídas do meu caderno e prepara un borrador para as familias de 1.º da ESO. A saída será o 18 de maio, de 9:00 a 14:00, e a autorización debe entregarse antes do día 12. Inclúe que deben traer, sinala calquera dato que falte e non inventes condicións. Non o envíes: quero revisalo.»</em></p>
+                  <div class="adaptation-privacy-reminder" role="note">
+                    <img src="assets/pitufo-rgpd-blanco.png" alt="Pitufo do RXPD que lembra protexer os datos persoais">
+                    <p><strong>Nun caso real, non introduzas datos persoais.</strong> Non compartas coa IA nomes, enderezos, teléfonos, circunstancias familiares nin información que identifique o alumnado ou as súas familias. Usa datos ficticios para preparar o borrador e complétao despois no sistema autorizado polo centro.</p>
+                  </div>
                 </div>
               </details>
 
@@ -1070,19 +1277,43 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
                 </div>
               </details>
 
-              <details>
-                <summary>Ampliar: integración en Google Docs e plataformas</summary>
+                                          <details>
+                <summary>Ampliar: compartir un caderno</summary>
                 <div class="longread">
-                  <p class="drawer-intro">A interoperabilidade con procesadores de texto e contornos virtuais de aprendizaxe consolida Gemini Notebook como unha ferramenta institucional de centro.</p>
+                  <p class="drawer-intro">Hai tres opcións para compartir: colaborar con outro docente como editor, ofrecer ao alumnado o caderno completo en modo lector ou enviarlle unha ligazón que abre directamente a vista de chat.</p>
+                  <h3>Opción 1 · Compartir con outro docente como editor</h3>
+                  <p>Usa este modo cando queiras que outra persoa do equipo docente poida construír o caderno contigo, non só consultalo. A invitación faise a unha conta concreta e co rol <strong>Editor</strong>.</p>
+                  <ol>
+                    <li>Abre o caderno e preme <strong>Compartir</strong>.</li>
+                    <li>Escribe o enderezo de Gmail ou de Google Workspace do outro docente e selecciona <strong>Editor</strong> antes de enviar a invitación.</li>
+                    <li>O docente debe aceptar a invitación e iniciar sesión con esa mesma conta. Poderá engadir ou quitar fontes e notas, preparar recursos de estudo desde o caderno e compartilo con outras persoas.</li>
+                  </ol>
+                  <p><strong>Exemplo:</strong> dous docentes de Ciencias reúnen apuntamentos e fontes fiables, incorporan materiais aprobados e preparan xuntos unha guía de estudo e unha infografía para o grupo. Os cambios vense no caderno compartido. Se a outra persoa só debe consultar ou preguntar, escolle o modo lector das opcións seguintes.</p>
 
-                  <h3>Referenciar cadernos en Google Docs co símbolo @</h3>
-                  <p>Mentres redactas unha programación didáctica, un exame ou unha guía docente en Google Docs, podes escribir <strong>`@`</strong> seguido do nome do teu caderno para inserir táboas, resumos ou citas verificadas directamente no teu documento sen cambiar de lapela.</p>
 
-                  <h3>Integración con plataformas educativas (LMS)</h3>
-                  <ul class="resource-list">
-                    <li><strong>Google Classroom:</strong> Permite crear cadernos cun só clic importando automaticamente todas as lecturas e guías publicadas na lapela *Trabajo de clase* (*Classwork*), compartíndoos co alumnado en modo lectura protexida.</li>
-                    <li><strong>Canvas LMS e Schoology:</strong> Integración mediante o estándar <em>Gemini LTI</em> para incrustar cadernos de estudo interactivos dentro das materias virtuais do centro.</li>
-                  </ul>
+                  <h3>Opción 2 · Caderno completo para persoas lectoras</h3>
+                  <p>Escolle esta opción cando queiras que o alumnado vexa que as respostas parten dos seus apuntamentos e poida consultar tamén os recursos didácticos que preparaches: guía de estudo, infografía, presentación, vídeo ou outros artefactos dispoñibles en Studio.</p>
+                  <ol>
+                    <li>Abre o caderno e preme <strong>Compartir</strong>.</li>
+                    <li>Para compartilo cunha persoa concreta, escribe o seu Gmail ou conta de Google Workspace e escolle <strong>Lector</strong>. Para compartilo cun grupo mediante ligazón, cambia o acceso a <strong>Calquera persoa coa ligazón</strong>.</li>
+                    <li>Copia a ligazón normal do caderno. Se aparece a opción, non escollas «Copiar ligazón á vista de chat»: esa é a outra modalidade.</li>
+                    <li>A persoa que o recibe debe iniciar sesión cunha conta de Google. Como lectora pode revisar as fontes, conversar co chat e abrir os recursos de estudo dispoñibles. Non pode engadir nin editar as fontes do caderno.</li>
+                  </ol>
+                  <p><strong>Exemplo:</strong> comparte así un caderno dunha unidade para que cada estudante consulte os apuntamentos orixinais, pregunte dúbidas ao chat e acceda ás infografías ou vídeos que xeraches para preparar a clase.</p>
+
+                  <h3>Opción 3 · Ligazón directa á vista de chat</h3>
+                  <p>Escolle <strong>«Copiar ligazón á vista de chat»</strong> se queres que a persoa chegue directamente a unha pantalla sinxela de preguntas e respostas, sen mostrar de entrada os paneis de fontes e artefactos. Poderá consultar o chat co caderno, pero non terá á vista a colección de apuntamentos e recursos como na opción 2. Tamén debe iniciar sesión cunha conta de Google.</p>
+                  <ol>
+                    <li>En <strong>Compartir</strong>, define quen pode acceder: convida a conta concreta como lectora ou activa <strong>Calquera persoa coa ligazón</strong> para o grupo previsto.</li>
+                    <li>Selecciona <strong>«Copiar ligazón á vista de chat»</strong> e envía esa ligazón, non a ligazón normal do caderno.</li>
+                    <li>Proba a ligazón como lectora antes de distribuíla para comprobar que experiencia se abre.</li>
+                  </ol>
+                  <p class="drawer-example"><strong>Ollo: a vista de chat non é unha protección das fontes.</strong> Google advirte que oculta eses materiais na experiencia inicial, pero non revoga por completo o acceso subxacente: a persoa lectora podería atopar outras formas de abrir fontes e artefactos. Se necesitas que certo documento non se comparta, non o inclúas nese caderno; crea unha copia só cos materiais autorizados.</p>
+
+                  <h3>Ligazón compartida e privacidade</h3>
+                  <p><strong>«Calquera persoa coa ligazón» non é o mesmo que «Público»:</strong> quen reciba a ligazón poderá abrir o caderno ao iniciar sesión en Google, pero a ligazón non o converte automaticamente nun resultado público de busca. Usa o acceso restrinxido cando queiras convidar só contas concretas. Podes volver a <strong>Compartir</strong> para quitar persoas ou restrinxir a ligazón.</p>
+                  <p>Antes de compartir co alumnado, confirma que tes permiso para distribuír todas as fontes e recursos. Non inclúas datos persoais nin documentos internos. Nas contas educativas, a organización pode limitar o uso compartido externo.</p>
+                  <p><a href="https://support.google.com/gemininotebook/answer/16322204?hl=es" target="_blank" rel="noopener">Axuda oficial de Google: ligazón normal e vista de chat (en español) ↗</a></p>
                 </div>
               </details>
 
@@ -1199,7 +1430,7 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
             </div>
           </aside>
         </div>
-        <nav class="slide-navigation" aria-label="Navegación da diapositiva"><a href="#integracion">← Anterior</a><a href="escritorio.html">Asistentes de escritorio (en castelán) →</a></nav>
+        <nav class="slide-navigation" aria-label="Navegación da diapositiva"><a href="#integracion">← Anterior</a><a href="escritorio-gl.html">Asistentes de escritorio →</a></nav>
       </section>
     </main>
 
@@ -1220,3 +1451,4 @@ h2 { font-size: 22pt; margin-top: 1.4em; }
   </details>
 </body>
 </html>
+

@@ -3,28 +3,339 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>En local · IA para docentes</title>
+  <title>IA en local · IA para docentes</title>
+  <meta name="description" content="Modelos en tu equipo, documentos y audio para el aula.">
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="portada.css">
-  <link rel="stylesheet" href="seccion.css">
+  <link rel="stylesheet" href="fundamentos.css?v=39">
+  <link rel="stylesheet" href="local.css">
   <link rel="stylesheet" href="licencia.css?v=2">
+  <link rel="stylesheet" href="idioma.css?v=4">
+  <script src="idioma.js?v=2" defer></script>
+  <script src="escritorio.js?v=4" defer></script>
   <script src="licencia.js?v=2" defer></script>
 </head>
 <body data-fase="local">
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="IA para docentes, inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
-      <span class="top-note"><span class="status-dot"></span> FORMACIÓN PARA DOCENTES</span>
-      <span class="top-index">DAVID RODRÍGUEZ <span class="slash">/</span> 04</span>
-    </header>
-    <main class="section-start">
-      <p class="eyebrow"><span class="eyebrow-line"></span> FASE 04 · IA PARA DOCENTES</p>
-      <h1>En local<span class="period">.</span></h1>
-      <p class="intro">Una primera mirada a herramientas que pueden procesar información en el propio equipo.</p>
-      <p class="section-note">El contenido de esta sección está en preparación.</p>
-      <a class="return-link" href="index.html#recorrido">← Volver al recorrido</a>
-    </main>
+<div class="site-shell">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Volver al inicio"><span class="brand-mark">IA<span>.</span></span><span class="brand-name">DOCENCIA<br>Y TECNOLOGÍA</span></a>
+    <span class="top-note"><span class="status-dot"></span> FASE 04 · IA EN LOCAL</span>
+    <a class="volver" href="index.html#recorrido">← Volver al recorrido</a>
+    <a class="language-switch" data-preserve-hash href="local-gl.html" lang="gl" hreflang="gl" aria-label="Ver en gallego">GL</a>
+  </header>
+  <nav class="chapter-nav" aria-label="Índice de IA en local">
+    <a href="#inicio" data-topic="inicio">Inicio</a>
+    <a href="#equipo" data-topic="equipo">1 · Equipo</a>
+    <a href="#lm-studio" data-topic="lm-studio">2 · LM Studio</a>
+    <a href="#rebost" data-topic="rebost">3 · Rebost</a>
+    <a href="#voz" data-topic="voz">4 · VoiceStudio</a>
+    <a href="#cierre" data-topic="cierre">5 · Cierre</a>
+  </nav>
+  <main id="recorrido-local">
+<section class="slide" id="inicio" data-topic="inicio">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>01 / 06</span> DEL ESCRITORIO AL MODELO</p>
+      <h1>Inteligencia artificial <em>en local.</em></h1>
+      <p class="lead">El aviso está en tu portátil. Al pedirle a la IA tres preguntas de repaso, ¿qué ordenador lee el texto y prepara la respuesta?</p>
+      
+      <blockquote class="takeaway">«¿Dónde está el archivo? ¿Dónde se ejecuta <strong>el modelo</strong>?»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>La ruta de una petición</figcaption><div class="route"><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="m4 17-2 3h20l-2-3M10 17h4"/></svg><b>Tu aplicación</b></span><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17m-7-7 7 7-7 7"/></svg><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h12a4 4 0 0 0 0-8 6 6 0 0 0-11-3 5.5 5.5 0 0 0-1 11Z"/></svg><b>Modelo remoto</b></span></div><div class="route local-route"><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="m4 17-2 3h20l-2-3M10 17h4"/></svg><b>Tu aplicación</b></span><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17m-7-7 7 7-7 7"/></svg><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></svg><b>Modelo local</b></span></div></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="m4 17-2 3h20l-2-3M10 17h4"/></svg>Seguir el recorrido de mis datos</summary>
+<div class="longread">
+<p class="drawer-intro">La misma carpeta puede participar en dos recorridos distintos. Sigue una frase del aviso desde que la seleccionas hasta que guardas la respuesta.</p>
+<h3>Tres lugares que conviene distinguir</h3>
+<ul>
+<li><strong>El original.</strong> El aviso está guardado en el portátil. Dar acceso a la carpeta permite que la aplicación lea el texto seleccionado.</li>
+<li><strong>El cálculo.</strong> Un asistente conectado puede enviar el fragmento a un proveedor. Con un modelo cargado en LM Studio y las herramientas externas desactivadas, el equipo genera la respuesta.</li>
+<li><strong>La copia.</strong> El historial y el documento exportado tienen su propio destino. Una carpeta sincronizada puede enviar una copia al servicio de almacenamiento.</li>
+</ul>
+<blockquote>Tengo una respuesta generada en mi portátil y la guardo en una carpeta compartida. ¿Quién puede leerla ahora?</blockquote>
+<p class="source"><a href="escritorio.html#cierre">La pregunta que dejamos en Escritorio ↗</a></p>
+<p class="source"><a href="fundamentos.html#datos">Antes de compartir un archivo ↗</a></p>
+</div>
+</details>
+      </div>
+    </aside>
   </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="escritorio.html#cierre">← Escritorio</a>
+    <a href="#equipo">Equipo →</a>
+  </nav>
+</section>
+
+<section class="slide" id="equipo" data-topic="equipo">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>02 / 06</span> MODELOS Y MEMORIA</p>
+      <h2>¿Cabe en <em>mi equipo?</em></h2>
+      <p class="lead">El modelo se guarda en disco. Para conversar, el ordenador carga sus pesos y reserva memoria para el contexto.</p>
+      <dl class="key-rows"><div><dt>Disco</dt><dd>Guarda el archivo descargado.</dd></div><div><dt>RAM / VRAM</dt><dd>Alojan los pesos y la conversación.</dd></div><div><dt>CPU / GPU</dt><dd>Calculan cada nuevo fragmento de texto.</dd></div></dl>
+      <blockquote class="takeaway">«¿Qué cambia en la <strong>memoria disponible</strong> al cargar Gemma?»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>Archivo de pesos · Gemma 3 4B</figcaption><div class="model-size"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></svg><strong>2,32 <small>GiB</small></strong></div><p>GGUF · Q4_K_M · en disco</p></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></svg>Elegir un modelo que quepa</summary>
+<div class="longread">
+<p class="drawer-intro">En LM Studio descargas los pesos del modelo, los valores que aprendió durante el entrenamiento. Puedes conservar varios modelos en disco y elegir cuál cargas para conversar.</p>
+<h3>Leer el nombre de la descarga</h3>
+<p>En <strong>gemma-3-4b-it-Q4_K_M.gguf</strong>, Gemma es la familia de Google. 4B indica unos cuatro mil millones de parámetros, IT identifica una variante ajustada para seguir instrucciones y Q4 indica una cuantización: muchos pesos se representan con menos bits para reducir el espacio necesario.</p>
+<h3>Del disco a la memoria</h3>
+<p>El archivo de pesos de este Gemma ocupa 2,32 GiB. En el mismo equipo, una variante de 7B derivada de DeepSeek-R1-Distill-Qwen ocupa 4,36 GiB. Al cargarlas hace falta memoria adicional para el motor y el contexto. Una conversación larga puede consumir más memoria que una petición corta.</p>
+<ul>
+<li><strong>En Windows</strong>, abre Rendimiento → Memoria en el Administrador de tareas. Observa la memoria disponible antes y después de cargar el modelo.</li>
+<li><strong>CPU y GPU.</strong> La CPU puede ejecutar el cálculo. Una gráfica compatible puede acelerarlo y alojar parte del modelo en su memoria (VRAM). LM Studio recomienda para Windows 16 GB de RAM y 4 GB de VRAM dedicada como referencia.</li>
+<li><strong>Si tarda demasiado</strong>, prueba un modelo más pequeño o reduce el contexto reservado. Envía una pregunta corta en el idioma de tu clase y comprueba cuánto esperas por una respuesta aprovechable.</li>
+</ul>
+<p class="source"><a href="https://ai.google.dev/gemma/docs/core/model_card_3?hl=es-419" target="_blank" rel="noopener noreferrer">Google · Ficha de Gemma 3 (español) ↗</a></p>
+<p class="source"><a href="https://lmstudio.ai/docs/app/system-requirements" target="_blank" rel="noopener noreferrer">LM Studio · Requisitos por sistema (inglés) ↗</a></p>
+</div>
+</details>
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 8 4v7c0 4-4 7-8 9-4-2-8-5-8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>Comprobar la ruta sin conexión</summary>
+<div class="longread">
+<p class="drawer-intro">Usa un aviso ficticio para distinguir la descarga de un modelo del envío de una consulta.</p>
+<ul>
+<li><strong>Prepara el equipo.</strong> Descarga previamente el motor y el modelo. Selecciona el proveedor local, desactiva las herramientas web y utiliza una carpeta fuera de sincronización.</li>
+<li><strong>Desconecta la red.</strong> Abre un chat nuevo y cambia un dato del aviso, por ejemplo la hora de salida. Pregunta por esa hora y comprueba que el modelo responde con el nuevo dato.</li>
+<li><strong>Interpreta el resultado.</strong> La prueba muestra que ese flujo puede funcionar sin conexión. Para saber qué ocurre al reconectar, revisa los servicios opcionales, los complementos, el historial y las copias.</li>
+</ul>
+<blockquote>Un equipo compartido puede conservar el chat a la vista de la siguiente persona. Comprueba quién tiene acceso y aplica las normas del centro también a las copias locales.</blockquote>
+<p class="source"><a href="https://lmstudio.ai/docs/app/offline" target="_blank" rel="noopener noreferrer">LM Studio · Operaciones con y sin red (inglés) ↗</a></p>
+<p class="source"><a href="fundamentos.html#normativa">Volver a las orientaciones del centro ↗</a></p>
+</div>
+</details>
+      </div>
+    </aside>
+  </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="#inicio">← Anterior</a>
+    <a href="#lm-studio">LM Studio →</a>
+  </nav>
+</section>
+
+<section class="slide" id="lm-studio" data-topic="lm-studio">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>03 / 06</span> CHAT LOCAL</p>
+      <h2>Conversar con <em>LM Studio.</em></h2>
+      <p class="lead">Un aviso de la huerta escolar puede convertirse en preguntas de comprensión para 5.º. La frase original nos permite revisar la respuesta.</p>
+      <ol class="steps"><li>Cargar Gemma y abrir un chat.</li><li>Pegar el aviso y pedir tres preguntas.</li><li>Comprobar cada respuesta en el texto.</li></ol>
+      <blockquote class="takeaway">«¿A qué hora saldrá el grupo <strong>de la biblioteca</strong>?»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>Aviso · 5.º de Primaria</figcaption><div class="notice"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H9l-5 4zM8 8h8m-8 4h5"/></svg><div><strong>10:15</strong><p>Salida de la biblioteca</p></div></div></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h5m5 0h6M4 12h10m5 0h1M4 18h1m5 0h10"/><circle cx="11.5" cy="6" r="2.5"/><circle cx="16.5" cy="12" r="2.5"/><circle cx="7.5" cy="18" r="2.5"/></svg>Probar el chat y sus ajustes</summary>
+<div class="longread">
+<p class="drawer-intro">Abre Chat, carga Gemma y empieza una conversación con los valores del modelo. Esta actividad sirve para observar dos cosas distintas: la fidelidad al aviso y la variedad de las respuestas.</p>
+<h3>Del aviso a tres preguntas</h3>
+<div class="prompt"><pre>El viernes, 5.º visitará el huerto escolar. El grupo saldrá de la biblioteca a las 10:15. Cada pareja llevará una libreta. Si llueve, observará las semillas en el aula de ciencias.
+
+Crea dos preguntas literales y una sobre qué cambia si llueve. Para cada una, escribe la respuesta y copia la frase del aviso que la justifica. Usa un lenguaje adecuado para 5.º.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<p>Contrasta las tres respuestas con el original. ¿La biblioteca aparece como punto de salida? ¿Conserva las 10:15 y la libreta por pareja? Si tienes una respuesta online al mismo encargo, compara tiempo de espera, nivel de lengua y fidelidad.</p>
+<h3>Un cambio por prueba</h3>
+<p>En los ajustes de generación, anota los valores iniciales. Pide dos títulos para el aviso. Conserva el texto y el modelo, abre un chat nuevo para cada prueba y cambia un solo control.</p>
+<ul>
+<li><strong>Temperatura.</strong> Compara 0,2 con 0,8. Al subirla, las opciones menos probables ganan peso. Genera dos veces por valor y observa si aparece un título nuevo o un detalle inventado.</li>
+<li><strong>Top-k.</strong> Limita el número de continuaciones candidatas a las k más probables. Si el modelo admite el ajuste, compara 5 con 40 manteniendo los demás valores.</li>
+<li><strong>Top-p.</strong> Ordena las continuaciones por probabilidad y conserva las necesarias para alcanzar el umbral acumulado. Con probabilidades 0,60, 0,25 y 0,15, el umbral 0,80 conserva las dos primeras.</li>
+</ul>
+<blockquote>Recupera los valores iniciales al terminar. Un título más variado sigue necesitando la misma comprobación contra el aviso.</blockquote>
+<p class="source"><a href="https://lmstudio.ai/docs/python/llm-prediction/parameters" target="_blank" rel="noopener noreferrer">LM Studio · Parámetros de generación (inglés) ↗</a></p>
+</div>
+</details>
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg>Una pregunta, dos formatos</summary>
+<div class="longread">
+<p class="drawer-intro">Una tabla se lee bien en una ficha. Un objeto JSON permite que un programa identifique cada campo y coloque la información donde corresponda.</p>
+<h3>Prueba en el mismo chat del aviso</h3>
+<div class="prompt"><pre>1. Prepara una pregunta sobre la hora. Devuelve una tabla con las columnas Pregunta, Respuesta y Evidencia.
+2. Entrega esa misma pregunta como un único objeto JSON con las claves pregunta, respuesta y evidencia. Conserva el contenido.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<h3>Una salida posible</h3>
+<div class="prompt"><pre>{
+  "pregunta": "¿A qué hora saldrá el grupo de la biblioteca?",
+  "respuesta": "A las 10:15.",
+  "evidencia": "El grupo saldrá de la biblioteca a las 10:15."
+}</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<blockquote>Cambia solo la respuesta a «10:45». El archivo conserva su estructura. ¿Qué comparación harías para detectar el error antes de entregar la ficha?</blockquote>
+<p>Si la actividad va al aula virtual, escoge después el formato de importación que acepte el banco de preguntas. Puedes recuperar las plantillas de la fase online.</p>
+<p class="source"><a href="online.html#preguntas">Preguntas para importar · AIKEN, GIFT y Moodle XML ↗</a></p>
+</div>
+</details>
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v5m6-5v5M6 7h12v3a6 6 0 0 1-12 0zm6 9v5h6"/></svg>Conectar una aplicación por API</summary>
+<div class="longread">
+<p class="drawer-intro">Imagina una aplicación del centro con un botón «Proponer pregunta». Puede pedir una ficha al modelo cargado y presentar los campos al docente para que los revise.</p>
+<h3>Qué configurar en LM Studio</h3>
+<ul>
+<li>En Developer, inicia el servidor y mantén el acceso limitado al propio equipo. Copia el identificador del modelo y la dirección que muestra la instalación.</li>
+<li>Con el puerto habitual, la aplicación envía una petición POST a <strong>http://127.0.0.1:1234/v1/chat/completions</strong>. Esa dirección apunta al mismo ordenador que ejecuta el programa.</li>
+<li>La petición incluye el modelo, los mensajes con el aviso y un <strong>response_format</strong> de tipo <strong>json_schema</strong>. El esquema puede exigir tres campos de texto: pregunta, respuesta y evidencia. Comprueba que el modelo elegido admite salidas estructuradas.</li>
+</ul>
+<h3>Qué hace el programa con la respuesta</h3>
+<p>Lee el contenido recibido y valida los campos. Si falta alguno o el servidor está detenido, avisa al docente antes de guardar. Con la ficha completa, muestra el dato y la frase original juntos para aceptar o corregir la propuesta.</p>
+<p class="source"><a href="https://lmstudio.ai/docs/developer/openai-compat/structured-output" target="_blank" rel="noopener noreferrer">LM Studio · Petición completa con esquema JSON (inglés) ↗</a></p>
+</div>
+</details>
+      </div>
+    </aside>
+  </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="#equipo">← Anterior</a>
+    <a href="#rebost">Rebost →</a>
+  </nav>
+</section>
+
+<section class="slide" id="rebost" data-topic="rebost">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>04 / 06</span> CONSULTA DE DOCUMENTOS</p>
+      <h2>Una carpeta en <em>Rebost.</em></h2>
+      <p class="lead">Crea un Estante con los documentos de una salida. Haz una pregunta, abre la cita y localiza la frase que sostiene la respuesta.</p>
+      <div class="file-cards"><div><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg><b>Aviso</b><small>Hora y lugar de salida</small></div><div><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg><b>Material</b><small>Libretas y lupas</small></div></div>
+      <blockquote class="takeaway">«¿Podemos saber <strong>la hora de regreso</strong> con estos archivos?»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>Estante · Salida al huerto</figcaption><div class="shelf-art"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V4h7l3 3h8v13H3zM3 10h18"/></svg><div><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg><b>Aviso</b></span><span class="illustrated"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg><b>Material</b></span></div></div></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V4h7l3 3h8v13H3zM3 10h18"/></svg>Preparar un Estante y abrir la cita</summary>
+<div class="longread">
+<p class="drawer-intro">Rebost sugiere un modelo según la memoria del equipo. Un Estante vincula una carpeta de trabajo al chat. Es una forma sencilla de recuperar la práctica de preguntar sobre fuentes que ya conoces del bloque de Proyectos.</p>
+<h3>Dos documentos para una salida</h3>
+<p>Crea una carpeta con dos archivos de texto. Guarda el primer bloque como «Aviso» y el segundo como «Material». Crea el Estante «Salida al huerto», vincula esa carpeta y deja desactivada la opción Online para la práctica.</p>
+<div class="prompt"><pre>El viernes, 5.º visitará el huerto escolar. El grupo saldrá de la biblioteca a las 10:15. Cada pareja llevará una libreta. Si llueve, observará las semillas en el aula de ciencias.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<div class="prompt"><pre>Cada pareja llevará una libreta. Las lupas las aporta el centro.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<h3>Qué comprobar al abrir la cita</h3>
+<div class="prompt"><pre>¿Qué material debe traer cada pareja y qué aporta el centro? Indica el archivo en que te basas. ¿A qué hora regresaremos? Si esa hora no figura, dilo.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<p>La libreta corresponde a cada pareja y las lupas las aporta el centro. La hora de regreso queda sin documentar. Abre el archivo citado junto al chat y localiza las palabras que justifican cada afirmación. Si aparece una hora de regreso, busca si confundió la salida con la vuelta.</p>
+<p class="source"><a href="https://rebost.ai/es/" target="_blank" rel="noopener noreferrer">Rebost · Estantes, modelos y modo Online (español) ↗</a></p>
+<p class="source"><a href="proyectos.html#archivos">Volver al trabajo con fuentes ↗</a></p>
+</div>
+</details>
+      </div>
+    </aside>
+  </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="#lm-studio">← Anterior</a>
+    <a href="#voz">VoiceStudio →</a>
+  </nav>
+</section>
+
+<section class="slide" id="voz" data-topic="voz">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>05 / 06</span> AUDIO LOCAL</p>
+      <h2>Texto y voz con <em>VoiceStudio.</em></h2>
+      <p class="lead">Un aviso breve sirve para practicar la escucha en inglés o para preparar subtítulos que acompañen un vídeo escolar.</p>
+      <dl class="key-rows"><div><dt>Texto → voz</dt><dd>Escucha el aviso y localiza la hora.</dd></div><div><dt>Voz → texto</dt><dd>Revisa la transcripción y los tiempos.</dd></div></dl>
+      <blockquote class="takeaway">«¿Se entiende <strong>ten fifteen</strong> al escuchar el aviso?»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>Escucha · Inglés A2</figcaption><div class="wave" aria-hidden="true"><i style="--bar:10%"></i><i style="--bar:18%"></i><i style="--bar:13%"></i><i style="--bar:32%"></i><i style="--bar:23%"></i><i style="--bar:49%"></i><i style="--bar:34%"></i><i style="--bar:61%"></i><i style="--bar:38%"></i><i style="--bar:27%"></i><i style="--bar:15%"></i><i style="--bar:26%"></i><i style="--bar:43%"></i><i style="--bar:62%"></i><i style="--bar:46%"></i><i style="--bar:30%"></i><i style="--bar:18%"></i><i style="--bar:28%"></i><i style="--bar:45%"></i><i style="--bar:34%"></i><i style="--bar:18%"></i><i style="--bar:12%"></i><i style="--bar:25%"></i><i style="--bar:38%"></i><i style="--bar:21%"></i><i style="--bar:10%"></i></div><p class="script-line" lang="en">“Meet us at the library at ten fifteen.”</p></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13v-2a7 7 0 0 1 14 0v2M3 12h4v8H5a2 2 0 0 1-2-2zm18 0h-4v8h2a2 2 0 0 0 2-2z"/></svg>Crear una escucha de nivel A2</summary>
+<div class="longread">
+<p class="drawer-intro">Prepara una actividad de comprensión oral con una voz incluida. El producto final son unos segundos de instrucciones y una pregunta que se puede responder escuchándolas.</p>
+<h3>Del guion al clip</h3>
+<ul>
+<li>En VoiceStudio, comprueba que el motor de síntesis local esté instalado y listo. En el espacio de voz, elige una voz incluida compatible con inglés.</li>
+<li>Pega el guion, selecciona inglés y genera el audio. Escucha el clip antes de exportarlo. Si dos instrucciones se confunden, sepáralas con un punto y vuelve a generar el fragmento.</li>
+</ul>
+<div class="prompt"><pre lang="en">Meet us at the library at ten fifteen. Bring a notebook. If it rains, we’ll go to the science room.</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<blockquote>Where do we meet? La biblioteca es el punto de encuentro. Comprueba también si se distingue «ten fifteen» y si las pausas dan tiempo a seguir las instrucciones.</blockquote>
+<p class="source"><a href="https://voicestudio.sh/es/docs/guides/getting-started" target="_blank" rel="noopener noreferrer">VoiceStudio · Generar el primer clip (español) ↗</a></p>
+<p class="source"><a href="online.html#audio">Voz y canciones en la fase online ↗</a></p>
+</div>
+</details>
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M5 14h6m2 0h6M5 17h8"/></svg>Transcribir y revisar subtítulos</summary>
+<div class="longread">
+<p class="drawer-intro">Una transcripción permite leer lo que se dice. Para subtitular un vídeo, cada fragmento necesita además una hora de inicio y otra de fin.</p>
+<h3>Del clip a un texto revisado</h3>
+<ul>
+<li>Graba a una persona adulta leyendo el aviso ficticio durante 15–20 segundos. También puedes usar un clip propio autorizado.</li>
+<li>En el espacio de transcripción, abre el archivo local. Elige el idioma de la grabación y un motor de reconocimiento descargado que lo admita, como Whisper. Genera el texto y compáralo con el audio.</li>
+<li>Para subtitular, comprueba la hora, los lugares y el corte de cada frase mientras se reproduce el clip. Ajusta los tiempos para que el texto permanezca visible durante la intervención.</li>
+</ul>
+<h3>Qué archivo conservar</h3>
+<p>Un texto revisado sirve como apoyo de lectura en Primaria. SRT y VTT incorporan tiempos para vídeo. La API local documenta ambos formatos; comprueba las opciones de exportación de tu versión de escritorio. Guarda el resultado en la carpeta prevista por el centro.</p>
+<blockquote>Las grabaciones de menores requieren el uso y los permisos previstos por el centro. Para probar el circuito basta la voz del docente leyendo un texto ficticio.</blockquote>
+<p class="source"><a href="https://voicestudio.sh/es/transcribe" target="_blank" rel="noopener noreferrer">VoiceStudio · Transcripción local (español) ↗</a></p>
+<p class="source"><a href="https://voicestudio.sh/es/docs/transcription" target="_blank" rel="noopener noreferrer">VoiceStudio · Formatos de subtítulos (español) ↗</a></p>
+</div>
+</details>
+      </div>
+    </aside>
+  </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="#rebost">← Anterior</a>
+    <a href="#cierre">Cierre →</a>
+  </nav>
+</section>
+
+<section class="slide" id="cierre" data-topic="cierre">
+  <div class="slide-body">
+    <div class="slide-content">
+      <p class="kicker"><span>06 / 06</span> CIERRE DEL CURSO</p>
+      <h2>¿Qué probarías <em>el lunes?</em></h2>
+      <p class="lead">Elige una tarea de tu próxima clase. Explica qué datos necesitas, dónde se procesarán y qué revisarás antes de usar el resultado.</p>
+      <div class="decision"><span>Tarea <b aria-hidden="true">›</b></span><span>Datos <b aria-hidden="true">›</b></span><span>Entorno <b aria-hidden="true">›</b></span><span>Revisión</span></div>
+      <blockquote class="takeaway">«La IA amplía. <strong>El criterio decide.</strong>»</blockquote>
+    </div>
+    <aside class="slide-aside">
+      <figure class="lc-figure"><figcaption>Mi próxima clase</figcaption><div class="class-note"><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M9 3h6v3H9zm-2 11 3 3 6-7"/></svg><p>Quiero preparar…<br>Lo comprobaré con…</p></div></figure>
+      <div class="extras">
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M9 3h6v3H9zm-2 11 3 3 6-7"/></svg>Elegir el entorno para mi tarea</summary>
+<div class="longread">
+<p class="drawer-intro">Empieza por un material que vayas a necesitar. La etapa del curso a la que conviene volver depende del resultado, de las fuentes y de los permisos.</p>
+<ul>
+<li><strong>Un borrador desde un texto público.</strong> Un chat online autorizado puede adaptar una lectura. Compara la dificultad de las frases y los datos con el original.</li>
+<li><strong>Una respuesta basada en documentos.</strong> Un proyecto o cuaderno online autorizado reúne fuentes curriculares. Abre la cita y verifica que sostiene la respuesta.</li>
+<li><strong>Una unidad con varios archivos.</strong> Un asistente de escritorio puede trabajar sobre una carpeta acotada. Revisa versiones, cambios y destino de los datos.</li>
+<li><strong>Una escucha sin conexión.</strong> Con motor y voz ya descargados, VoiceStudio genera el audio en el equipo. Comprueba pronunciación, ritmo y transcripción.</li>
+</ul>
+<blockquote>¿Qué cambiaría si la grabación permitiera identificar a un alumno? También puedes usar material preparado o resolver la tarea sin IA.</blockquote>
+<p class="source"><a href="fundamentos.html#criterio">El criterio profesional en Fundamentos ↗</a></p>
+</div>
+</details>
+<details>
+<summary><svg class="lc-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5zM14 3v6h5M8 13h8m-8 4h6"/></svg>Guardar mi primera actividad</summary>
+<div class="longread">
+<p class="drawer-intro">Copia esta ficha en tus notas y complétala con una actividad de la semana próxima. Elige una comprobación que puedas hacer antes de llevar el resultado al aula.</p>
+<div class="prompt"><pre>Quiero preparar…
+Para este grupo…
+Necesito estos datos…
+Usaré este entorno porque…
+Los datos se procesarán en…
+El uso está autorizado para…
+Antes de llevarlo al aula comprobaré…</pre><button class="copy" type="button">Copiar texto</button><span class="copy-status" role="status"></span></div>
+<h3>Un ejemplo de Lengua Extranjera</h3>
+<p>«Quiero preparar un aviso oral para mi grupo de A2. Usaré un texto ficticio y una voz local porque el aula tiene conexión irregular. Antes de usarlo, escucharé la hora sin mirar el guion y comprobaré que se entiende el punto de encuentro».</p>
+<p>Comparte tu elección con otra persona. Si cambiasen los datos, el equipo disponible o el público, ¿mantendrías la herramienta y la misma forma de revisar el resultado?</p>
+</div>
+</details>
+      </div>
+    </aside>
+  </div>
+  <nav class="slide-navigation" aria-label="Navegación de la diapositiva">
+    <a href="#voz">← Anterior</a>
+    <a href="index.html#recorrido">Volver al recorrido →</a>
+  </nav>
+</section>
+  </main>
+  <footer><span>IA PARA DOCENTES · DAVID RODRÍGUEZ</span><span>FASE 04 · IA EN LOCAL</span></footer>
+</div>
 <details class="license-badge"><summary><span>@David</span><span class="license-more"> Rodríguez · CC BY-NC-SA 4.0</span></summary><div class="license-info"><p>El contenido original de este recurso es obra de <strong>David Rodríguez</strong> y se comparte bajo la licencia <strong>CC BY-NC-SA 4.0</strong>.</p><p>Se permite compartir y adaptar citando la autoría, enlazando la licencia e indicando los cambios, sin uso comercial. Las adaptaciones deben distribuirse bajo la misma licencia o una compatible.</p><p>Los materiales de terceros pueden tener derechos y condiciones propias.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noopener noreferrer">Consultar las condiciones de la licencia ↗</a></p></div></details>
 </body>
 </html>

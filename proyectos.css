@@ -344,6 +344,49 @@ body[data-fase="proyectos"] .drawer-arrow {
 #integracion .integration-bridge > span { color: #9b6f24; font-size: 24px; font-weight: 800; }
 #integracion .integration-bridge p { margin: 0; line-height: 1.35; }
 #integracion .integration-bridge strong { color: #684b17; }
+#integracion .integration-summary-hook {
+  align-items: center;
+  gap: 5px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+#integracion .integration-summary-hook strong {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+#integracion .integration-summary-hook small {
+  color: #68757a;
+  font-size: 12px;
+  line-height: 1.3;
+}
+#integracion .integration-mini-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 7px;
+  color: #8a692e;
+}
+#integracion .integration-mini-diagram .integration-icon {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  border: 1px solid #e7d7b8;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fffefa, #f3e7ce);
+  box-shadow: 6px 6px 13px #d0d6d8, -5px -5px 13px #fff;
+}
+#integracion .integration-mini-diagram svg {
+  display: block;
+  width: 64px;
+  height: 64px;
+  overflow: visible;
+}
+#integracion .integration-mini-diagram b { color: #a47b37; font-size: 30px; }
 
 #cierre .closing-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 18px 0 12px; }
 #cierre .closing-choices article { padding: 2px 0 0 14px; border-left: 3px solid #c9ad70; }
@@ -700,5 +743,128 @@ body[data-fase="proyectos"] .drawer-arrow {
   .studio-layout-diagram {
     grid-template-columns: 1fr;
   }
+}
+
+/* Guía de extensiones: lectura por bloques, pasos y avisos suaves. */
+.youtube-guide-expansion > summary {
+  padding: 13px 16px;
+  border: 1px solid #ead9b8;
+  border-left: 4px solid #b78b3e;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fffaf0, #f6efdf);
+  box-shadow: 0 4px 12px rgba(76, 61, 35, .10);
+  color: #694d1d;
+  font-weight: 800;
+}
+
+.youtube-guide-expansion > summary:hover,
+.youtube-guide-expansion > summary:focus-visible {
+  background: #f5ead2;
+  box-shadow: 0 6px 16px rgba(76, 61, 35, .16);
+}
+
+.youtube-guide {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 18px clamp(16px, 3vw, 30px) 34px;
+  color: #34434a;
+  line-height: 1.72;
+}
+
+.youtube-guide p {
+  margin: 16px 0 22px;
+  line-height: 1.72;
+}
+
+.youtube-guide .drawer-intro {
+  padding: 17px 20px;
+  border: 1px solid #ead9b8;
+  border-left: 5px solid #b78b3e;
+  border-radius: 14px;
+  background: #fffaf0;
+  box-shadow: 0 5px 15px rgba(76, 61, 35, .10);
+  color: #493d2a;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.youtube-guide h3 {
+  margin: 36px 0 16px;
+  padding: 14px 0 0 16px;
+  border-top: 1px solid #e1e5e5;
+  border-left: 3px solid #c6a15f;
+  color: #66501f;
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.youtube-guide ol {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 26px;
+  padding: 0;
+  list-style: none;
+  counter-reset: guide-step;
+}
+
+.youtube-guide ol li {
+  position: relative;
+  min-height: 38px;
+  margin: 0;
+  padding: 13px 17px 13px 52px;
+  border: 1px solid #e9eceb;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 3px 9px rgba(44, 58, 62, .07);
+  counter-increment: guide-step;
+  line-height: 1.62;
+}
+
+.youtube-guide ol li::before {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: #efe3c9;
+  color: #6b511f;
+  content: counter(guide-step);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.youtube-guide strong {
+  color: #263940;
+  font-weight: 800;
+}
+
+.youtube-guide a {
+  font-weight: 700;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.youtube-guide code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #eef1f1;
+  color: #31444b;
+  font-size: .92em;
+}
+
+@media (max-width: 650px) {
+  .youtube-guide { padding: 14px 12px 26px; }
+  .youtube-guide p { margin: 14px 0 18px; }
+  .youtube-guide h3 { margin: 30px 0 13px; padding-left: 12px; }
+  .youtube-guide .drawer-intro { padding: 14px 15px; font-size: 16px; }
+  .youtube-guide ol { gap: 10px; }
+  .youtube-guide ol li { padding: 12px 12px 12px 45px; }
 }
 
