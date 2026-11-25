@@ -1,3 +1,0 @@
-# El método científico
-
-Una investigación puede partir de una pregunta, proponer una hipótesis y contrastarla con observaciones. Los resultados ayudan a revisar la explicación.

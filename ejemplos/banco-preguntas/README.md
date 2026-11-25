@@ -4,7 +4,7 @@ Esta carpeta reúne muestras de preguntas basadas en el mito de la caverna. Est�
 
 - `gift/`: ejemplos individuales y un banco completo en texto plano.
 - `xml/`: ejemplos individuales y un banco completo Moodle XML.
-- `recursos/`: imagen utilizada por el ejemplo de arrastrar y soltar sobre una imagen.
+- Los XML de arrastrar y soltar sobre una imagen y del banco completo incluyen la imagen incrustada; no necesitan descargar un archivo de imagen aparte.
 - `gift/modelo-largo-cuestionario.md`: prompt extenso para solicitar un cuestionario GIFT; adapta curso, objetivo y contenido antes de utilizarlo.
 - `index.html`: catálogo navegable con descripción de los archivos y precauciones de importación.
 
