@@ -82,7 +82,7 @@ body[data-fase="local"] {
   color: var(--local-ink);
 }
 .slide-aside .open-drawer:is(:hover,:focus-visible) { background: #e3d4ea; color: var(--local-ink); }
-.open-drawer .drawer-arrow { background: var(--accent); color: white; width: 30px; height: 30px; }
+/* La flecha hereda el círculo claro y el tamaño común de fundamentos.css. */
 .open-drawer .lc-icon { color: var(--accent); width: 21px; height: 21px; }
 .extras summary .lc-icon { vertical-align: middle; margin-right: 10px; }
 .drawer { width: min(890px, 93vw); }
