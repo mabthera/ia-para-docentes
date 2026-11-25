@@ -8,11 +8,15 @@ Guía de referencia para desarrollar las siguientes fases del curso. Se basa en 
 - Diseñar principalmente para pantallas horizontales de ordenador y proyección, sin descuidar móviles, zoom o pantallas más pequeñas. El contenido debe seguir siendo accesible mediante desplazamiento cuando no quepa.
 - Mantener la estética minimalista inspirada en la referencia neumórfica: fondo gris muy claro, superficies claras, esquinas redondeadas, sombras suaves y contraste suficiente. Los elementos deben respirar, con márgenes amplios y equilibrados, sin desperdiciar la pantalla ni aplastar el contenido contra los lados.
 - Cada una de las cuatro fases puede tener su propio color de acento. Utilizarlo para orientar, destacar palabras, títulos y controles, sin inundar el fondo de color. Mantener colores oscuros y legibles, y estados de selección y de foco claramente visibles.
+- En IA local, las ilustraciones forman una misma familia: formas planas, contornos violetas redondeados, rellenos lavanda, fondos claros y pequeños acentos verdeazulados. Mantener el mismo grosor de trazo y tratamiento en portada, equipo, LM Studio, Rebost, VoiceStudio y cierre. Usar `assets/local-equipo-resumen.png` como referencia; evitar mezclar estas ilustraciones con escenas de aspecto tridimensional. Los rótulos se mantienen como HTML traducible junto a la imagen.
+- Las capturas de aplicaciones utilizadas como referencia técnica en las ampliaciones conservan su interfaz real. Identificarlas como capturas, enlazar su fuente y fechar la consulta; no recrear controles o valores con generación de imágenes.
 - Usar imágenes y esquemas que expliquen o sugieran una idea, de tamaño suficiente y sin deformaciones; guardar los recursos gráficos necesarios en `assets`. El estilo y el tamaño deben acompañar la lectura, no competir con ella.
 - Favorecer recorridos amables: desplazamiento suave y cancelable, aperturas claras y transiciones sin saltos bruscos; respetar la preferencia del sistema de reducir movimiento.
 - Mantener un lenguaje divulgativo dirigido directamente a quienes consultan el curso: evitar referencias a la conversación de trabajo, instrucciones para el ponente o tiempos internos que el público no necesita ver.
 
 ## Pantallas principales
+
+- El cierre final recoge toda la formación, desde Fundamentos hasta IA local. Dar prioridad a una reflexión compartida sobre propósito educativo, criterio docente y aprendizaje del alumnado. Mantener el agradecimiento y las citas en el centro, acompañados por dos ilustraciones laterales del mismo estilo 2D que la fase local. En pantallas pequeñas, colocar juntas las ilustraciones debajo de las citas. Conservar un cierre sin ampliaciones ni nuevas prácticas técnicas.
 
 - Mantener una estructura clara y consistente: a la izquierda, el título o pregunta y la explicación o elementos de apoyo; a la derecha, la imagen, ejemplo o pregunta que sirva de gancho.
 - Agrupar las ampliaciones justo debajo del apoyo derecho, con botones destacados mediante un acento de color, relieve suave y una flecha que indique su apertura lateral.
