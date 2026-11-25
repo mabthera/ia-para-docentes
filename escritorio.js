@@ -23,26 +23,33 @@ addEventListener('scroll', actualizarIndice, { passive: true });
 addEventListener('resize', actualizarIndice);
 actualizarIndice();
 
-document.querySelectorAll('.extras details').forEach((detalle, i) => {
+document.querySelectorAll('.extras > details, .case-expansions > details').forEach((detalle, i) => {
   const resumen = detalle.querySelector('summary').textContent;
   const contenido = detalle.querySelector(':scope > div');
-  const boton = document.createElement('button');
-  boton.type = 'button';
-  boton.className = 'open-drawer';
+  const botonExistente = detalle.dataset.trigger ? document.getElementById(detalle.dataset.trigger) : null;
+  const boton = botonExistente || document.createElement('button');
+  if (!botonExistente) {
+    boton.type = 'button';
+    boton.className = 'open-drawer';
+  } else {
+    boton.setAttribute('aria-label', resumen);
+  }
   boton.setAttribute('aria-haspopup', 'dialog');
   boton.setAttribute('aria-controls', `ampliacion-${i}`);
   if (detalle.classList.contains('legal-expansion')) boton.classList.add('legal-expansion-link');
   if (detalle.classList.contains('bridge-expansion')) boton.classList.add('bridge-expansion-link');
 
-  const texto = document.createElement('span');
-  texto.textContent = resumen;
-  const flecha = document.createElement('span');
-  flecha.className = 'drawer-arrow';
-  flecha.setAttribute('aria-hidden', 'true');
-  flecha.textContent = '→';
-  const icono = detalle.querySelector('summary svg');
-  if (icono) boton.append(icono);
-  boton.append(texto, flecha);
+  if (!botonExistente) {
+    const texto = document.createElement('span');
+    texto.textContent = resumen;
+    const flecha = document.createElement('span');
+    flecha.className = 'drawer-arrow';
+    flecha.setAttribute('aria-hidden', 'true');
+    flecha.textContent = '→';
+    const icono = detalle.querySelector('summary svg');
+    if (icono) boton.append(icono);
+    boton.append(texto, flecha);
+  }
 
   const panel = document.createElement('dialog');
   panel.className = 'drawer';
@@ -64,7 +71,8 @@ document.querySelectorAll('.extras details').forEach((detalle, i) => {
   contenido.classList.add('drawer-content');
   panel.append(cabecera, contenido);
   document.body.append(panel);
-  detalle.replaceWith(boton);
+  if (botonExistente) detalle.remove();
+  else detalle.replaceWith(boton);
 
   let cerrando = false;
   function cerrarPanel() {
@@ -87,7 +95,8 @@ document.querySelectorAll('.extras details').forEach((detalle, i) => {
     });
   }
 
-  boton.addEventListener('click', () => {
+  boton.addEventListener('click', evento => {
+    evento.preventDefault();
     if (!panel.open) panel.showModal();
   });
   cerrar.addEventListener('click', cerrarPanel);
@@ -105,6 +114,11 @@ document.querySelectorAll('.extras details').forEach((detalle, i) => {
       const destino = document.getElementById(enlace.getAttribute('href').slice(1));
       if (panel.contains(destino)) {
         e.preventDefault();
+        let desplegable = destino.closest('details');
+        while (desplegable && panel.contains(desplegable)) {
+          desplegable.open = true;
+          desplegable = desplegable.parentElement?.closest('details');
+        }
         const cabeceraAltura = cabecera.getBoundingClientRect().height;
         const posicion = panel.scrollTop + destino.getBoundingClientRect().top - panel.getBoundingClientRect().top - cabeceraAltura - 16;
         panel.scrollTo({ top: Math.max(0, posicion), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
@@ -116,6 +130,19 @@ document.querySelectorAll('.extras details').forEach((detalle, i) => {
     }
   });
 });
+
+const imagenIDE = document.getElementById('imagen-ide');
+if (imagenIDE) {
+  document.querySelectorAll('.desktop-open-reference').forEach(boton => {
+    boton.addEventListener('click', () => {
+      if (!imagenIDE.open) imagenIDE.showModal();
+    });
+  });
+  imagenIDE.querySelector('.close-drawer').addEventListener('click', () => imagenIDE.close());
+  imagenIDE.addEventListener('click', evento => {
+    if (evento.target === imagenIDE) imagenIDE.close();
+  });
+}
 
 document.querySelectorAll('.copy').forEach(boton => {
   boton.addEventListener('click', async () => {
